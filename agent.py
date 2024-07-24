@@ -4,6 +4,7 @@ import operator
 from typing import Annotated, Optional, Sequence, Dict, Any, TypedDict
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
+from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_core.messages import BaseMessage, HumanMessage, ToolMessage
 from langgraph.prebuilt import ToolExecutor, ToolInvocation
 from langgraph.graph import StateGraph, START, END
@@ -17,13 +18,11 @@ class AgentState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], operator.add]
 
 
-
-
 def create_workflow() -> StateGraph:
 
     # Initialize tools and model
-    # tools = [TavilySearchResults(max_results=5, include_raw_content=True)]
-    tools = [search_tool]
+    tools = [TavilySearchResults(max_results=5, include_raw_content=True, include_images=True)]
+    # tools = [search_tool]
     tool_executor = ToolExecutor(tools)
     model = ChatOpenAI(model='gpt-4o-mini',temperature=1, streaming=True)
     model = model.bind_tools(tools)
