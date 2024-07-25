@@ -8,7 +8,7 @@ from tools.search import search_tool
 
 
 def create_agent():
-    model = ChatOpenAI(model="gpt-4o-mini")
+    model = ChatOpenAI(model="gpt-4o-mini", temperature=1, streaming=True)
 
     system_message = """Act as a knowledgeable wine assistant. A question, command, or statement about wine, including details about specific wines, wine prices, or wine recommendations, will be provided and you will truthfully answer using the information provided in everyday language. You may also include additional relevant responses to questions, remarks, or statements provided they are truthful.
 

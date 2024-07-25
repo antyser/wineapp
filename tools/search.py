@@ -102,7 +102,7 @@ def search_tool_deprecated(query: str, top_n: int = 3) -> SearchResultsResponse:
     return SearchResultsResponse(result=organic_results)
 
 @tool
-def search_tool(query: str, top_n: int = 5) -> SearchResultsResponse:
+def search_tool(query: str, top_n: int = 3) -> SearchResultsResponse:
     """Perform a Google search and scrape the top N organic results."""
     search = SerpAPIWrapper()
 
