@@ -12,7 +12,7 @@ import streamlit as st
 from PIL import Image
 from langchain_core.messages import HumanMessage
 
-from tools import search_tool
+from tools import search
 
 
 class AgentState(TypedDict):

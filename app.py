@@ -9,7 +9,7 @@ import io  # Added import for io
 from PIL import Image
 from agent import create_agent  # Added import for Image
 
-from tools import search_tool
+from tools import search
 from langgraph.checkpoint import MemorySaver
 
 from fastapi import FastAPI, HTTPException

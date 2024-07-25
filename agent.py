@@ -4,8 +4,7 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 
 
 from langgraph.checkpoint.sqlite import SqliteSaver
-
-from tools.wine_searcher_tool import fetch_wine_data
+from tools.search import search_tool
 
 
 def create_agent():
@@ -24,7 +23,7 @@ def create_agent():
     If asked specific questions, feel free to use the search tool."""
 
     # tools = [TavilySearchResults(max_results=5, include_raw_content=True, include_images=True)]
-    tools = [fetch_wine_data]
+    tools = [search_tool]
     memory = SqliteSaver.from_conn_string(":memory:")
     app = create_react_agent(model, tools, state_modifier=system_message)
     return app

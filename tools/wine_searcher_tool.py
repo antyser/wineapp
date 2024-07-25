@@ -25,15 +25,13 @@ def fetch_wine_data(wine_name: str) -> str:
     }
     client = httpx.Client(http2=True)
     response = client.get(url, headers=headers)
+    return parse_wine_searcher(response.text)
 
-    # Parse the response content
-    soup = BeautifulSoup(response.text, "html.parser")
 
-    # Extract LD+JSON data
+def parse_wine_searcher(response_text: str) -> str:
+    soup = BeautifulSoup(response_text, "html.parser")
     ld_json = soup.find("script", type="application/ld+json")
     if ld_json:
         json_data = json.loads(ld_json.string)
-        yaml_data = yaml.dump(json_data)  # Convert JSON to YAML
-        return yaml_data
-
+        return yaml.dump(json_data)  # Convert JSON to YAML
     return None
