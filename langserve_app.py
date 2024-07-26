@@ -1,24 +1,12 @@
-from typing import List, Optional, Union
-from langchain_core.messages import SystemMessage
-from langgraph.prebuilt import create_react_agent
-from langchain_openai import ChatOpenAI
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_community.tools.tavily_search import TavilySearchResults
-from langgraph.prebuilt import ToolExecutor, ToolInvocation
-import io  # Added import for io
-from PIL import Image
-from agent import create_agent  # Added import for Image
+from typing import List, Union
 
-from tools import search
-from langgraph.checkpoint import MemorySaver
-
-from fastapi import FastAPI, HTTPException
-from langserve import add_routes
-from typing import Optional
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_core.pydantic_v1 import BaseModel
+from langserve import add_routes
+
+from agents.agent import create_agent  # Added import for Image
 
 
 class ChatInputType(BaseModel):

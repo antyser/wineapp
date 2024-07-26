@@ -1,23 +1,21 @@
-import datetime
-from typing import Optional
-import io
-import uuid  # Added import for io
-from PIL import Image  # Added import for Image
-from dotenv import load_dotenv  # Added import for load_dotenv
 import base64  # Added import for base64
-from langchain_core.messages import HumanMessage
-from agent import create_agent, test_agent
-
-from typing import Optional
+import datetime
+import io
+from typing import Any, Dict, List, Optional, Union
 
 import streamlit as st
+from dotenv import load_dotenv  # Added import for load_dotenv
+from langchain_core.messages import HumanMessage
+from PIL import Image  # Added import for Image
+
+from agents.agent import create_agent
 
 
 def build_human_message(
     text: Optional[str] = None, image_bytes: Optional[bytes] = None
 ) -> HumanMessage:
     # Create the base message content
-    content = []
+    content: List[Union[str, Dict[str, Any]]] = []
 
     # If text is provided, add it to the content
     if text is not None:
@@ -126,6 +124,7 @@ def main_cmd(command: Optional[str] = None, image_file: Optional[str] = None):
     load_dotenv(".env")  # Load environment variables from a .env file
 
     agent = create_agent()
+    print(agent.input_schema.schema())
 
     image_bytes = None
     if image_file:
@@ -142,7 +141,7 @@ def main_cmd(command: Optional[str] = None, image_file: Optional[str] = None):
 
     # Use the build_human_message function to create the message
     message = build_human_message(text=command, image_bytes=image_bytes)
-
+    print(message)
     # Invoke the agent with the message
     config = {
         "configurable": {
@@ -154,4 +153,5 @@ def main_cmd(command: Optional[str] = None, image_file: Optional[str] = None):
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    main_cmd("2010 opus one")
