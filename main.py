@@ -5,15 +5,18 @@ from typing import Any, Dict, List, Optional, Union
 
 import streamlit as st
 from dotenv import load_dotenv  # Added import for load_dotenv
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import AIMessage, HumanMessage
 from PIL import Image  # Added import for Image
 
 from agents.agent import create_agent
+from models import Message
 
 
-def build_human_message(
-    text: Optional[str] = None, image_bytes: Optional[bytes] = None
-) -> HumanMessage:
+def build_input_messages(
+    text: Optional[str] = None,
+    image_bytes: Optional[bytes] = None,
+    history: Optional[List[Message]] = None,
+) -> List[Union[HumanMessage, AIMessage]]:
     # Create the base message content
     content: List[Union[str, Dict[str, Any]]] = []
 
@@ -33,7 +36,15 @@ def build_human_message(
 
     # Create the HumanMessage with the constructed content
     message = HumanMessage(content=content)
-    return message
+
+    history_messages = [
+        HumanMessage(content=msg.content)
+        if msg.type == "human"
+        else AIMessage(content=msg.content)
+        for msg in (history or [])
+    ]
+
+    return history_messages + [message]
 
 
 def main():
@@ -84,7 +95,7 @@ def main():
                 image_bytes = img_byte_arr.getvalue()
 
             # Use the build_human_message function to create the message
-            message = build_human_message(text=wine_query, image_bytes=image_bytes)
+            message = build_input_messages(text=wine_query, image_bytes=image_bytes)
 
             # Append user message to session state
             st.session_state.messages.append(
@@ -140,8 +151,7 @@ def main_cmd(command: Optional[str] = None, image_file: Optional[str] = None):
             return
 
     # Use the build_human_message function to create the message
-    message = build_human_message(text=command, image_bytes=image_bytes)
-    print(message)
+    message = build_input_messages(text=command, image_bytes=image_bytes)
     # Invoke the agent with the message
     config = {
         "configurable": {

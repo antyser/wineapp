@@ -23,10 +23,7 @@ def create_agent():
 
     # tools = [TavilySearchResults(max_results=5, include_raw_content=True, include_images=True)]
     tools = [search_tool]
-    memory = SqliteSaver.from_conn_string(":memory:")
-    app = create_react_agent(
-        model, tools, state_modifier=system_message, checkpointer=memory
-    )
+    app = create_react_agent(model, tools, state_modifier=system_message)
     return app
 
 

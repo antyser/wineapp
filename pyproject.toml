@@ -19,13 +19,15 @@ apify-client = "^1.7.1"
 mypy = "^1.11.0"
 black = "^24.4.2"
 langserve = {extras = ["all"], version = "^0.2.2"}
-langchain-cli = "^0.0.25"
 httpx = {extras = ["http2"], version = "^0.27.0"}
 bs4 = "^0.0.2"
 python-slugify = {extras = ["unidecode"], version = "^8.0.4"}
 markdownify = "^0.13.1"
 ruff = "^0.5.5"
 pre-commit = "^3.7.1"
+fastapi = "^0.111.1"
+uvicorn = "^0.30.3"
+loguru = "^0.7.2"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -38,6 +40,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 88  # Match Black's default line length
+
+[tool.ruff.lint]
 select = ["E", "F", "I"]  # Enable Pyflakes, pycodestyle, and isort rules
 ignore = ["E501"]  # Ignore line length violations (let Black handle it)
 
