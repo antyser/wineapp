@@ -10,7 +10,6 @@ from langchain.pydantic_v1 import BaseModel
 from langchain.tools import tool
 from langchain_community.utilities import ApifyWrapper, SerpAPIWrapper
 from langchain_core.documents import Document
-from markdownify import markdownify as md
 from slugify import slugify  # type: ignore
 
 headers = {
@@ -157,7 +156,44 @@ def general_parse(html_content: str) -> str:
     Returns:
         str: The converted Markdown content.
     """
-    return md(html_content)
+    return extract_main_text(html_content)
+
+
+def extract_main_text(html_content: str) -> str:
+    # Parse the HTML content
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    # Remove script and style elements
+    for script_or_style in soup(["script", "style"]):
+        script_or_style.decompose()
+
+    # Get the text
+    text = soup.get_text()
+
+    # Break into lines and remove leading/trailing space on each
+    lines = (line.strip() for line in text.splitlines())
+
+    # Break multi-headlines into a line each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+
+    # Drop blank lines
+    text = "\n".join(chunk for chunk in chunks if chunk)
+
+    return text
+
+
+def extract_card_body_text(html_content: str) -> str:
+    # Parse the HTML content
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    # Find all elements with class "card-body"
+    card_bodies = soup.find_all(class_="card-body")
+
+    # Extract and concatenate the text content of each card body
+    card_body_texts = [card_body.get_text(strip=True) for card_body in card_bodies]
+
+    # Join the texts with a newline for better readability
+    return "\n".join(card_body_texts)
 
 
 async def fetch_and_process_page(client, url):

@@ -1,0 +1,166 @@
+import argparse
+import os
+import time
+from urllib.parse import quote, urljoin, urlparse, urlunparse
+
+import httpx
+from bs4 import BeautifulSoup
+from loguru import logger
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from tenacity import (
+    retry,
+    retry_if_exception_type,
+    stop_after_attempt,
+    wait_exponential,
+)
+from webdriver_manager.chrome import ChromeDriverManager
+
+BASE_URL = "https://www.wine-searcher.com/regions"
+OUTPUT_DIR = "ws"
+URLS_FILE = "crawled_urls.txt"
+UNCRAWLED_URLS_FILE = "uncrawled_urls.txt"
+
+HEADERS = {
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "sec-ch-ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"macOS"',
+}
+
+PROXY = "http://1093198151395201024:kYls9Q8y@http-dynamic-S03.xiaoxiangdaili.com:10030"
+
+logger.add("crawler.log", rotation="1 MB")
+
+
+def save_html(url, content):
+    parsed_url = urlparse(url)
+    path = quote(parsed_url.path.strip("/"), safe="")
+    file_path = os.path.join(OUTPUT_DIR, f"{path}.html")
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.write(content)
+    logger.info(f"Saved HTML content for {url}")
+
+
+def load_urls(file_path):
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as file:
+            return set(line.strip() for line in file)
+    return set()
+
+
+def save_url(file_path, url):
+    with open(file_path, "a", encoding="utf-8") as file:
+        file.write(url + "\n")
+    logger.info(f"Saved URL: {url} to {file_path}")
+
+
+def remove_url(file_path, url):
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as file:
+            lines = file.readlines()
+        with open(file_path, "w", encoding="utf-8") as file:
+            for line in lines:
+                if line.strip() != url:
+                    file.write(line)
+
+
+def is_single_level_path(url):
+    parsed_url = urlparse(url)
+    path = parsed_url.path.strip("/")
+    return len(path.split("/")) == 1
+
+
+def strip_fragment_and_query(url):
+    parsed_url = urlparse(url)
+    return urlunparse(parsed_url._replace(fragment="", query=""))
+
+
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=4, max=10),
+    retry=retry_if_exception_type(httpx.HTTPStatusError),
+)
+def fetch_url(client, url):
+    response = client.get(url, headers=HEADERS)
+    if response.status_code == 403:
+        logger.warning(f"Received 403 for {url}, retrying...")
+        response.raise_for_status()
+    return response
+
+
+def fetch_url_with_selenium(url):
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    driver = webdriver.Chrome(
+        service=ChromeService(ChromeDriverManager().install()), options=options
+    )
+    driver.get(url)
+    content = driver.page_source
+    driver.quit()
+    return content
+
+
+def crawl(url, visited, uncrawled, use_browser):
+    url = strip_fragment_and_query(url)
+    if url in visited or not is_single_level_path(url):
+        logger.info(f"Skipping already visited URL: {url}")
+        return
+    visited.add(url)
+    save_url(URLS_FILE, url)
+    remove_url(UNCRAWLED_URLS_FILE, url)
+
+    if use_browser:
+        try:
+            response_text = fetch_url_with_selenium(url)
+        except Exception as e:
+            logger.error(f"Failed to retrieve {url} with Selenium: {e}")
+            return
+    else:
+        client = httpx.Client(http2=True, headers=HEADERS)
+        try:
+            response = fetch_url(client, url)
+        except httpx.HTTPStatusError as e:
+            logger.error(f"Failed to retrieve {url} after retries: {e}")
+            return
+        response_text = response.text
+
+    time.sleep(5)
+    save_html(url, response_text)
+
+    soup = BeautifulSoup(response_text, "html.parser")
+    for link in soup.find_all("a", href=True):
+        next_url = urljoin(BASE_URL, link["href"])
+        next_url = strip_fragment_and_query(next_url)
+        if (
+            next_url.startswith(BASE_URL)
+            and next_url not in visited
+            and is_single_level_path(next_url)
+        ):
+            if next_url not in uncrawled:
+                save_url(UNCRAWLED_URLS_FILE, next_url)
+                uncrawled.add(next_url)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Crawl wine-searcher website.")
+    parser.add_argument(
+        "--use-browser", action="store_true", help="Use Selenium browser for crawling"
+    )
+    args = parser.parse_args()
+
+    visited_urls = load_urls(URLS_FILE)
+    uncrawled_urls = load_urls(UNCRAWLED_URLS_FILE)
+
+    if not uncrawled_urls:
+        uncrawled_urls.add(BASE_URL)
+
+    logger.info("Starting crawl")
+    while uncrawled_urls:
+        url = uncrawled_urls.pop()
+        crawl(url, visited_urls, uncrawled_urls, args.use_browser)
+    logger.info("Crawl finished")

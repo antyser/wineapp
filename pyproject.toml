@@ -7,18 +7,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-langchain = "^0.2.11"
 streamlit = "^1.36.0"
-langchain-openai = "^0.1.17"
-langchain-community = "^0.2.10"
-langgraph = "^0.1.11"
+
 ipython = "^8.26.0"
 python-dotenv = "^1.0.1"
 google-search-results = "^2.4.2"
 apify-client = "^1.7.1"
 mypy = "^1.11.0"
 black = "^24.4.2"
-langserve = {extras = ["all"], version = "^0.2.2"}
 httpx = {extras = ["http2"], version = "^0.27.0"}
 bs4 = "^0.0.2"
 python-slugify = {extras = ["unidecode"], version = "^8.0.4"}
@@ -28,6 +24,15 @@ pre-commit = "^3.7.1"
 fastapi = "^0.111.1"
 uvicorn = "^0.30.3"
 loguru = "^0.7.2"
+modal = "^0.63.90"
+langchain = "^0.2.11"
+langchain-openai = "^0.1.17"
+langchain-community = "^0.2.10"
+langgraph = "^0.1.11"
+langchain-experimental = "^0.0.63"
+langserve = {extras = ["all"], version = "^0.2.2"}
+selenium = "^4.23.1"
+webdriver-manager = "^4.0.2"
 
 
 [tool.poetry.group.dev.dependencies]

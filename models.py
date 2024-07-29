@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Message(BaseModel):
@@ -16,3 +16,12 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     messages: List[Dict]
+
+
+class FollowupRequest(BaseModel):
+    context: str
+    n: int = 3
+
+
+class FollowupResponse(BaseModel):
+    questions: List[str] = Field(description="List of follow-up questions")
