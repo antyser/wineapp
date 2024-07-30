@@ -33,10 +33,11 @@ async def chat(request: ChatRequest):
     # Call the agent's stream function
     event = agent.invoke({"messages": input_messages}, stream_mode="values")
     # Collect the messages from the events
+    logger.info(event)
     messages = []
     if "messages" in event:
         for msg in event["messages"]:
-            if msg.type == "ai":
+            if msg.type == "ai" and msg.content:
                 messages.append(msg.content)
 
     response = ChatResponse(messages=messages)

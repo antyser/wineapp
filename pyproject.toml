@@ -33,6 +33,7 @@ langchain-experimental = "^0.0.63"
 langserve = {extras = ["all"], version = "^0.2.2"}
 selenium = "^4.23.1"
 webdriver-manager = "^4.0.2"
+fake-headers = "^1.0.2"
 
 
 [tool.poetry.group.dev.dependencies]
