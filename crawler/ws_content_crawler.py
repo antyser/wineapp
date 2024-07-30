@@ -1,10 +1,12 @@
 import argparse
 import os
+import random
 import time
 from urllib.parse import quote, urljoin, urlparse, urlunparse
 
 import httpx
 from bs4 import BeautifulSoup
+from fake_headers import Headers
 from loguru import logger
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -22,11 +24,18 @@ URLS_FILE = "crawled_urls.txt"
 UNCRAWLED_URLS_FILE = "uncrawled_urls.txt"
 
 HEADERS = {
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "accept-language": "en-US,en;q=0.9",
+    "priority": "u=0, i",
     "sec-ch-ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": '"macOS"',
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "none",
+    "sec-fetch-user": "?1",
+    "upgrade-insecure-requests": "1",
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
 }
 
 PROXY = "http://1093198151395201024:kYls9Q8y@http-dynamic-S03.xiaoxiangdaili.com:10030"
@@ -93,8 +102,6 @@ def fetch_url(client, url):
 
 def fetch_url_with_selenium(url):
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(
         service=ChromeService(ChromeDriverManager().install()), options=options
@@ -121,7 +128,8 @@ def crawl(url, visited, uncrawled, use_browser):
             logger.error(f"Failed to retrieve {url} with Selenium: {e}")
             return
     else:
-        client = httpx.Client(http2=True, headers=HEADERS)
+        headers = Headers(os="mac", headers=True).generate()
+        client = httpx.Client(http2=True, headers=headers)
         try:
             response = fetch_url(client, url)
         except httpx.HTTPStatusError as e:
@@ -129,7 +137,7 @@ def crawl(url, visited, uncrawled, use_browser):
             return
         response_text = response.text
 
-    time.sleep(5)
+    time.sleep(random.randint(3, 10))
     save_html(url, response_text)
 
     soup = BeautifulSoup(response_text, "html.parser")
