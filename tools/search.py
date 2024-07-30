@@ -173,6 +173,8 @@ def parse_wine_searcher(response_text: str) -> str:
     ld_json = soup.find("script", type="application/ld+json")
     if ld_json:
         json_data = json.loads(ld_json.string)
+        if "offers" in json_data:
+            json_data["offers"] = json_data["offers"][:5]
         return yaml.dump(json_data)
     return ""
 
