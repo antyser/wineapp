@@ -1,15 +1,18 @@
 import asyncio
 import json
-from typing import Any, Dict, List, Optional
-from urllib.parse import urlparse
+import time
+from typing import Dict, List, Optional
+from urllib.parse import quote_plus, urlparse
 
 import httpx
 import yaml  # type: ignore
 from bs4 import BeautifulSoup
+from curl_cffi import requests
 from langchain.pydantic_v1 import BaseModel
 from langchain.tools import tool
-from langchain_community.utilities import ApifyWrapper, SerpAPIWrapper
+from langchain_community.utilities import ApifyWrapper, GoogleSerperAPIWrapper
 from langchain_core.documents import Document
+from loguru import logger
 from slugify import slugify  # type: ignore
 
 headers = {
@@ -25,19 +28,7 @@ class SearchResult(BaseModel):
     position: Optional[int] = None
     title: Optional[str] = None
     link: Optional[str] = None
-    redirect_link: Optional[str] = None
-    displayed_link: Optional[str] = None
-    thumbnail: Optional[str] = None
-    favicon: Optional[str] = None
     snippet: Optional[str] = None
-    snippet_highlighted_words: Optional[List[str]] = None
-    sitelinks_search_box: Optional[bool] = None
-    sitelinks: Optional[Dict[str, Any]] = None
-    rich_snippet: Optional[Dict[str, Any]] = None
-    about_this_result: Optional[Dict[str, Any]] = None
-    cached_page_link: Optional[str] = None
-    related_pages_link: Optional[str] = None
-    source: Optional[str] = None
     crawled_content: Optional[str] = None
 
 
@@ -69,9 +60,8 @@ def fetch_crawler_results(apify: ApifyWrapper, urls: List[str]) -> List[str]:
 @tool
 def search_tool_deprecated(query: str, top_n: int = 3) -> SearchResultsResponse:
     """Perform a Google search and scrape the top N organic results."""
-    search = SerpAPIWrapper(search_engine="google")
     apify = ApifyWrapper(apify_client=None, apify_client_async=None)
-
+    search = GoogleSerperAPIWrapper()
     top_organic_results = search.results(query)
     if "organic_results" not in top_organic_results:
         raise ValueError(f"Search failed, {top_organic_results}")
@@ -99,19 +89,58 @@ def search_tool_deprecated(query: str, top_n: int = 3) -> SearchResultsResponse:
     return SearchResultsResponse(result=organic_results)
 
 
+def google(search_term, site=None):
+    escaped_search_term = slugify(search_term, separator=" ")
+    if site:
+        escaped_search_term = "site: " + site + " " + escaped_search_term
+
+    escaped_search_term = quote_plus(escaped_search_term)
+    params = (
+        ("q", escaped_search_term),
+        ("oq", escaped_search_term),
+        ("aqs", "chrome..69i57j69i60.1395j0j1"),
+        ("sourceid", "chrome"),
+    )
+    resp = requests.get(
+        "https://www.google.com/search",
+        impersonate="chrome110",
+        params=params,
+        verify=False,
+    )
+    soup = BeautifulSoup(resp.text, "html.parser")
+    links = []
+
+    # Extract links from search results
+    for item in soup.find_all("a"):
+        href = item.get("href")
+        if href and href.startswith("/url?q="):
+            link = href.split("/url?q=")[1].split("&")[0]
+            links.append(link)
+
+    return links
+
+
 @tool
 def search_tool(query: str, top_n: int = 3) -> SearchResultsResponse:
     """Perform a Google search and scrape the top N organic results."""
-    search = SerpAPIWrapper(search_engine="google")
+    search = GoogleSerperAPIWrapper()
 
-    top_organic_results = search.results(query)
-    if "organic_results" not in top_organic_results:
-        raise ValueError(f"Search failed, {top_organic_results}")
-    top_organic_results = top_organic_results["organic_results"][:top_n]
-    link_to_result = {result["link"]: result for result in top_organic_results}
+    start_time = time.time()
+    search_result = search.results(query)
+    search_latency = time.time() - start_time
+    logger.info(f"search.results latency: {search_latency:.2f} seconds")
+
+    if "organic" not in search_result:
+        raise ValueError(f"Search failed, {search_result}")
+    search_result = search_result["organic"][:top_n]
+    link_to_result = {result["link"]: result for result in search_result}
 
     urls = list(link_to_result.keys())
+
+    start_time = time.time()
     crawled_contents = asyncio.run(batch_crawl(urls))
+    crawl_latency = time.time() - start_time
+    logger.info(f"batch_crawl latency: {crawl_latency:.2f} seconds")
 
     # Map crawled content back to search results
     for i, doc in enumerate(crawled_contents):
