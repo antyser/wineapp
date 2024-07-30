@@ -89,11 +89,12 @@ def strip_fragment_and_query(url):
 
 @retry(
     stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
+    wait=wait_exponential(multiplier=1, min=20, max=100),
     retry=retry_if_exception_type(httpx.HTTPStatusError),
 )
 def fetch_url(client, url):
-    response = client.get(url, headers=HEADERS)
+    headers = Headers(os="mac", headers=True).generate()
+    response = client.get(url, headers=headers)
     if response.status_code == 403:
         logger.warning(f"Received 403 for {url}, retrying...")
         response.raise_for_status()
@@ -137,7 +138,7 @@ def crawl(url, visited, uncrawled, use_browser):
             return
         response_text = response.text
 
-    time.sleep(random.randint(3, 10))
+    time.sleep(random.randint(15, 20))
     save_html(url, response_text)
 
     soup = BeautifulSoup(response_text, "html.parser")
