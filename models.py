@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -15,7 +15,7 @@ class ChatRequest(BaseModel):
 
 
 class ChatResponse(BaseModel):
-    messages: List[Dict]
+    messages: List[str]
 
 
 class FollowupRequest(BaseModel):

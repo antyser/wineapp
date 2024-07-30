@@ -34,12 +34,10 @@ async def chat(request: ChatRequest):
     event = agent.invoke({"messages": input_messages}, stream_mode="values")
     # Collect the messages from the events
     messages = []
-    print(event)
     if "messages" in event:
         for msg in event["messages"]:
-            print(msg)
-            print(msg.dict())
-            messages.append(msg.dict())  # Convert message objects to dictionaries
+            if msg.type == "ai":
+                messages.append(msg.content)
 
     response = ChatResponse(messages=messages)
     logger.info(f"Response: {response.json()}")
