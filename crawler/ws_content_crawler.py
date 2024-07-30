@@ -38,7 +38,7 @@ HEADERS = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
 }
 
-PROXY = "http://1093198151395201024:kYls9Q8y@http-dynamic-S03.xiaoxiangdaili.com:10030"
+PROXY = "http://1135478480335949824:CBtfFxU6@http-dynamic-S03.xiaoxiangdaili.com:10030"
 
 logger.add("crawler.log", rotation="1 MB")
 
@@ -130,7 +130,9 @@ def crawl(url, visited, uncrawled, use_browser):
             return
     else:
         headers = Headers(os="mac", headers=True).generate()
-        client = httpx.Client(http2=True, headers=headers)
+        client = httpx.Client(
+            http2=True, headers=headers, proxies={"http://": PROXY, "https://": PROXY}
+        )
         try:
             response = fetch_url(client, url)
         except httpx.HTTPStatusError as e:
