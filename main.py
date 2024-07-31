@@ -25,7 +25,7 @@ def build_input_messages(
         content.append({"type": "text", "text": text})
 
     # If image_bytes is provided, encode it to base64 and add to content
-    if image_bytes is not None:
+    if image_bytes:
         image_base64 = base64.b64encode(image_bytes).decode("utf-8")
         content.append(
             {

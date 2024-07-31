@@ -131,7 +131,10 @@ def crawl(url, visited, uncrawled, use_browser):
     else:
         headers = Headers(os="mac", headers=True).generate()
         client = httpx.Client(
-            http2=True, headers=headers, proxies={"http://": PROXY, "https://": PROXY}
+            http2=True,
+            headers=headers,
+            proxies={"http://": PROXY, "https://": PROXY},
+            timeout=30,
         )
         try:
             response = fetch_url(client, url)
