@@ -36,10 +36,7 @@ async def chat(request: ChatRequest):
     logger.info(event)
     messages = []
     if "messages" in event:
-        for msg in event["messages"]:
-            if msg.type == "ai" and msg.content:
-                messages.append(msg.content)
-
+        messages.append(event["messages"][-1].content)
     response = ChatResponse(messages=messages)
     logger.info(f"Response: {response.json()}")
     return response
