@@ -20,26 +20,25 @@ secret = Secret.from_dotenv(".env")
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     logger.info(f"Received request: {request.json()}")
-    # Create the agent
-    agent = create_agent()
-    logger.info(request)
-    # Build the human message
-    input_messages = build_input_messages(
-        text=request.text, image_bytes=request.image_bytes, history=request.history
-    )
+    try:
+        agent = create_agent()
+        logger.info(request)
+        input_messages = build_input_messages(
+            text=request.text, image_bytes=request.image_bytes, history=request.history
+        )
 
-    # Configuration for the agent
-    logger.info(input_messages)
-    # Call the agent's stream function
-    event = agent.invoke({"messages": input_messages}, stream_mode="values")
-    # Collect the messages from the events
-    logger.info(event)
-    messages = []
-    if "messages" in event:
-        messages.append(event["messages"][-1].content)
-    response = ChatResponse(messages=messages)
-    logger.info(f"Response: {response.json()}")
-    return response
+        logger.info(input_messages)
+        event = agent.invoke({"messages": input_messages}, stream_mode="values")
+        logger.info(event)
+        messages = []
+        if "messages" in event:
+            messages.append(event["messages"][-1].content)
+        response = ChatResponse(messages=messages)
+        logger.info(f"Response: {response.json()}")
+        return response
+    except Exception as e:
+        logger.error(f"Error in chat endpoint: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
 @app.post("/followups", response_model=FollowupResponse)
