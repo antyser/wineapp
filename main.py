@@ -1,3 +1,4 @@
+import base64  # Added import for base64
 import datetime
 import io
 from typing import Any, Dict, List, Optional, Union
@@ -25,10 +26,11 @@ def build_input_messages(
 
     # If image_bytes is provided, encode it to base64 and add to content
     if image_bytes:
+        image_base64 = base64.b64encode(image_bytes).decode("utf-8")
         content.append(
             {
                 "type": "image_url",
-                "image_url": {"url": image_bytes},
+                "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"},
             }
         )
 
