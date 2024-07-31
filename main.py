@@ -1,4 +1,4 @@
-import base64  # Added import for base64
+import base64
 import datetime
 import io
 from typing import Any, Dict, List, Optional, Union
@@ -14,23 +14,20 @@ from models import Message
 
 def build_input_messages(
     text: Optional[str] = None,
-    image_bytes: Optional[bytes] = None,
+    base64_image: Optional[str] = None,
     history: Optional[List[Message]] = None,
 ) -> List[Union[HumanMessage, AIMessage]]:
     # Create the base message content
     content: List[Union[str, Dict[str, Any]]] = []
 
-    # If text is provided, add it to the content
     if text is not None:
         content.append({"type": "text", "text": text})
 
-    # If image_bytes is provided, encode it to base64 and add to content
-    if image_bytes:
-        image_base64 = base64.b64encode(image_bytes).decode("utf-8")
+    if base64_image:
         content.append(
             {
                 "type": "image_url",
-                "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"},
+                "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"},
             }
         )
 
@@ -38,9 +35,11 @@ def build_input_messages(
     message = HumanMessage(content=content)
 
     history_messages = [
-        HumanMessage(content=msg.content)
-        if msg.type == "human"
-        else AIMessage(content=msg.content)
+        (
+            HumanMessage(content=msg.content)
+            if msg.type == "human"
+            else AIMessage(content=msg.content)
+        )
         for msg in (history or [])
     ]
 
@@ -95,7 +94,7 @@ def main():
                 image_bytes = img_byte_arr.getvalue()
 
             # Use the build_human_message function to create the message
-            message = build_input_messages(text=wine_query, image_bytes=image_bytes)
+            message = build_input_messages(text=wine_query, base64_image=image_bytes)
 
             # Append user message to session state
             st.session_state.messages.append(
@@ -137,21 +136,17 @@ def main_cmd(command: Optional[str] = None, image_file: Optional[str] = None):
     agent = create_agent()
     print(agent.input_schema.schema())
 
-    image_bytes = None
     if image_file:
         try:
             # Process the uploaded image file
-            with Image.open(image_file) as image:
-                # Convert image to bytes
-                img_byte_arr = io.BytesIO()
-                image.save(img_byte_arr, format="PNG")
-                image_bytes = img_byte_arr.getvalue()
+            with open(image_file, "rb") as image_file:  # type: ignore
+                encoded_image = base64.b64encode(image_file.read()).decode("utf-8")  # type: ignore
         except Exception as e:
             print(f"Error processing image: {e}")
             return
 
     # Use the build_human_message function to create the message
-    message = build_input_messages(text=command, image_bytes=image_bytes)
+    message = build_input_messages(text=command, base64_image=encoded_image)
     # Invoke the agent with the message
     config = {
         "configurable": {
@@ -159,7 +154,9 @@ def main_cmd(command: Optional[str] = None, image_file: Optional[str] = None):
             "thread_ts": datetime.datetime.now(datetime.UTC),
         }
     }
-    print_stream(agent.stream(message, config=config, stream_mode="values"))
+    print_stream(
+        agent.stream({"messages": message}, config=config, stream_mode="values")
+    )
 
 
 if __name__ == "__main__":

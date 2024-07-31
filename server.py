@@ -24,7 +24,9 @@ async def chat(request: ChatRequest):
         agent = create_agent()
         logger.info(request)
         input_messages = build_input_messages(
-            text=request.text, image_bytes=request.image_bytes, history=request.history
+            text=request.text,
+            base64_image=request.base64_image,
+            history=request.history,
         )
 
         logger.info(input_messages)

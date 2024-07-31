@@ -10,7 +10,7 @@ class Message(BaseModel):
 
 class ChatRequest(BaseModel):
     text: Optional[str] = None
-    image_bytes: Optional[bytes] = None
+    base64_image: Optional[str] = None
     history: Optional[List[Message]] = None
 
 
