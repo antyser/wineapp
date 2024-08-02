@@ -6,7 +6,7 @@ authors = ["Jun Liu <antyser@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "3.12.*"
 streamlit = "^1.36.0"
 
 ipython = "^8.26.0"
@@ -35,6 +35,10 @@ selenium = "^4.23.1"
 webdriver-manager = "^4.0.2"
 fake-headers = "^1.0.2"
 curl-cffi = "^0.7.1"
+pinecone = "^5.0.0"
+tiktoken = "^0.7.0"
+unstructured = "^0.15.0"
+libmagic = "^1.0"
 
 
 [tool.poetry.group.dev.dependencies]

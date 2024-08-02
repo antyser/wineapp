@@ -14,6 +14,7 @@ from langchain_community.utilities import ApifyWrapper, GoogleSerperAPIWrapper
 from langchain_core.documents import Document
 from loguru import logger
 from slugify import slugify  # type: ignore
+from unstructured.partition.html import partition_html
 
 headers = {
     "Upgrade-Insecure-Requests": "1",
@@ -165,10 +166,10 @@ def fetch_wine_data(wine_name: str) -> str:
 
     client = httpx.Client(http2=True)
     response = client.get(url, headers=headers)
-    return parse_wine_searcher(response.text)
+    return parse_wine_searcher_wine(response.text)
 
 
-def parse_wine_searcher(response_text: str) -> str:
+def parse_wine_searcher_wine(response_text: str) -> str:
     soup = BeautifulSoup(response_text, "html.parser")
     ld_json = soup.find("script", type="application/ld+json")
     if ld_json:
@@ -192,25 +193,8 @@ def general_parse(html_content: str) -> str:
 
 def extract_main_text(html_content: str) -> str:
     # Parse the HTML content
-    soup = BeautifulSoup(html_content, "html.parser")
-
-    # Remove script and style elements
-    for script_or_style in soup(["script", "style"]):
-        script_or_style.decompose()
-
-    # Get the text
-    text = soup.get_text()
-
-    # Break into lines and remove leading/trailing space on each
-    lines = (line.strip() for line in text.splitlines())
-
-    # Break multi-headlines into a line each
-    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-
-    # Drop blank lines
-    text = "\n".join(chunk for chunk in chunks if chunk)
-
-    return text
+    text_elements = [element.text for element in partition_html(html_content)]
+    return "\n".join(text_elements)
 
 
 def extract_card_body_text(html_content: str) -> str:
@@ -230,8 +214,8 @@ def extract_card_body_text(html_content: str) -> str:
 async def fetch_and_process_page(client, url):
     response = await client.get(url, headers=headers)
 
-    if "wine-searcher.com" in url:
-        return parse_wine_searcher(response.text)
+    if "wine-searcher.com/find/" in url:
+        return parse_wine_searcher_wine(response.text)
     else:
         return general_parse(response.text)
 
