@@ -21,6 +21,14 @@ secret = Secret.from_dotenv(".env")
 async def chat(request: ChatRequest):
     logger.info(f"Received request: {request.json()}")
     try:
+        if (
+            request.text
+            and request.text.lower() == "hello"
+            and not request.base64_image
+        ):
+            return ChatResponse(
+                messages=["How can I assist you with wine information today?"]
+            )
         agent = create_agent()
         logger.info(request)
         input_messages = build_input_messages(
