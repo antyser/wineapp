@@ -221,7 +221,7 @@ def general_parse(html_content: str) -> str:
 
 def extract_main_text(html_content: str) -> str:
     # Parse the HTML content
-    text_elements = [element.text for element in partition_html(html_content)]
+    text_elements = [element.text for element in partition_html(text=html_content)]
     return " ".join(text_elements)
 
 
