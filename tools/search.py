@@ -123,7 +123,7 @@ def google(search_term, site=None):
 
 @tool
 def search_tool(query: str, top_n: int = 3) -> SearchResultsResponse:
-    """Perform a Google search and scrape the top N organic results."""
+    """Perform a Google search and scrape the top N organic results. If the query is a wine name, suggest to add wine searcher in the query."""
     search = GoogleSerperAPIWrapper()
 
     start_time = time.time()
@@ -184,8 +184,26 @@ def parse_wine_searcher_wine(response_text: str) -> str:
     ld_json = soup.find("script", type="application/ld+json")
     if ld_json:
         json_data = json.loads(ld_json.string)
+
+        fields_to_remove = ["@context", "@type", "itemCondition", "mpn", "sku"]
+        for field in fields_to_remove:
+            json_data.pop(field, None)
+
         if "offers" in json_data:
-            json_data["offers"] = json_data["offers"][:5]
+            trimmed_offers = []
+            for offer in json_data["offers"][:5]:
+                trimmed_offer = {
+                    "price": offer.get("price"),
+                    "description": offer.get("description"),
+                    "priceCurrency": offer.get("priceCurrency"),
+                    "availability": offer.get("availability"),
+                    "url": offer.get("url"),
+                    "name": offer.get("name"),
+                    "seller_name": offer.get("seller", {}).get("name"),
+                    "address": offer.get("seller", {}).get("address", {}),
+                }
+                trimmed_offers.append(trimmed_offer)
+            json_data["offers"] = trimmed_offers
         return yaml.dump(json_data)
     return ""
 
@@ -203,7 +221,7 @@ def general_parse(html_content: str) -> str:
 
 def extract_main_text(html_content: str) -> str:
     # Parse the HTML content
-    text_elements = [element.text for element in partition_html(text=html_content)]
+    text_elements = [element.text for element in partition_html(html_content)]
     return " ".join(text_elements)
 
 
