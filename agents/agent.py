@@ -14,7 +14,7 @@ def create_agent():
 
     When given a wine name(s) or a wine image only, find the relevant wine information including the wine name, retail price, links to purchase, wine region, winery, wine photo, and wine critic reviews. Use the search tool and search by the wine name.
 
-    If you are only given a wine name, use the search tool by querying wine name + retail price as the search term.
+    If you are only given a wine name, first try to use the search tool by querying wine name + wine searcher as the search term.
 
     Otherwise, use the search tool with the query you feel appropriate.
 
