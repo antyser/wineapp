@@ -133,8 +133,18 @@ def search_tool(query: str, top_n: int = 3) -> SearchResultsResponse:
 
     if "organic" not in search_result:
         raise ValueError(f"Search failed, {search_result}")
-    search_result = search_result["organic"][:top_n]
-    link_to_result = {result["link"]: result for result in search_result}
+    search_result = search_result["organic"]
+
+    # Keep only the highest-ranked link from each domain
+    domain_to_result = {}
+    for result in search_result:
+        domain = urlparse(result["link"]).netloc
+        if domain not in domain_to_result:
+            domain_to_result[domain] = result
+
+    # Get the top N results
+    filtered_results = list(domain_to_result.values())[:top_n]
+    link_to_result = {result["link"]: result for result in filtered_results}
 
     urls = list(link_to_result.keys())
 
@@ -193,8 +203,8 @@ def general_parse(html_content: str) -> str:
 
 def extract_main_text(html_content: str) -> str:
     # Parse the HTML content
-    text_elements = [element.text for element in partition_html(html_content)]
-    return "\n".join(text_elements)
+    text_elements = [element.text for element in partition_html(text=html_content)]
+    return " ".join(text_elements)
 
 
 def extract_card_body_text(html_content: str) -> str:
@@ -214,10 +224,14 @@ def extract_card_body_text(html_content: str) -> str:
 async def fetch_and_process_page(client, url):
     response = await client.get(url, headers=headers)
 
-    if "wine-searcher.com/find/" in url:
-        return parse_wine_searcher_wine(response.text)
+    if response.status_code == 200:
+        if "wine-searcher.com/find/" in url:
+            return parse_wine_searcher_wine(response.text)
+        else:
+            return general_parse(response.text)
     else:
-        return general_parse(response.text)
+        logger.error(f"Failed to fetch {url}: {response.status_code}")
+        return None
 
 
 async def batch_crawl(links: List[str]):
