@@ -33,7 +33,7 @@ def create_followup_chain():
 def generate_followups(context: str, n: int) -> Dict:
     chain = create_followup_chain()
     result = chain.invoke({"context": context, "n": n})
-    return result.json()
+    return result.dict()
 
 
 # Example usage
