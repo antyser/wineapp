@@ -2,7 +2,7 @@ import asyncio
 import json
 import time
 from typing import Dict, List, Optional
-from urllib.parse import quote_plus, urlparse
+from urllib.parse import quote_plus, urljoin, urlparse
 
 import httpx
 import yaml  # type: ignore
@@ -188,6 +188,11 @@ def parse_wine_searcher_wine(response_text: str) -> str:
         fields_to_remove = ["@context", "@type", "itemCondition", "mpn", "sku"]
         for field in fields_to_remove:
             json_data.pop(field, None)
+
+        if "image" in json_data:
+            json_data["image"] = urljoin(
+                "https://www.wine-searcher.com/", json_data["image"]
+            )
 
         if "offers" in json_data:
             trimmed_offers = []

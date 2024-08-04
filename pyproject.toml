@@ -39,6 +39,7 @@ pinecone = "^5.0.0"
 tiktoken = "^0.7.0"
 unstructured = "^0.15.0"
 libmagic = "^1.0"
+orjson = "^3.10.6"
 
 
 [tool.poetry.group.dev.dependencies]

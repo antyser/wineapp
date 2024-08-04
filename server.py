@@ -1,3 +1,4 @@
+import orjson as json
 from fastapi import FastAPI, HTTPException
 from loguru import logger
 
@@ -32,10 +33,12 @@ async def chat(request: ChatRequest):
         logger.info(input_messages)
         event = agent.invoke({"messages": input_messages}, stream_mode="values")
         logger.info(event)
-        messages = []
-        if "messages" in event:
-            messages.append(event["messages"][-1].content)
-        response = ChatResponse(messages=messages)
+        try:
+            d = json.loads(event["messages"][-1].content)
+            response = ChatResponse(messages=[d.get("text")], wines=d.get("wines"))
+        except Exception as e:
+            logger.error(f"Error parsing response: {e}")
+            response = ChatResponse(messages=[event["messages"][-1].content])
         logger.info(f"Response: {response.json()}")
         return response
     except Exception as e:

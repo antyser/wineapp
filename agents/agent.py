@@ -25,7 +25,7 @@ class WineOutput(BaseModel):
 
 
 def create_agent():
-    model = ChatOpenAI(model="gpt-4o-mini", temperature=1, streaming=True)
+    model = ChatOpenAI(model="gpt-4o-mini", temperature=0.7, streaming=True)
 
     system_message = """Act as a knowledgeable wine assistant. 
     Your job is to answer any questions related to wines include but not limit to wine basic information, regions, pairing, etc.
@@ -39,6 +39,18 @@ def create_agent():
     Do not restate or appreciate what I say.
 
     Always be as efficient as possible when providing information or making recommendations.
+
+    If the response text contains wines, put the wine name and image separately in the wines field. Output the information in the following JSON format:
+    {
+        "text": "The detailed output to address the question.",
+        "wines(optional)": [
+            {
+                "name": "Wine Name",
+                "image(optional)": "Image URL"
+            },
+        ]
+    }
+
 
     """
 
