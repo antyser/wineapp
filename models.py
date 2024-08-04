@@ -23,5 +23,11 @@ class FollowupRequest(BaseModel):
     n: int = 3
 
 
+class Wine(BaseModel):
+    name: str = Field(description="The name of the wine")
+    image: Optional[str] = Field(description="The image of the wine")
+
+
 class FollowupResponse(BaseModel):
-    questions: List[str] = Field(description="List of follow-up questions")
+    followups: List[str] = Field(description="List of follow-up questions")
+    wines: Optional[List[Wine]] = Field(description="The wines referred in the context")

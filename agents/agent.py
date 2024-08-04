@@ -1,9 +1,27 @@
+from typing import List, Optional
+
 from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.prebuilt import create_react_agent
 
 from tools.search import search_tool
+
+
+class Wine(BaseModel):
+    name: str = Field(description="The name of the wine")
+    image: Optional[str] = Field(description="The image of the wine")
+
+
+class WineOutput(BaseModel):
+    text: str = Field(description="The text output")
+    wines: Optional[List[Wine]] = Field(
+        description="The wines referred in the converstation"
+    )
+
+
+# parser = PydanticOutputParser(pydantic_object=Followups)
 
 
 def create_agent():
