@@ -5,7 +5,6 @@ from typing import Dict, List, Optional
 from urllib.parse import quote_plus, urljoin, urlparse
 
 import httpx
-import yaml  # type: ignore
 from bs4 import BeautifulSoup
 from curl_cffi import requests
 from langchain.pydantic_v1 import BaseModel
@@ -189,6 +188,66 @@ def fetch_wine_data(wine_name: str) -> str:
     return parse_wine_searcher_wine(response.text)
 
 
+def extract_wine_info(wine_data: dict) -> str:
+    """
+    Extracts relevant wine information from a dictionary and converts it to plain text.
+
+    Args:
+        wine_data (dict): The wine data dictionary.
+
+    Returns:
+        str: The extracted wine information in plain text format.
+    """
+    name = wine_data.get("name", "N/A")
+    description = wine_data.get("description", "N/A")
+    country = wine_data.get("countryOfOrigin", {}).get("name", "N/A")
+    vintage = wine_data.get("model", "N/A")
+    brand = wine_data.get("brand", {}).get("name", "N/A")
+    award = wine_data.get("award", "N/A")
+    image_url = wine_data.get("image", "N/A")
+    rating = wine_data.get("aggregateRating", {}).get("ratingValue", "N/A")
+    rating_count = wine_data.get("aggregateRating", {}).get("ratingCount", "N/A")
+
+    categories = ", ".join(
+        [cat.get("name", "N/A") for cat in wine_data.get("category", [])]
+    )
+
+    offers = wine_data.get("offers", [])
+    offers_text = "\n".join(
+        [
+            f"Price: {offer.get('price', 'N/A')} {offer.get('priceCurrency', 'N/A')}, "
+            f"Description: {offer.get('description', 'N/A')}, "
+            f"Seller: {offer.get('seller_name', 'N/A')}, "
+            f"URL: {offer.get('url', 'N/A')}"
+            for offer in offers
+        ]
+    )
+
+    reviews = wine_data.get("review", [])
+    reviews_text = "\n".join(
+        [
+            f"Author: {review.get('author', {}).get('name', 'N/A')}, "
+            f"Rating: {review.get('reviewRating', {}).get('ratingValue', 'N/A')}/100, "
+            f"Review: {review.get('reviewBody', 'N/A')}"
+            for review in reviews
+        ]
+    )
+
+    return (
+        f"Name: {name}\n"
+        f"Description: {description}\n"
+        f"Country of Origin: {country}\n"
+        f"Vintage: {vintage}\n"
+        f"Brand: {brand}\n"
+        f"Award: {award}\n"
+        f"Image URL: {image_url}\n"
+        f"Rating: {rating} (based on {rating_count} reviews)\n"
+        f"Categories: {categories}\n"
+        f"Offers:\n{offers_text}\n"
+        f"Reviews:\n{reviews_text}"
+    )
+
+
 def parse_wine_searcher_wine(response_text: str) -> str:
     soup = BeautifulSoup(response_text, "html.parser")
     ld_json = soup.find("script", type="application/ld+json")
@@ -204,22 +263,9 @@ def parse_wine_searcher_wine(response_text: str) -> str:
                 "https://www.wine-searcher.com/", json_data["image"]
             )
 
-        if "offers" in json_data:
-            trimmed_offers = []
-            for offer in json_data["offers"][:5]:
-                trimmed_offer = {
-                    "price": offer.get("price"),
-                    "description": offer.get("description"),
-                    "priceCurrency": offer.get("priceCurrency"),
-                    "availability": offer.get("availability"),
-                    "url": offer.get("url"),
-                    "name": offer.get("name"),
-                    "seller_name": offer.get("seller", {}).get("name"),
-                    "address": offer.get("seller", {}).get("address", {}),
-                }
-                trimmed_offers.append(trimmed_offer)
-            json_data["offers"] = trimmed_offers
-        return yaml.dump(json_data)
+        json_data["offers"] = json_data["offers"][:5]
+        wine_info = extract_wine_info(json_data)
+        return wine_info
     return ""
 
 
