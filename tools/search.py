@@ -121,6 +121,9 @@ def google(search_term, site=None):
     return links
 
 
+skip_domains = ["klwines.com", "wine.com", "reddit.com", "benchmarkwine.com"]
+
+
 @tool
 def search_tool(query: str, top_n: int = 3) -> SearchResultsResponse:
     """Perform a Google search and scrape the top N organic results. If the query is a wine name, suggest to add wine searcher in the query."""
@@ -135,9 +138,16 @@ def search_tool(query: str, top_n: int = 3) -> SearchResultsResponse:
         raise ValueError(f"Search failed, {search_result}")
     search_result = search_result["organic"]
 
+    # Pre-filter results to exclude specified domains
+    filtered_search_result = [
+        result
+        for result in search_result
+        if urlparse(result["link"]).netloc not in skip_domains
+    ]
+
     # Keep only the highest-ranked link from each domain
     domain_to_result = {}
-    for result in search_result:
+    for result in filtered_search_result:
         domain = urlparse(result["link"]).netloc
         if domain not in domain_to_result:
             domain_to_result[domain] = result

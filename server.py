@@ -1,9 +1,9 @@
-import orjson as json
 from fastapi import FastAPI, HTTPException
 from loguru import logger
 
 from agents.agent import create_agent
 from llm.gen_followup import generate_followups
+from llm.structure_wine import extact_wines
 from main import build_input_messages
 from models import ChatRequest, ChatResponse, FollowupRequest, FollowupResponse
 
@@ -33,12 +33,13 @@ async def chat(request: ChatRequest):
         logger.info(input_messages)
         event = agent.invoke({"messages": input_messages}, stream_mode="values")
         logger.info(event)
+        message = event["messages"][-1].content
         try:
-            d = json.loads(event["messages"][-1].content)
-            response = ChatResponse(messages=[d.get("text")], wines=d.get("wines"))
+            wines = extact_wines(message)
+            response = ChatResponse(messages=[message], wines=wines)
         except Exception as e:
             logger.error(f"Error parsing response: {e}")
-            response = ChatResponse(messages=[event["messages"][-1].content])
+            response = ChatResponse(messages=[message])
         logger.info(f"Response: {response.json()}")
         return response
     except Exception as e:

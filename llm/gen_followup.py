@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
@@ -6,14 +6,8 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_openai import ChatOpenAI
 
 
-class Wine(BaseModel):
-    name: str = Field(description="The name of the wine")
-    image: Optional[str] = Field(description="The image of the wine")
-
-
 class Followups(BaseModel):
     followups: List[str] = Field(description="List of follow-up questions")
-    wines: Optional[List[Wine]] = Field(description="The wines referred in the context")
 
 
 parser = PydanticOutputParser(pydantic_object=Followups)
