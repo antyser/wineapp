@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse
 from loguru import logger
+from sse_starlette.sse import EventSourceResponse
 
 from agents.agent import create_agent
 from llm.gen_followup import generate_followups
@@ -91,7 +92,7 @@ async def stream_chat(request: ChatRequest):
                         yield content
             yield "\n"
 
-        return StreamingResponse(event_stream(), media_type="text/plain")
+        return EventSourceResponse(event_stream(), media_type="text/plain")
     except Exception as e:
         logger.error(f"Error in stream_chat endpoint: {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
