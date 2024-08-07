@@ -89,7 +89,7 @@ async def stream_chat(request: ChatRequest):
                 if kind == "on_chat_model_stream":
                     data = event["data"]["chunk"].content
                     if data:
-                        yield " " + data
+                        yield "^" + data
             yield "[DONE]"
 
         return EventSourceResponse(event_stream(), media_type="text/plain")
