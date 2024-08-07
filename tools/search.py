@@ -16,8 +16,6 @@ from loguru import logger
 from slugify import slugify  # type: ignore
 from unstructured.partition.html import partition_html
 
-headers = Headers(headers=True).generate()
-
 
 class SearchResult(BaseModel):
     position: Optional[int] = None
@@ -179,7 +177,7 @@ def fetch_wine_data(wine_name: str) -> str:
     url = f"https://www.wine-searcher.com/find/{slugify(wine_name)}"
 
     client = httpx.Client(http2=True)
-    response = client.get(url, headers=headers)
+    response = client.get(url, headers=Headers(headers=True).generate())
     return parse_wine_searcher_wine(response.text)
 
 
@@ -296,7 +294,7 @@ def extract_card_body_text(html_content: str) -> str:
 
 
 async def fetch_and_process_page(client, url):
-    response = await client.get(url, headers=headers)
+    response = await client.get(url, headers=Headers(headers=True).generate())
 
     if response.status_code == 200:
         if "wine-searcher.com/find/" in url:
