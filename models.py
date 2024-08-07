@@ -36,3 +36,11 @@ class FollowupRequest(BaseModel):
 class FollowupResponse(BaseModel):
     followups: List[str] = Field(description="List of follow-up questions")
     wines: Optional[List[Wine]] = Field(description="The wines referred in the context")
+
+
+class ExtractWineRequest(BaseModel):
+    message: str
+
+
+class ExtractWineResponse(BaseModel):
+    wines: List[Wine]

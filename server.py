@@ -6,7 +6,14 @@ from agents.agent import create_agent
 from llm.gen_followup import generate_followups
 from llm.structure_wine import extact_wines
 from main import build_input_messages
-from models import ChatRequest, ChatResponse, FollowupRequest, FollowupResponse
+from models import (
+    ChatRequest,
+    ChatResponse,
+    ExtractWineRequest,
+    ExtractWineResponse,
+    FollowupRequest,
+    FollowupResponse,
+)
 
 app = FastAPI()
 
@@ -98,6 +105,17 @@ async def followups(request: FollowupRequest):
     except Exception as e:
         logger.error(f"Error generating follow-up questions: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/extract_wine", response_model=ExtractWineResponse)
+async def extract_wine(request: ExtractWineRequest):
+    try:
+        wines = extact_wines(request.message)
+        logger.info(f"Extracted wines: {wines}")
+        return ExtractWineResponse(wines=wines)
+    except Exception as e:
+        logger.error(f"Error extracting wines: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
 if __name__ == "__main__":
