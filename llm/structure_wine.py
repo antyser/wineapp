@@ -18,16 +18,17 @@ class Wine(BaseModel):
 
 
 class WineOutput(BaseModel):
-    wines: List[Wine] = Field(description="The wines referred in the context")
+    has_wine: bool = Field(description="Whether the context has wine information")
+    wines: Optional[List[Wine]] = Field(description="The wines referred in the context")
 
 
 parser = PydanticOutputParser(pydantic_object=WineOutput)
 
 
 def extract_wine_chain():
-    model = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.7)
+    model = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
     prompt = PromptTemplate(
-        template="Given the following context, extract the wines referred in the context:\nContext: {context}\n{format_instructions}",
+        template="Given the following context, the wine name and the wine image must exist in the context:\n <context>{context}</context>\n{format_instructions}",
         input_variables=["context"],
         partial_variables={"format_instructions": parser.get_format_instructions()},
     )
@@ -38,7 +39,9 @@ def extract_wine_chain():
 def extact_wines(context: str) -> List[Wine]:
     chain = extract_wine_chain()
     result = chain.invoke({"context": context})
-    return result.dict().get("wines", [])
+    if result.has_wine:
+        return result.dict().get("wines", [])
+    return []
 
 
 # Example usage
