@@ -66,7 +66,7 @@ async def stream_chat(request: ChatRequest):
         ):
 
             async def hello_stream():
-                yield "How can I assist you with wine information today?"
+                yield "How can I assist you with wine information today?\n"
 
             return StreamingResponse(hello_stream(), media_type="text/plain")
 
@@ -89,6 +89,7 @@ async def stream_chat(request: ChatRequest):
                     content = event["data"]["chunk"].content
                     if content:
                         yield content
+            yield "\n"
 
         return StreamingResponse(event_stream(), media_type="text/plain")
     except Exception as e:
