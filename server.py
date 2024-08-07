@@ -85,7 +85,7 @@ async def stream_chat(request: ChatRequest):
                 if kind == "on_chat_model_stream":
                     data = event["data"]["chunk"].content
                     if data:
-                        yield "" + data
+                        yield "^" + data
             yield "[DONE]"
             time_to_stream_end = time.time() - start_time
             logger.info(f"Time to end streaming: {time_to_stream_end:.2f} seconds")
