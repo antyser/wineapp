@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import StreamingResponse
 from loguru import logger
 
 from agents.agent import create_agent
@@ -44,6 +45,47 @@ async def chat(request: ChatRequest):
         return response
     except Exception as e:
         logger.error(f"Error in chat endpoint: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+
+
+@app.post("/stream_chat")
+async def stream_chat(request: ChatRequest):
+    logger.info(f"Received request: {request.json()}")
+    try:
+        if (
+            request.text
+            and request.text.lower() == "hello"
+            and not request.base64_image
+        ):
+
+            async def hello_stream():
+                yield "How can I assist you with wine information today?"
+
+            return StreamingResponse(hello_stream(), media_type="text/plain")
+
+        agent = create_agent()
+        logger.info(request)
+        input_messages = build_input_messages(
+            text=request.text,
+            base64_image=request.base64_image,
+            history=request.history,
+        )
+
+        logger.info(input_messages)
+
+        async def event_stream():
+            async for event in agent.astream_events(
+                {"messages": input_messages}, stream_mode="values", version="v2"
+            ):
+                kind = event["event"]
+                if kind == "on_chat_model_stream":
+                    content = event["data"]["chunk"].content
+                    if content:
+                        yield content
+
+        return StreamingResponse(event_stream(), media_type="text/plain")
+    except Exception as e:
+        logger.error(f"Error in stream_chat endpoint: {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
