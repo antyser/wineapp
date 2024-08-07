@@ -7,6 +7,7 @@ from urllib.parse import quote_plus, urljoin, urlparse
 import httpx
 from bs4 import BeautifulSoup
 from curl_cffi import requests
+from fake_headers import Headers
 from langchain.pydantic_v1 import BaseModel
 from langchain.tools import tool
 from langchain_community.utilities import ApifyWrapper, GoogleSerperAPIWrapper
@@ -15,13 +16,7 @@ from loguru import logger
 from slugify import slugify  # type: ignore
 from unstructured.partition.html import partition_html
 
-headers = {
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-    "sec-ch-ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"macOS"',
-}
+headers = Headers(headers=True).generate()
 
 
 class SearchResult(BaseModel):
