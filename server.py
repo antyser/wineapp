@@ -74,10 +74,7 @@ async def stream_chat(request: ChatRequest):
         logger.info(input_messages)
 
         async def event_stream():
-            # Calculate the time taken to start streaming
-            time_to_stream_start = time.time() - start_time
-            logger.info(f"Time to start streaming: {time_to_stream_start:.2f} seconds")
-
+            first_yield = True
             async for event in agent.astream_events(
                 {"messages": input_messages}, stream_mode="values", version="v2"
             ):
@@ -85,6 +82,12 @@ async def stream_chat(request: ChatRequest):
                 if kind == "on_chat_model_stream":
                     data = event["data"]["chunk"].content
                     if data:
+                        if first_yield:
+                            time_to_stream_start = time.time() - start_time
+                            logger.info(
+                                f"Time to start streaming: {time_to_stream_start:.2f} seconds"
+                            )
+                            first_yield = False
                         yield "^" + data
             yield "[DONE]"
             time_to_stream_end = time.time() - start_time

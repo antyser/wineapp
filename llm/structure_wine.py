@@ -7,7 +7,9 @@ from langchain_openai import ChatOpenAI
 
 
 class Wine(BaseModel):
-    name: str = Field(description="The name of the wine")
+    name: str = Field(
+        description="The name of the wine. Usually it includes the winery, region and vintage"
+    )
     image: Optional[str] = Field(
         description="The image of the wine. Leave blank if you cannot find it from the context"
     )
