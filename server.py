@@ -76,7 +76,10 @@ async def stream_chat(request: ChatRequest):
         async def event_stream():
             first_yield = True
             async for event in agent.astream_events(
-                {"messages": input_messages}, stream_mode="values", version="v2"
+                {"messages": input_messages},
+                {"configurable": {"user_id": request.user_id}},
+                stream_mode="values",
+                version="v2",
             ):
                 kind = event["event"]
                 if kind == "on_chat_model_stream":

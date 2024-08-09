@@ -18,6 +18,7 @@ class Message(BaseModel):
 
 
 class ChatRequest(BaseModel):
+    user_id: Optional[str] = None
     text: Optional[str] = None
     base64_image: Optional[str] = None
     history: Optional[List[Message]] = None
