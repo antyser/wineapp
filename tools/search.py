@@ -300,7 +300,7 @@ async def fetch_and_process_page(client, url):
         if "wine-searcher.com/find/" in url:
             return parse_wine_searcher_wine(response.text)
         else:
-            return general_parse(response.text)
+            return general_parse(response.content)
     else:
         logger.error(f"Failed to fetch {url}: {response.status_code}")
         return None

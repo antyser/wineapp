@@ -1,5 +1,6 @@
 import time
 
+import sentry_sdk
 from fastapi import FastAPI, HTTPException
 from loguru import logger
 from sse_starlette.sse import EventSourceResponse
@@ -15,6 +16,17 @@ from models import (
     ExtractWineResponse,
     FollowupRequest,
     FollowupResponse,
+)
+
+sentry_sdk.init(
+    dsn="https://a767b779feb7c6c6265dd37f1cebe3f1@o4507757109903360.ingest.us.sentry.io/4507757112066048",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    traces_sample_rate=1.0,
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
 )
 
 app = FastAPI()
