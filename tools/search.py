@@ -294,16 +294,24 @@ def extract_card_body_text(html_content: str) -> str:
 
 
 async def fetch_and_process_page(client, url):
-    response = await client.get(url, headers=Headers(headers=True).generate())
-
-    if response.status_code == 200:
-        if "wine-searcher.com/find/" in url:
+    if "wine-searcher.com/find/" in url:
+        response = await client.get(url, headers=Headers(headers=True).generate())
+        if response.status_code == 200:
             return parse_wine_searcher_wine(response.text)
         else:
-            return general_parse(response.content)
+            logger.error(f"Failed to fetch {url}: {response.status_code}")
     else:
-        logger.error(f"Failed to fetch {url}: {response.status_code}")
-        return None
+        try:
+            return partition_html(
+                url=url,
+                headers=Headers(headers=True).generate(),
+                skip_headers_and_footers=True,
+                chunking_strategy="basic",
+                max_characters=50000,
+            )[0].text
+        except Exception as e:
+            logger.error(f"Failed to fetch {url}: {e}")
+            return None
 
 
 async def batch_crawl(links: List[str]):
