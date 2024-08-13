@@ -2,14 +2,7 @@ from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
-
-class Wine(BaseModel):
-    name: str = Field(description="The name of the wine")
-    image: Optional[str] = Field(description="The image of the wine")
-    region: Optional[str] = Field(description="The region of the wine")
-    producer: Optional[str] = Field(description="The producer of the wine")
-    vintage: Optional[str] = Field(description="The vintage of the wine")
-    type: Optional[str] = Field(description="The type of the wine")
+from core.wine.model import Wine
 
 
 class Message(BaseModel):
