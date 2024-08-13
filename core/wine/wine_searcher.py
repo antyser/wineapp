@@ -21,16 +21,22 @@ def compose_search_url(
     """
     Composes the URL for the Wine-Searcher API.
 
-
     Parameters:
     keyword (str): The keyword to search for.
     vintage (str, optional): The vintage to search for. Defaults to "".
     include_auction (bool, optional): Whether to include auctions in the search. Defaults to False.
 
-
     Returns:
     str: The composed URL.
     """
+    # Extract vintage from the keyword if not provided
+    if not vintage:
+        match = re.search(r"(\d{4})", keyword)
+        if match:
+            vintage = match.group(1)
+            # Remove the vintage from the keyword
+            keyword = re.sub(r"(\d{4})", "", keyword).strip()
+
     url = f"https://www.wine-searcher.com/find/{keyword}/"
     if vintage:
         url += f"{vintage}/"
@@ -86,17 +92,6 @@ def extract_wine_info(wine_data: dict) -> str:
         [cat.get("name", "N/A") for cat in wine_data.get("category", [])]
     )
 
-    offers = wine_data.get("offers", [])
-    offers_text = "\n".join(
-        [
-            f"Price: {offer.get('price', 'N/A')} {offer.get('priceCurrency', 'N/A')}, "
-            f"Description: {offer.get('description', 'N/A')}, "
-            f"Seller: {offer.get('seller_name', 'N/A')}, "
-            f"URL: {offer.get('url', 'N/A')}"
-            for offer in offers
-        ]
-    )
-
     reviews = wine_data.get("review", [])
     reviews_text = "\n".join(
         [
@@ -117,7 +112,6 @@ def extract_wine_info(wine_data: dict) -> str:
         f"Image URL: {image_url}\n"
         f"Rating: {rating} (based on {rating_count} reviews)\n"
         f"Categories: {categories}\n"
-        f"Offers:\n{offers_text}\n"
         f"Reviews:\n{reviews_text}"
     )
 
