@@ -75,7 +75,7 @@ async def stream_chat(request: ChatRequest):
     start_time = time.time()  # Start the timer
 
     try:
-        agent = create_agent()
+        agent = create_agent(request.user_id)
         logger.info(request)
         input_messages = build_input_messages(
             text=request.text,
