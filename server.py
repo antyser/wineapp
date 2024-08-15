@@ -6,6 +6,7 @@ from loguru import logger
 from sse_starlette.sse import EventSourceResponse
 
 from agents.agent import create_agent
+from core.users.service import delete_user
 from llm.gen_followup import generate_followups
 from llm.structure_wine import extact_wines
 from main import build_input_messages
@@ -134,6 +135,17 @@ async def extract_wine(request: ExtractWineRequest):
     except Exception as e:
         logger.error(f"Error extracting wines: {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
+
+
+@app.delete("/user/{user_id}", status_code=204)
+async def delete_user_endpoint(user_id: str):
+    try:
+        response = delete_user(user_id)
+        if response.get("error"):
+            raise HTTPException(status_code=400, detail=response["error"]["message"])
+        return {"message": "User deleted successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 if __name__ == "__main__":
