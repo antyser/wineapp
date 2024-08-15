@@ -140,11 +140,10 @@ async def extract_wine(request: ExtractWineRequest):
 @app.delete("/user/{user_id}", status_code=204)
 async def delete_user_endpoint(user_id: str):
     try:
-        response = delete_user(user_id)
-        if response.get("error"):
-            raise HTTPException(status_code=400, detail=response["error"]["message"])
+        delete_user(user_id)
         return {"message": "User deleted successfully"}
     except Exception as e:
+        logger.error(f"Error deleting user: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
