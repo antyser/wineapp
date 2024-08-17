@@ -40,7 +40,7 @@ parser = PydanticOutputParser(pydantic_object=WineOutput)
 def extract_wine_chain():
     model = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
     prompt = PromptTemplate(
-        template="Given the following context, the wine name and the wine image must exist in the context:\n <context>{context}</context>\n{format_instructions}",
+        template="Given the following context, find the wine name in the context. A wine name usually includes winery, region and vintage. :\n <context>{context}</context>\n{format_instructions}",
         input_variables=["context"],
         partial_variables={"format_instructions": parser.get_format_instructions()},
     )
