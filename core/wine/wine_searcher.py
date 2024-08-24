@@ -54,6 +54,7 @@ async def fetch_wine(wine_name: str, is_pro: bool = False) -> Optional[Wine]:
 
 
 async def batch_fetch_wines(wine_names: List[str], is_pro: bool = False) -> List[Wine]:
+    is_pro = len(wine_names) > 2
     urls = [compose_search_url(wine_name, country="usa") for wine_name in wine_names]
     responses = await fetch(urls, is_pro)
     return [
