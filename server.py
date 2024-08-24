@@ -5,7 +5,7 @@ from fastapi import FastAPI, HTTPException
 from loguru import logger
 from sse_starlette.sse import EventSourceResponse
 
-from agents.agent import create_agent
+from agents.agent import create_agent, wine_search_agent
 from core.users.service import delete_user
 from llm.gen_followup import generate_followups
 from llm.structure_wine import extact_wines
@@ -58,7 +58,7 @@ async def chat(request: ChatRequest):
         logger.info(event)
         message = event["messages"][-1].content
         try:
-            wines = extact_wines(message)
+            wines = await extact_wines(message)
             response = ChatResponse(messages=[message], wines=wines)
         except Exception as e:
             logger.error(f"Error parsing response: {e}")
@@ -72,11 +72,60 @@ async def chat(request: ChatRequest):
 
 @app.post("/stream_chat")
 async def stream_chat(request: ChatRequest):
-    logger.info(f"Received request: {request.json()}")
+    request_data = request.model_copy()
+    request_data.base64_image = "[REDACTED]"
+    logger.info(f"Received request: {request_data}")
     start_time = time.time()  # Start the timer
 
     try:
         agent = create_agent(request.user_id)
+        logger.info(request)
+        input_messages = build_input_messages(
+            text=request.text,
+            base64_image=request.base64_image,
+            history=request.history,
+        )
+
+        logger.info(input_messages)
+
+        async def event_stream():
+            first_yield = True
+            async for event in agent.astream_events(
+                {"messages": input_messages},
+                {"configurable": {"user_id": request.user_id}},
+                stream_mode="values",
+                version="v2",
+            ):
+                kind = event["event"]
+                if kind == "on_chat_model_stream":
+                    data = event["data"]["chunk"].content
+                    if data:
+                        if first_yield:
+                            time_to_stream_start = time.time() - start_time
+                            logger.info(
+                                f"Time to start streaming: {time_to_stream_start:.2f} seconds"
+                            )
+                            first_yield = False
+                        yield "^" + data
+            yield "[DONE]"
+            time_to_stream_end = time.time() - start_time
+            logger.info(f"Time to end streaming: {time_to_stream_end:.2f} seconds")
+
+        return EventSourceResponse(event_stream())
+    except Exception as e:
+        logger.error(f"Error in stream_chat endpoint: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+
+
+@app.post("/pro_stream_chat")
+async def pro_stream_chat(request: ChatRequest):
+    request_data = request.model_copy()
+    request_data.base64_image = "[REDACTED]"
+    logger.info(f"Received request: {request_data}")
+    start_time = time.time()  # Start the timer
+
+    try:
+        agent = wine_search_agent(request.user_id)
         logger.info(request)
         input_messages = build_input_messages(
             text=request.text,
@@ -129,7 +178,7 @@ async def followups(request: FollowupRequest):
 @app.post("/extract_wine", response_model=ExtractWineResponse)
 async def extract_wine(request: ExtractWineRequest):
     try:
-        wines = extact_wines(request.message)
+        wines = await extact_wines(request.message)
         logger.info(f"Extracted wines: {wines}")
         return ExtractWineResponse(wines=wines)
     except Exception as e:

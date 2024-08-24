@@ -1,21 +1,21 @@
+import csv
+import io
 import json
 import re
-from typing import Optional
+from typing import List, Optional
 from urllib.parse import urljoin
 
-import httpx
-from bs4 import BeautifulSoup
-from fake_headers import Headers
 from loguru import logger
 from lxml.html import fromstring
-from slugify import slugify  # type: ignore
 
+from core.utils import fetch, fetch_url
 from core.wine.model import Offer, Wine
 
 
 def compose_search_url(
     keyword: str,
     vintage: Optional[str | int] = "",
+    country: Optional[str] = "-",
     include_auction: Optional[bool] = False,
 ) -> str:
     """
@@ -41,88 +41,34 @@ def compose_search_url(
     if vintage:
         url += f"{vintage}/"
     if not include_auction:
-        url += "-/-/ndbipe?Xsort_order=p"
+        url += f"{country}/-/ndbipe?Xsort_order=p&Xcurrencycode=USD&Xsavecurrency=Y"
     return url
 
 
-def fetch_wine_data(wine_name: str) -> Optional[Wine]:
-    """
-    Fetches wine data from Wine-Searcher based on the provided wine name.
-    Args:
-        wine_name (str): The name of the wine to search for.
-    Returns:
-        str: The LD+JSON data converted to YAML format, or None if no data is found.
-    """
-    url = compose_search_url(slugify(wine_name))
-
-    client = httpx.Client(http2=True)
-    response = client.get(
-        url, headers=Headers(headers=True).generate(), follow_redirects=True
-    )
+async def fetch_wine(wine_name: str, is_pro: bool = False) -> Optional[Wine]:
+    url = compose_search_url(wine_name, country="usa")
+    response = await fetch_url(url, is_pro)
+    if response.status_code != 200:
+        return None
     return parse_wine(response.text)
+
+
+async def batch_fetch_wines(wine_names: List[str], is_pro: bool = False) -> List[Wine]:
+    urls = [compose_search_url(wine_name, country="usa") for wine_name in wine_names]
+    responses = await fetch(urls, is_pro)
+    return [
+        wine
+        for response in responses
+        if response
+        and response.status_code == 200
+        and (wine := parse_wine(response.text)) is not None
+    ]
 
 
 def str_to_vintage(vintage_str: Optional[str]) -> int:
     if not vintage_str:
         return 1
     return 1 if vintage_str == "All" else int(vintage_str)
-
-
-def extract_wine_info(wine_data: dict) -> str:
-    """
-    Extracts relevant wine information from a dictionary and converts it to plain text.
-
-    Args:
-        wine_data (dict): The wine data dictionary.
-
-    Returns:
-        str: The extracted wine information in plain text format.
-    """
-    name = wine_data.get("name", "N/A")
-    description = wine_data.get("description", "N/A")
-    country = wine_data.get("countryOfOrigin", {}).get("name", "N/A")
-    vintage = wine_data.get("model", "N/A")
-    brand = wine_data.get("brand", {}).get("name", "N/A")
-    award = wine_data.get("award", "N/A")
-    image_url = wine_data.get("image", "N/A")
-    rating = wine_data.get("aggregateRating", {}).get("ratingValue", "N/A")
-    rating_count = wine_data.get("aggregateRating", {}).get("ratingCount", "N/A")
-
-    categories = ", ".join(
-        [cat.get("name", "N/A") for cat in wine_data.get("category", [])]
-    )
-
-    reviews = wine_data.get("review", [])
-    reviews_text = "\n".join(
-        [
-            f"Author: {review.get('author', {}).get('name', 'N/A')}, "
-            f"Rating: {review.get('reviewRating', {}).get('ratingValue', 'N/A')}/100, "
-            f"Review: {review.get('reviewBody', 'N/A')}"
-            for review in reviews
-        ]
-    )
-
-    return (
-        f"Name: {name}\n"
-        f"Description: {description}\n"
-        f"Country of Origin: {country}\n"
-        f"Vintage: {vintage}\n"
-        f"Brand: {brand}\n"
-        f"Award: {award}\n"
-        f"Image URL: {image_url}\n"
-        f"Rating: {rating} (based on {rating_count} reviews)\n"
-        f"Categories: {categories}\n"
-        f"Reviews:\n{reviews_text}"
-    )
-
-
-def extract_wine_data(response_text: str) -> dict:
-    soup = BeautifulSoup(response_text, "html.parser")
-    ld_json = soup.find("script", type="application/ld+json")
-    if ld_json:
-        json_data = json.loads(ld_json.string)
-        return json_data
-    return {}
 
 
 def _extract_ld_json(root) -> dict:
@@ -132,6 +78,7 @@ def _extract_ld_json(root) -> dict:
 
 
 def parse_wine(html: str) -> Optional[Wine]:
+    # TODO: only works for USA because of the $ sign in the price
     try:
         root = fromstring(html)
         ld_json = _extract_ld_json(root)
@@ -223,7 +170,10 @@ def parse_wine(html: str) -> Optional[Wine]:
             offers=offers,
         )
     except Exception as e:
-        logger.error(e)
+        import traceback
+
+        logger.error(f"Error in parse_wine: {e}")
+        logger.error(f"Traceback:\n{traceback.format_exc()}")
         return None
 
 
@@ -251,22 +201,23 @@ def _extract_average_price(root) -> Optional[float]:
     return float(average_price_str)
 
 
-def parse_wine_searcher_wine(response_text: str) -> str:
-    soup = BeautifulSoup(response_text, "html.parser")
-    ld_json = soup.find("script", type="application/ld+json")
-    if ld_json:
-        json_data = json.loads(ld_json.string)
+def wines_to_csv(wines: List[Wine]) -> str:
+    """Convert a list of Wine objects to a CSV string."""
+    output = io.StringIO()
+    writer = csv.writer(output)
 
-        fields_to_remove = ["@context", "@type", "itemCondition", "mpn", "sku"]
-        for field in fields_to_remove:
-            json_data.pop(field, None)
+    header = list(Wine.model_fields.keys())
+    header.extend(["first_offer", "second_offer", "third_offer"])
+    writer.writerow(header)
 
-        if "image" in json_data:
-            json_data["image"] = urljoin(
-                "https://www.wine-searcher.com/", json_data["image"]
-            )
-
-        json_data["offers"] = json_data["offers"][:5]
-        wine_info = extract_wine_info(json_data)
-        return wine_info
-    return ""
+    # Write the wine data
+    for wine in wines:
+        row = [getattr(wine, field) for field in Wine.model_fields.keys()]
+        offers = wine.offers[:3] if wine.offers else []
+        for i in range(3):
+            if i < len(offers):
+                row.append(offers[i].model_dump())
+            else:
+                row.append(None)
+        writer.writerow(row)
+    return output.getvalue()

@@ -1,13 +1,12 @@
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import asyncio
 from typing import List, Optional
 
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_openai import ChatOpenAI
-from loguru import logger
 
-from core.wine.wine_searcher import fetch_wine_data
+from core.wine.wine_searcher import batch_fetch_wines
 
 
 class Wine(BaseModel):
@@ -48,32 +47,18 @@ def extract_wine_chain():
     return chain
 
 
-def extact_wines(context: str) -> List[Wine]:
+async def extact_wines(context: str) -> List[Wine]:
     chain = extract_wine_chain()
     result = chain.invoke({"context": context})
-    if not result.has_wine:
-        return []
-    wine_names = result.wines
-
-    with ThreadPoolExecutor() as executor:
-        futures = {
-            executor.submit(fetch_wine_data, wine_name): wine_name
-            for wine_name in wine_names
-        }
-        wines = []
-        for future in as_completed(futures):
-            try:
-                wine_data = future.result()
-                if wine_data:
-                    wines.append(wine_data)
-            except Exception as e:
-                logger.error(f"Error fetching data for {futures[future]}: {e}")
-    return wines
+    if result.has_wine:
+        wine_names = result.dict().get("wines", [])
+        return await batch_fetch_wines(wine_names)
+    return []
 
 
 # Example usage
 if __name__ == "__main__":
     context = "which one is better? Opus one 2013, Lafite 2013"
-    wines = extact_wines(context)
+    wines = asyncio.run(extact_wines(context))
     if wines:
         print(wines)

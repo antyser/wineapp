@@ -14,11 +14,7 @@ from loguru import logger
 from slugify import slugify  # type: ignore
 from unstructured.partition.html import partition_html
 
-# Import the wine_searcher functions
-from core.wine.wine_searcher import (
-    fetch_wine_data,
-    parse_wine_searcher_wine,
-)
+from core.wine.wine_searcher import batch_fetch_wines, fetch, parse_wine, wines_to_csv
 
 
 class SearchResult(BaseModel):
@@ -119,13 +115,11 @@ def search_tool(query: str, top_n: int = 3) -> SearchResultsResponse:
     return SearchResultsResponse(result=organic_results)
 
 
-def batch_search_wines(wine_names: List[str]) -> List[str]:
-    """Search for wines by name and return the results."""
-    return [
-        wine_data
-        for wine_name in wine_names
-        if (wine_data := fetch_wine_data(wine_name))
-    ]
+@tool
+async def batch_search_wines_tool(wine_names: List[str]) -> str:
+    """Search for wines by name and return the wine information as a CSV string."""
+    wines = await batch_fetch_wines(wine_names, is_pro=True)
+    return wines_to_csv(wines)
 
 
 def general_parse(html_content: str) -> str:
@@ -161,11 +155,11 @@ def extract_card_body_text(html_content: str) -> str:
 
 async def fetch_and_process_page(client, url):
     if "wine-searcher.com/find/" in url:
-        response = await client.get(url, headers=Headers(headers=True).generate())
-        if response.status_code == 200:
-            return parse_wine_searcher_wine(response.text)
-        else:
-            logger.error(f"Failed to fetch {url}: {response.status_code}")
+        responses = await fetch(url)
+        if responses and responses[0] and responses[0].status_code == 200:
+            wine = parse_wine(responses[0].text)
+            return wines_to_csv([wine])
+        return None
     else:
         try:
             return partition_html(
