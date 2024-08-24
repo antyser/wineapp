@@ -1,32 +1,19 @@
-import asyncio
 from typing import List, Optional
 
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_openai import ChatOpenAI
+from langsmith import traceable
+from openai import OpenAI
+from pydantic import BaseModel, Field
 
+from core.wine.model import Wine
 from core.wine.wine_searcher import batch_fetch_wines
-
-
-class Wine(BaseModel):
-    name: str = Field(
-        description="The name of the wine. It includes the winery, region and vintage. A grape name or a producer name is not a wine. And there should be a space between wine name and the vintage. i.e. Opus One 2013 instead of Opus One2013"
-    )
-    image: Optional[str] = Field(
-        description="The image of the wine. Leave blank if you cannot find it from the context"
-    )
-    region: Optional[str] = Field(description="The region of the wine")
-    producer: Optional[str] = Field(description="The producer of the wine")
-    vintage: Optional[str] = Field(description="The vintage of the wine")
-    type: Optional[str] = Field(
-        description="The type of the wine. If it is wine, specify the type of wine, e.g. red, white, sparkling, rose etc. Otherwise, try your best to fill it such as beer, sake, whiskey, etc. If you are not sure, leave it blank."
-    )
 
 
 class WineOutput(BaseModel):
     has_wine: bool = Field(
-        description="Whether the context has information of a specific wine. General grape or producer information is not a wine."
+        description="Whether the context has information of wines. General grape or producer information is not a wine."
     )
     wines: Optional[List[str]] = Field(
         description="The wine names referred in the context"
@@ -47,18 +34,56 @@ def extract_wine_chain():
     return chain
 
 
-async def extact_wines(context: str) -> List[Wine]:
-    chain = extract_wine_chain()
-    result = chain.invoke({"context": context})
+@traceable(name="extract_wines")
+def extract_wines_llm(
+    text_input: Optional[str] = None, image_url: Optional[str] = None
+) -> str:
+    if not text_input and not image_url:
+        raise ValueError("Either text_input or image_url must be provided")
+    messages = [
+        {
+            "role": "system",
+            "content": [
+                {
+                    "type": "text",
+                    "text": """
+                you are a wine expert. Your task is to extract the complete wine names given the context or image.
+                A wine name usually includes winery, region and vintage.
+            """,
+                }
+            ],
+        },
+    ]
+    if image_url:
+        messages.append(
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": "Extract the wine names from the image:"},
+                    {"type": "image_url", "image_url": {"url": image_url}},
+                ],
+            }
+        )
+
+    if text_input:
+        messages.append(
+            {"role": "user", "content": [{"type": "text", "text": text_input}]}
+        )
+    client = OpenAI()
+    response = client.beta.chat.completions.parse(
+        model="gpt-4o-mini",
+        messages=messages,
+        temperature=0.7,
+        response_format=WineOutput,
+    )
+    return response.choices[0].message.parsed
+
+
+async def extact_wines(
+    text_input: Optional[str] = None, image_url: Optional[str] = None
+) -> List[Wine]:
+    result = extract_wines_llm(text_input, image_url)
     if result.has_wine:
         wine_names = result.dict().get("wines", [])
         return await batch_fetch_wines(wine_names)
     return []
-
-
-# Example usage
-if __name__ == "__main__":
-    context = "which one is better? Opus one 2013, Lafite 2013"
-    wines = asyncio.run(extact_wines(context))
-    if wines:
-        print(wines)

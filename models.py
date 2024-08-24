@@ -33,7 +33,8 @@ class FollowupResponse(BaseModel):
 
 
 class ExtractWineRequest(BaseModel):
-    message: str
+    message: Optional[str] = None
+    image_url: Optional[str] = None
 
 
 class ExtractWineResponse(BaseModel):

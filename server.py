@@ -178,7 +178,7 @@ async def followups(request: FollowupRequest):
 @app.post("/extract_wine", response_model=ExtractWineResponse)
 async def extract_wine(request: ExtractWineRequest):
     try:
-        wines = await extact_wines(request.message)
+        wines = await extact_wines(request.message, request.image_url)
         logger.info(f"Extracted wines: {wines}")
         return ExtractWineResponse(wines=wines)
     except Exception as e:
