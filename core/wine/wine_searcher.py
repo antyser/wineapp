@@ -171,10 +171,7 @@ def parse_wine(html: str) -> Optional[Wine]:
             offers=offers,
         )
     except Exception as e:
-        import traceback
-
         logger.error(f"Error in parse_wine: {e}")
-        logger.error(f"Traceback:\n{traceback.format_exc()}")
         return None
 
 
