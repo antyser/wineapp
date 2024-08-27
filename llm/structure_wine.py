@@ -85,5 +85,5 @@ async def extact_wines(
     result = extract_wines_llm(text_input, image_url)
     if result.has_wine:
         wine_names = result.dict().get("wines", [])
-        return await batch_fetch_wines(wine_names)
+        return await batch_fetch_wines(wine_names, is_pro=True)
     return []
