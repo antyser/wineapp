@@ -47,7 +47,7 @@ def compose_search_url(
 
 async def fetch_wine(wine_name: str, is_pro: bool = False) -> Optional[Wine]:
     url = compose_search_url(wine_name, country="usa")
-    response = await fetch_url(url, is_pro)
+    response = await fetch_url(url, use_scraper_api=is_pro)
     if response.status_code != 200:
         return None
     return parse_wine(response.text)

@@ -39,7 +39,7 @@ async def stream_chat(request: ChatRequest):
                 result = extract_wines_llm(request.text, request.base64_image)
                 wines = {}
                 if result.has_wine:
-                    wine_names = result.dict().get("wines", [])
+                    wine_names = list(dict.fromkeys(result.dict().get("wines", [])))
                     for i in range(0, len(wine_names), 10):
                         batch = wine_names[i : i + 10]
                         logger.info(f"batch: {batch}")
