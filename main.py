@@ -8,7 +8,7 @@ from dotenv import load_dotenv  # Added import for load_dotenv
 from langchain_core.messages import AIMessage, HumanMessage
 from PIL import Image  # Added import for Image
 
-from agents.agent import create_agent
+from agents.agent import somm_agent
 from models import Message
 
 
@@ -27,7 +27,7 @@ def build_input_messages(
         content.append(
             {
                 "type": "image_url",
-                "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"},
+                "image_url": {"url": f"{base64_image}"},
             }
         )
 
@@ -51,7 +51,7 @@ def main():
     load_dotenv(".env")  # Load environment variables from a .env file
 
     # Create the workflow
-    app = create_agent()
+    app = somm_agent()
     st.title("Wine Information Finder")
 
     # Initialize session state for messages
@@ -133,7 +133,7 @@ def main_cmd(command: Optional[str] = None, image_file: Optional[str] = None):
     # Load environment variables
     load_dotenv(".env")  # Load environment variables from a .env file
 
-    agent = create_agent()
+    agent = somm_agent()
     print(agent.input_schema.schema())
 
     if image_file:

@@ -1,12 +1,14 @@
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_openai import ChatOpenAI
 from langsmith import traceable
-from openai import OpenAI
+from loguru import logger
 from pydantic import BaseModel, Field
 
+from core.clients.openai import get_client
+from core.timer import timer
 from core.wine.model import Wine
 from core.wine.wine_searcher import batch_fetch_wines
 
@@ -17,6 +19,9 @@ class WineOutput(BaseModel):
     )
     wines: Optional[List[str]] = Field(
         description="The wine names referred in the context"
+    )
+    need_further_action: bool = Field(
+        description="Determine if the LLM needs further action to complete the task."
     )
 
 
@@ -35,6 +40,7 @@ def extract_wine_chain():
 
 
 @traceable(name="extract_wines")
+@timer
 def extract_wines_llm(
     text_input: Optional[str] = None, image_url: Optional[str] = None
 ) -> str:
@@ -49,6 +55,55 @@ def extract_wines_llm(
                     "text": """
                 you are a wine expert. Your task is to extract the complete wine names given the context or image.
                 A wine name usually includes winery, region and vintage.
+                If the user has further request other than looking for the wine information, please set need_further_action to True.
+                You don't need to proceed the request or explain it.
+                <Example>
+                <Context>
+                I am looking for a wine that is a red wine from California.
+                </Context>
+                <Output>
+                {
+                    "has_wine": False,
+                    "wines": [],
+                    "need_further_action": True
+                }
+                </Output>
+                <Explanation>
+                The user doesn't specify the wine, so we need to further investigate.
+                </Explanation>
+                </Example>
+                
+                <Example>
+                <Context>
+                Tell me about Opus One 2013.
+                </Context>
+                <Output>
+                {
+                    "has_wine": True,
+                    "wines": ["Opus One 2013"],
+                    "need_further_action": False
+                }
+                </Output>
+                <Explanation>
+                The user specifies the wine, so we don't need to further investigate.
+                </Explanation>
+                </Example>
+
+                <Example>
+                <Context>
+                Which one is from Napa Valley, 2013 Opus One or 2013 Lafite Rothschild?
+                </Context>
+                <Output>
+                {
+                    "has_wine": True,
+                    "wines": ["2013 Opus One", "2013 Lafite Rothschild"],
+                    "need_further_action": True
+                }
+                </Output>
+                <Explanation>
+                The user specifies the wine, and ask which one is from Napa Valley. We need to further investigate.
+                </Explanation>
+                </Example>
             """,
                 }
             ],
@@ -69,7 +124,7 @@ def extract_wines_llm(
         messages.append(
             {"role": "user", "content": [{"type": "text", "text": text_input}]}
         )
-    client = OpenAI()
+    client = get_client()
     response = client.beta.chat.completions.parse(
         model="gpt-4o-mini",
         messages=messages,
@@ -79,11 +134,17 @@ def extract_wines_llm(
     return response.choices[0].message.parsed
 
 
-async def extact_wines(
+@timer
+async def extract_wines(
     text_input: Optional[str] = None, image_url: Optional[str] = None
-) -> List[Wine]:
+) -> Tuple[Dict[str, Optional[Wine]], bool]:
     result = extract_wines_llm(text_input, image_url)
+
+    logger.info(f"extract_wines_llm result: {result}")
+
     if result.has_wine:
         wine_names = result.dict().get("wines", [])
-        return await batch_fetch_wines(wine_names, is_pro=True)
-    return []
+        wines_dict = await batch_fetch_wines(wine_names, is_pro=True)
+        return wines_dict, result.need_further_action
+
+    return {}, False

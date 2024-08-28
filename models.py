@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -38,4 +38,6 @@ class ExtractWineRequest(BaseModel):
 
 
 class ExtractWineResponse(BaseModel):
-    wines: List[Wine]
+    wines: Dict[str, Optional[Wine]] = Field(
+        description="a dictionary of wine names and their corresponding wines"
+    )

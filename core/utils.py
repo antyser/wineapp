@@ -11,6 +11,8 @@ from tenacity import (
     wait_exponential,
 )
 
+from core.timer import timer
+
 
 @retry(
     stop=stop_after_attempt(3),
@@ -47,6 +49,7 @@ async def fetch_url(
             await client.aclose()
 
 
+@timer
 async def fetch(urls: str | List[str], is_pro: bool = False) -> List[httpx.Response]:
     if isinstance(urls, str):
         urls = [urls]

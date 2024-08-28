@@ -1,18 +1,19 @@
 import time
 
+import orjson
 import sentry_sdk
 from fastapi import FastAPI, HTTPException
 from loguru import logger
 from sse_starlette.sse import EventSourceResponse
 
-from agents.agent import create_agent, wine_search_agent
+from agents.agent import somm_agent
 from core.users.service import delete_user
+from core.wine.wine_searcher import batch_fetch_wines
+from llm.extract_wines import extract_wines, extract_wines_llm
 from llm.gen_followup import generate_followups
-from llm.structure_wine import extact_wines
 from main import build_input_messages
 from models import (
     ChatRequest,
-    ChatResponse,
     ExtractWineRequest,
     ExtractWineResponse,
     FollowupRequest,
@@ -21,142 +22,80 @@ from models import (
 
 sentry_sdk.init(
     dsn="https://a767b779feb7c6c6265dd37f1cebe3f1@o4507757109903360.ingest.us.sentry.io/4507757112066048",
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
     traces_sample_rate=1.0,
-    # Set profiles_sample_rate to 1.0 to profile 100%
-    # of sampled transactions.
-    # We recommend adjusting this value in production.
     profiles_sample_rate=1.0,
 )
 
 app = FastAPI()
 
 
-@app.post("/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
-    logger.info(f"Received request: {request.json()}")
-    try:
-        if (
-            request.text
-            and request.text.lower() == "hello"
-            and not request.base64_image
-        ):
-            return ChatResponse(
-                messages=["How can I assist you with wine information today?"]
-            )
-        agent = create_agent()
-        logger.info(request)
-        input_messages = build_input_messages(
-            text=request.text,
-            base64_image=request.base64_image,
-            history=request.history,
-        )
-
-        logger.info(input_messages)
-        event = agent.invoke({"messages": input_messages}, stream_mode="values")
-        logger.info(event)
-        message = event["messages"][-1].content
-        try:
-            wines = await extact_wines(message)
-            response = ChatResponse(messages=[message], wines=wines)
-        except Exception as e:
-            logger.error(f"Error parsing response: {e}")
-            response = ChatResponse(messages=[message])
-        logger.info(f"Response: {response.json()}")
-        return response
-    except Exception as e:
-        logger.error(f"Error in chat endpoint: {e}")
-        raise HTTPException(status_code=500, detail="Internal Server Error")
-
-
 @app.post("/stream_chat")
 async def stream_chat(request: ChatRequest):
-    request_data = request.model_copy()
-    request_data.base64_image = "[REDACTED]"
-    logger.info(f"Received request: {request_data}")
-    start_time = time.time()  # Start the timer
-
+    start_time = time.time()
     try:
-        agent = create_agent(request.user_id)
-        logger.info(request)
-        input_messages = build_input_messages(
-            text=request.text,
-            base64_image=request.base64_image,
-            history=request.history,
-        )
-
-        logger.info(input_messages)
 
         async def event_stream():
-            first_yield = True
-            async for event in agent.astream_events(
-                {"messages": input_messages},
-                {"configurable": {"user_id": request.user_id}},
-                stream_mode="values",
-                version="v2",
-            ):
-                kind = event["event"]
-                if kind == "on_chat_model_stream":
-                    data = event["data"]["chunk"].content
-                    if data:
-                        if first_yield:
-                            time_to_stream_start = time.time() - start_time
-                            logger.info(
-                                f"Time to start streaming: {time_to_stream_start:.2f} seconds"
-                            )
-                            first_yield = False
-                        yield "^" + data
-            yield "[DONE]"
-            time_to_stream_end = time.time() - start_time
-            logger.info(f"Time to end streaming: {time_to_stream_end:.2f} seconds")
+            try:
+                result = extract_wines_llm(request.text, request.base64_image)
+                wines = {}
+                if result.has_wine:
+                    wine_names = result.dict().get("wines", [])
+                    for i in range(0, len(wine_names), 10):
+                        batch = wine_names[i : i + 10]
+                        logger.info(f"batch: {batch}")
+                        wines_batch = await batch_fetch_wines(batch, is_pro=True)
+                        wines.update(wines_batch)
+                        wine_dicts = [
+                            wine.model_dump()
+                            for wine in wines_batch.values()
+                            if wine is not None
+                        ]
+                        logger.info(f"wine_dicts: {wine_dicts}")
+                        wine_json = orjson.dumps({"wines": wine_dicts}).decode("utf-8")
+                        yield f"{wine_json}\n\n"
+                    logger.info(
+                        f"time to extract wines: {time.time() - start_time:.2f} seconds"
+                    )
 
-        return EventSourceResponse(event_stream())
-    except Exception as e:
-        logger.error(f"Error in stream_chat endpoint: {e}")
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+                if not result.need_further_action:
+                    return
+                else:
+                    wines = [wine for wine in wines.values() if wine is not None]
+                    agent = somm_agent(request.user_id, wines)
+                    input_messages = build_input_messages(
+                        text=request.text,
+                        base64_image=request.base64_image,
+                        history=request.history,
+                    )
 
-
-@app.post("/pro_stream_chat")
-async def pro_stream_chat(request: ChatRequest):
-    request_data = request.model_copy()
-    request_data.base64_image = "[REDACTED]"
-    logger.info(f"Received request: {request_data}")
-    start_time = time.time()  # Start the timer
-
-    try:
-        agent = wine_search_agent(request.user_id)
-        logger.info(request)
-        input_messages = build_input_messages(
-            text=request.text,
-            base64_image=request.base64_image,
-            history=request.history,
-        )
-
-        logger.info(input_messages)
-
-        async def event_stream():
-            first_yield = True
-            async for event in agent.astream_events(
-                {"messages": input_messages},
-                {"configurable": {"user_id": request.user_id}},
-                stream_mode="values",
-                version="v2",
-            ):
-                kind = event["event"]
-                if kind == "on_chat_model_stream":
-                    data = event["data"]["chunk"].content
-                    if data:
-                        if first_yield:
-                            time_to_stream_start = time.time() - start_time
-                            logger.info(
-                                f"Time to start streaming: {time_to_stream_start:.2f} seconds"
-                            )
-                            first_yield = False
-                        yield "^" + data
-            yield "[DONE]"
-            time_to_stream_end = time.time() - start_time
-            logger.info(f"Time to end streaming: {time_to_stream_end:.2f} seconds")
+                    first_yield = True
+                    async for event in agent.astream_events(
+                        {"messages": input_messages},
+                        {"configurable": {"user_id": request.user_id}},
+                        stream_mode="values",
+                        version="v2",
+                    ):
+                        kind = event["event"]
+                        if kind == "on_chat_model_stream":
+                            data = event["data"]["chunk"].content
+                            if data:
+                                if first_yield:
+                                    time_to_stream_start = time.time() - start_time
+                                    logger.info(
+                                        f"Time to start streaming: {time_to_stream_start:.2f} seconds"
+                                    )
+                                    first_yield = False
+                                event = orjson.dumps({"msg": data}).decode("utf-8")
+                                yield f"{event}\n\n"
+                    time_to_stream_end = time.time() - start_time
+                    logger.info(
+                        f"Time to end streaming: {time_to_stream_end:.2f} seconds"
+                    )
+            except Exception as e:
+                logger.error(f"Error when streaming: {e}")
+                raise e
+            finally:
+                yield "[DONE]"
 
         return EventSourceResponse(event_stream())
     except Exception as e:
@@ -178,7 +117,7 @@ async def followups(request: FollowupRequest):
 @app.post("/extract_wine", response_model=ExtractWineResponse)
 async def extract_wine(request: ExtractWineRequest):
     try:
-        wines = await extact_wines(request.message, request.image_url)
+        wines, _ = await extract_wines(request.message, request.image_url)
         logger.info(f"Extracted wines: {wines}")
         return ExtractWineResponse(wines=wines)
     except Exception as e:

@@ -2,12 +2,12 @@ import csv
 import io
 import json
 import re
-from typing import List, Optional
-from urllib.parse import urljoin
+from typing import Dict, List, Optional
 
 from loguru import logger
 from lxml.html import fromstring
 
+from core.timer import timer
 from core.utils import fetch, fetch_url
 from core.wine.model import Offer, Wine
 
@@ -53,16 +53,24 @@ async def fetch_wine(wine_name: str, is_pro: bool = False) -> Optional[Wine]:
     return parse_wine(response.text)
 
 
-async def batch_fetch_wines(wine_names: List[str], is_pro: bool = False) -> List[Wine]:
+@timer
+async def batch_fetch_wines(
+    wine_names: List[str], is_pro: bool = False
+) -> Dict[str, Optional[Wine]]:
     urls = [compose_search_url(wine_name, country="usa") for wine_name in wine_names]
     responses = await fetch(urls, is_pro)
-    return [
-        wine
-        for response in responses
-        if response
-        and response.status_code == 200
-        and (wine := parse_wine(response.text)) is not None
-    ]
+
+    result = {}
+    for wine_name, response in zip(wine_names, responses):
+        if response and response.status_code == 200:
+            wine = parse_wine(response.text)
+            result[wine_name] = wine
+            if wine is None:
+                logger.error(f"Failed to parse wine: {wine_name}")
+        else:
+            result[wine_name] = None
+
+    return result
 
 
 def str_to_vintage(vintage_str: Optional[str]) -> int:
@@ -74,6 +82,8 @@ def str_to_vintage(vintage_str: Optional[str]) -> int:
 def _extract_ld_json(root) -> dict:
     script_tag = root.xpath('//script[@type="application/ld+json"]')
     ld_json = script_tag[0].text if script_tag else None
+    if not ld_json:
+        return {}
     return json.loads(ld_json)
 
 
@@ -81,17 +91,18 @@ def parse_wine(html: str) -> Optional[Wine]:
     # TODO: only works for USA because of the $ sign in the price
     try:
         root = fromstring(html)
-        ld_json = _extract_ld_json(root)
         wine_searcher_id = (
             int(root.xpath("//h1/@data-name-id")[0])
             if root.xpath("//h1/@data-name-id")
             else None
         )
+        name = (
+            root.xpath("//h1/text()")[0].strip() if root.xpath("//h1/text()") else None
+        )
         og_url = root.xpath('//meta[@property="og:url"]/@content')[0]
         match = re.search(r"/(\d{4})/", og_url)
         vintage_str = match.group(1) if match else None
         vintage = str_to_vintage(vintage_str) if vintage_str else 1
-        display_name_short = ld_json["name"] if "name" in ld_json else None
         display_name_url = og_url
         region = (
             root.xpath('//meta[@name="productRegion"]/@content')[0]
@@ -109,52 +120,58 @@ def parse_wine(html: str) -> Optional[Wine]:
             else None
         )
         average_price = _extract_average_price(root)
-        producer = (
-            ld_json["brand"]["name"]
-            if "brand" in ld_json and "name" in ld_json["brand"]
+
+        grape_variety = (
+            root.xpath('//meta[@name="productVarietal"]/@content')[0]
+            if root.xpath('//meta[@name="productVarietal"]/@content')
             else None
         )
-        region_image = None
-        grape_variety = None
         wine_type = None
         wine_style = None
-
-        # Extract category information
-        for category in ld_json.get("category", []):
-            if category.get("disambiguatingDescription") == "Region":
-                region = category.get("name")
-                region_image = urljoin(
-                    "https://www.wine-searcher.com/", category.get("image")
-                )
-            elif category.get("disambiguatingDescription") == "Grape Variety / Blend":
-                grape_variety = category.get("name")
-            elif category.get("disambiguatingDescription") == "Style":
-                wine_type, wine_style = category.get("name").split(" - ")
-        offers = []
-        for offer in ld_json["offers"][:5]:
-            seller = offer.get("seller", {})
-            address = seller.get("address", {})
-            offers.append(
-                Offer(
-                    price=float(offer.get("price", 0)),
-                    description=offer.get("description"),
-                    seller_name=seller.get("name"),
-                    url=offer.get(
-                        "url",
-                    ),
-                    name=offer.get("name"),
-                    seller_address_region=address.get("addressRegion"),
-                    seller_address_country=address.get("addressCountry", {}).get(
-                        "name"
-                    ),
-                )
+        style_element = root.xpath('//li[@class="product-details__styles"]/span/text()')
+        if style_element:
+            wine_type, wine_style = style_element[0].split(" - ", 1)
+        region_image = (
+            "https://www.wine-searcher.com"
+            + root.xpath(f'//img[@alt="{region}"]/@data-src')[0]
+            if root.xpath(f'//img[@alt="{region}"]/@data-src')
+            else None
+        )
+        producer = (
+            root.xpath('//a[@id="MoreProducerDetail"]/@title')[0].replace(
+                "More information about ", ""
             )
+            if root.xpath('//a[@id="MoreProducerDetail"]/@title')
+            else None
+        )
+        offers = []
+
+        ld_json = _extract_ld_json(root)
+        if ld_json:
+            for offer in ld_json["offers"][:5]:
+                seller = offer.get("seller", {})
+                address = seller.get("address", {})
+                offers.append(
+                    Offer(
+                        price=float(offer.get("price", 0)),
+                        description=offer.get("description"),
+                        seller_name=seller.get("name"),
+                        url=offer.get(
+                            "url",
+                        ),
+                        name=offer.get("name"),
+                        seller_address_region=address.get("addressRegion"),
+                        seller_address_country=address.get("addressCountry", {}).get(
+                            "name"
+                        ),
+                    )
+                )
 
         return Wine(
             id=str(f"{wine_searcher_id}_{vintage}"),
             wine_searcher_id=wine_searcher_id,
             vintage=vintage,
-            name=display_name_short,
+            name=name,
             url=display_name_url,
             description=ld_json.get("description"),
             region=region,
@@ -164,7 +181,7 @@ def parse_wine(html: str) -> Optional[Wine]:
             image=image,
             producer=producer,
             average_price=average_price,
-            min_price=min(offers, key=lambda x: x.price).price,
+            min_price=min(offers, key=lambda x: x.price).price if offers else None,
             wine_type=wine_type,
             wine_style=wine_style,
             offers=offers,
