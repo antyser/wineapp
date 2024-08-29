@@ -2,6 +2,7 @@ import csv
 import io
 import re
 from typing import Dict, List, Optional
+from urllib.parse import unquote
 
 from loguru import logger
 from lxml.html import fromstring
@@ -84,7 +85,8 @@ def str_to_vintage(vintage_str: Optional[str]) -> int:
 def safe_xpath_extract(root, xpath, default=None):
     """Safely extract value using XPath, returning default if not found."""
     try:
-        return root.xpath(xpath)[0].strip()
+        result = root.xpath(xpath)
+        return result[0].strip() if result else default
     except IndexError:
         return default
 
@@ -128,22 +130,28 @@ def extract_offers(root) -> List[Offer]:
         seller_name = safe_xpath_extract(
             offer_card, './/a[contains(@class, "offer-card__merchant-name")]/text()'
         )
-        price_str = price_detail.text_content()
+        price_str = safe_xpath_extract(price_detail, ".//text()")
         price = (
             float(price_str.replace("$", "").replace(",", "")) if price_str else None
         )
 
         unit_price_detail = price_section.xpath(
             './/div[contains(@class, "price__detail_secondary")]'
-        )[0]
-        unit_price_str = unit_price_detail.text_content()
-        unit_price = (
-            float(unit_price_str.split("/")[0].replace("$", "").replace(",", ""))
-            if unit_price_str
-            else None
         )
+        if not unit_price_detail:
+            unit_price = price
+        else:
+            unit_price_str = safe_xpath_extract(unit_price_detail[0], ".//text()")
+            unit_price = (
+                float(unit_price_str.split("/")[0].replace("$", "").replace(",", ""))
+                if unit_price_str
+                else None
+            )
 
-        url = safe_xpath_extract(offer_card, './/a[contains(@class, "col2")]/@href')
+        encoded_url = safe_xpath_extract(
+            offer_card, './/a[contains(@class, "col2")]/@href'
+        )
+        url = unquote(encoded_url) if encoded_url else None
 
         location = safe_xpath_extract(
             offer_card,
