@@ -1,7 +1,8 @@
 import csv
 import io
+import os
 import re
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Set
 from urllib.parse import unquote
 
 from loguru import logger
@@ -58,10 +59,7 @@ async def batch_fetch_wines(
     wine_names: List[str], is_pro: bool = False
 ) -> Dict[str, Optional[Wine]]:
     urls = [compose_search_url(wine_name, country="usa") for wine_name in wine_names]
-    if len(urls) < 2:
-        responses = await fetch(urls, False)
-    else:
-        responses = await fetch(urls, is_pro)
+    responses = await fetch(urls, is_pro)
 
     result = {}
     for wine_name, response in zip(wine_names, responses):
@@ -275,3 +273,78 @@ def wines_to_csv(wines: List[Wine]) -> str:
                 row.append(None)
         writer.writerow(row)
     return output.getvalue()
+
+
+async def process_wine_list(
+    input_file: str, output_file: str, batch_size: int = 10, is_pro: bool = False
+) -> None:
+    """
+    Process a list of wine names, fetch their details, and store them in CSV format.
+
+    Args:
+    input_file (str): Path to the input file containing wine names (one per line).
+    output_file (str): Path to the output CSV file.
+    batch_size (int): Number of wines to process in each batch.
+    is_pro (bool): Whether to use the pro version of the wine searcher.
+    """
+    processed_wines: Set[str] = set()
+
+    # If output file exists, read already processed wines
+    if os.path.exists(output_file):
+        with open(output_file, "r", newline="", encoding="utf-8") as csvfile:
+            reader = csv.DictReader(csvfile)
+            processed_wines = set(row["query"] for row in reader)
+
+    with open(input_file, "r") as f:
+        wine_names = [line.strip() for line in f if line.strip()]
+
+    total_wines = len(wine_names)
+    wines_to_process = [name for name in wine_names if name not in processed_wines]
+
+    logger.info(f"Total wines: {total_wines}")
+    logger.info(f"Wines to process: {len(wines_to_process)}")
+
+    for i in range(0, len(wines_to_process), batch_size):
+        batch = wines_to_process[i : i + batch_size]
+        logger.info(f"Processing batch {i//batch_size + 1}")
+
+        try:
+            results = await batch_fetch_wines(batch, is_pro)
+
+            # Prepare data for CSV
+            csv_data = []
+            for wine_name, wine in results.items():
+                if wine:
+                    wine_dict = wine.model_dump()
+                    wine_dict["query"] = wine_name  # Add query field
+                    offers = wine.offers[:3] if wine.offers else []
+                    for j in range(3):
+                        if j < len(offers):
+                            wine_dict[f"offer_{j+1}"] = offers[j].model_dump()
+                        else:
+                            wine_dict[f"offer_{j+1}"] = None
+                    csv_data.append(wine_dict)
+
+            # Append to CSV file
+            file_exists = os.path.exists(output_file)
+            with open(output_file, "a", newline="", encoding="utf-8") as csvfile:
+                fieldnames = (
+                    list(Wine.model_fields.keys())
+                    + ["query"]
+                    + [f"offer_{j+1}" for j in range(3)]
+                )
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+                if not file_exists:
+                    writer.writeheader()
+
+                for row in csv_data:
+                    writer.writerow(row)
+
+            processed_wines.update(batch)
+
+        except Exception as e:
+            logger.error(f"Error processing batch: {e}")
+            # Continue with the next batch
+
+    logger.info("Wine processing completed")
