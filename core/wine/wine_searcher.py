@@ -243,7 +243,9 @@ def parse_wine(html: str) -> Optional[Wine]:
             image=image,
             producer=producer,
             average_price=average_price,
-            min_price=min(offers, key=lambda x: x.price).price if offers else None,
+            min_price=min(offers, key=lambda x: x.unit_price).unit_price
+            if offers
+            else None,
             wine_type=wine_type,
             wine_style=wine_style,
             offers=offers,
