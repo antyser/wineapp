@@ -5,11 +5,11 @@ from pydantic import BaseModel
 
 class Offer(BaseModel):
     price: float
+    unit_price: float
     description: Optional[str] = None
-    seller_name: str
+    seller_name: Optional[str] = None
     url: Optional[str] = None
     name: Optional[str] = None
-    sku: Optional[str] = None
     seller_address_region: Optional[str] = None
     seller_address_country: Optional[str] = None
 
