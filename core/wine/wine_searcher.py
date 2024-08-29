@@ -130,7 +130,7 @@ def extract_offers(root) -> List[Offer]:
         seller_name = safe_xpath_extract(
             offer_card, './/a[contains(@class, "offer-card__merchant-name")]/text()'
         )
-        price_str = safe_xpath_extract(price_detail, ".//text()")
+        price_str = price_detail.text_content()
         price = (
             float(price_str.replace("$", "").replace(",", "")) if price_str else None
         )
@@ -141,7 +141,7 @@ def extract_offers(root) -> List[Offer]:
         if not unit_price_detail:
             unit_price = price
         else:
-            unit_price_str = safe_xpath_extract(unit_price_detail[0], ".//text()")
+            unit_price_str = unit_price_detail[0].text_content()
             unit_price = (
                 float(unit_price_str.split("/")[0].replace("$", "").replace(",", ""))
                 if unit_price_str
