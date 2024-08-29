@@ -3,6 +3,7 @@ import io
 import json
 import re
 from typing import Dict, List, Optional
+from urllib.parse import urljoin
 
 from loguru import logger
 from lxml.html import fromstring
@@ -58,7 +59,10 @@ async def batch_fetch_wines(
     wine_names: List[str], is_pro: bool = False
 ) -> Dict[str, Optional[Wine]]:
     urls = [compose_search_url(wine_name, country="usa") for wine_name in wine_names]
-    responses = await fetch(urls, is_pro)
+    if len(urls) < 2:
+        responses = await fetch(urls, False)
+    else:
+        responses = await fetch(urls, is_pro)
 
     result = {}
     for wine_name, response in zip(wine_names, responses):
@@ -148,6 +152,18 @@ def parse_wine(html: str) -> Optional[Wine]:
 
         ld_json = _extract_ld_json(root)
         if ld_json:
+            for category in ld_json.get("category", []):
+                if category.get("disambiguatingDescription") == "Region":
+                    region = category.get("name")
+                    region_image = urljoin(
+                        "https://www.wine-searcher.com/", category.get("image")
+                    )
+                elif (
+                    category.get("disambiguatingDescription") == "Grape Variety / Blend"
+                ):
+                    grape_variety = category.get("name")
+                elif category.get("disambiguatingDescription") == "Style":
+                    wine_type, wine_style = category.get("name").split(" - ")
             for offer in ld_json["offers"][:5]:
                 seller = offer.get("seller", {})
                 address = seller.get("address", {})
@@ -187,7 +203,7 @@ def parse_wine(html: str) -> Optional[Wine]:
             offers=offers,
         )
     except Exception as e:
-        logger.error(f"Error in parse_wine: {e}")
+        logger.warning(f"Error in parse_wine: {e}")
         return None
 
 
