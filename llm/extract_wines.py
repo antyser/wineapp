@@ -54,7 +54,8 @@ def extract_wines_llm(
                     "type": "text",
                     "text": """
                 you are a wine expert. Your task is to extract the complete wine names given the context or image.
-                A wine name usually includes winery, region and vintage. Don't include the format or status information such as Magnum, 750ml, OWC, etc.
+                Think step by step and provide the final output. The wine name must include winery. Most of the time, it also includes region and vintage.
+                Don't include the format or status information such as Magnum, 750ml, OWC, etc.
                 If the user has further request other than looking for the wine information, please set need_further_action to True.
                 You don't need to proceed the request or explain it. Don't duplcate wine names.
                 <Example>
