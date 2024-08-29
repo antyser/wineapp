@@ -32,6 +32,10 @@ app = FastAPI()
 @app.post("/stream_chat")
 async def stream_chat(request: ChatRequest):
     start_time = time.time()
+    if not request.text and not request.base64_image:
+        raise HTTPException(
+            status_code=400, detail="Either text or base64_image must be provided"
+        )
     try:
 
         async def event_stream():
@@ -117,6 +121,10 @@ async def followups(request: FollowupRequest):
 @app.post("/extract_wine", response_model=ExtractWineResponse)
 async def extract_wine(request: ExtractWineRequest):
     try:
+        if not request.message and not request.image_url:
+            raise HTTPException(
+                status_code=400, detail="Either message or image_url must be provided"
+            )
         wines, _ = await extract_wines(request.message, request.image_url)
         logger.info(f"Extracted wines: {wines}")
         return ExtractWineResponse(wines=wines)
