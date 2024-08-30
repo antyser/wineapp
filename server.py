@@ -61,7 +61,7 @@ async def stream_chat(request: ChatRequest):
                         f"time to extract wines: {time.time() - start_time:.2f} seconds"
                     )
 
-                if not result.need_further_action:
+                if not result.need_further_action and wines:
                     return
                 else:
                     wines = [wine for wine in wines.values() if wine is not None]
