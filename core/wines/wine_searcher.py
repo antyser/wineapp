@@ -1,3 +1,4 @@
+import asyncio
 import csv
 import io
 import os
@@ -55,7 +56,7 @@ async def fetch_wine(wine_name: str, is_pro: bool = False) -> Optional[Wine]:
 
     wine = parse_wine(response.text)
     if wine:
-        await save_wine(wine)
+        asyncio.create_task(save_wine(wine))
 
     return wine
 
@@ -82,7 +83,7 @@ async def batch_fetch_wines(
 
     # Schedule save_wines_batch to run in the background
     if wines_to_save:
-        await save_wines_batch(wines_to_save)
+        asyncio.create_task(save_wines_batch(wines_to_save))
 
     return result
 

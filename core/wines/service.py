@@ -5,7 +5,7 @@ from core.wines.model import Wine
 
 
 async def save_wine(wine: Wine):
-    client = get_client()
+    client = await get_client()
     wine_data = wine.model_dump(exclude={"offers"})
     offers = wine.offers or []
 
@@ -26,19 +26,19 @@ async def save_wine(wine: Wine):
 
 
 async def get_wine(id: str):
-    client = get_client()
+    client = await get_client()
     data = await client.table("wines").select("*").eq("id", id).execute()
     return data
 
 
 async def get_wine_by_name(name: str):
-    client = get_client()
+    client = await get_client()
     data = await client.table("wines").select("*").eq("name", name).execute()
     return data
 
 
 async def save_wines_batch(wines: List[Wine]):
-    client = get_client()
+    client = await get_client()
     wine_data = [wine.model_dump(exclude={"offers"}) for wine in wines]
     offers_data = []
 
