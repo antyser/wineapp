@@ -2,7 +2,7 @@ from typing import Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
-from core.wine.model import Wine
+from core.wines.model import Wine
 
 
 class Message(BaseModel):

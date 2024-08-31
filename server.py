@@ -8,7 +8,7 @@ from sse_starlette.sse import EventSourceResponse
 
 from agents.agent import somm_agent
 from core.users.service import delete_user
-from core.wine.wine_searcher import batch_fetch_wines
+from core.wines.wine_searcher import batch_fetch_wines
 from llm.extract_wines import extract_wines, extract_wines_llm
 from llm.gen_followup import generate_followups
 from main import build_input_messages
@@ -136,7 +136,7 @@ async def extract_wine(request: ExtractWineRequest):
 @app.delete("/user/{user_id}", status_code=204)
 async def delete_user_endpoint(user_id: str):
     try:
-        delete_user(user_id)
+        await delete_user(user_id)
         return {"message": "User deleted successfully"}
     except Exception as e:
         logger.error(f"Error deleting user: {e}")

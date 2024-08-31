@@ -3,8 +3,8 @@ from typing import List, Optional
 from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 
-from core.wine.model import Wine
-from core.wine.wine_searcher import wines_to_csv
+from core.wines.model import Wine
+from core.wines.wine_searcher import wines_to_csv
 from tools.recommendation import save_memory, search_personal_memory_v2
 from tools.search import batch_search_wines_tool
 

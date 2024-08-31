@@ -1,6 +1,6 @@
 from core.clients.supabase import get_client
 
 
-def delete_user(user_id: str):
+async def delete_user(user_id: str):
     client = get_client()
-    client.auth.admin.delete_user(user_id)
+    await client.auth.admin.delete_user(user_id)

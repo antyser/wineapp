@@ -14,7 +14,7 @@ from loguru import logger
 from slugify import slugify  # type: ignore
 from unstructured.partition.html import partition_html
 
-from core.wine.wine_searcher import batch_fetch_wines, fetch, parse_wine, wines_to_csv
+from core.wines.wine_searcher import batch_fetch_wines, fetch, parse_wine, wines_to_csv
 
 
 class SearchResult(BaseModel):

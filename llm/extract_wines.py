@@ -9,8 +9,8 @@ from pydantic import BaseModel, Field
 
 from core.clients.openai import get_client
 from core.timer import timer
-from core.wine.model import Wine
-from core.wine.wine_searcher import batch_fetch_wines
+from core.wines.model import Wine
+from core.wines.wine_searcher import batch_fetch_wines
 
 
 class WineOutput(BaseModel):

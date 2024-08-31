@@ -10,7 +10,8 @@ from lxml.html import fromstring
 
 from core.timer import timer
 from core.utils import fetch, fetch_url
-from core.wine.model import Offer, Wine
+from core.wines.model import Offer, Wine
+from core.wines.service import save_wine, save_wines_batch
 
 
 def compose_search_url(
@@ -51,7 +52,12 @@ async def fetch_wine(wine_name: str, is_pro: bool = False) -> Optional[Wine]:
     response = await fetch_url(url, use_scraper_api=is_pro)
     if response.status_code != 200:
         return None
-    return parse_wine(response.text)
+
+    wine = parse_wine(response.text)
+    if wine:
+        await save_wine(wine)
+
+    return wine
 
 
 @timer
@@ -62,14 +68,21 @@ async def batch_fetch_wines(
     responses = await fetch(urls, is_pro)
 
     result = {}
+    wines_to_save = []
     for wine_name, response in zip(wine_names, responses):
         if response and response.status_code == 200:
             wine = parse_wine(response.text)
             result[wine_name] = wine
             if wine is None:
                 logger.error(f"Failed to parse wine: {wine_name}")
+            else:
+                wines_to_save.append(wine)
         else:
             result[wine_name] = None
+
+    # Schedule save_wines_batch to run in the background
+    if wines_to_save:
+        await save_wines_batch(wines_to_save)
 
     return result
 
