@@ -10,9 +10,9 @@ from loguru import logger
 from lxml.html import fromstring
 
 from core.timer import timer
-from core.utils import fetch, fetch_url
+from core.utils import fetch
 from core.wines.model import Offer, Wine
-from core.wines.service import save_wine, save_wines_batch
+from core.wines.service import save_wines_batch
 
 
 def compose_search_url(
@@ -46,19 +46,6 @@ def compose_search_url(
     if not include_auction:
         url += f"{country}/-/ndbipe?Xsort_order=p&Xcurrencycode=USD&Xsavecurrency=Y"
     return url
-
-
-async def fetch_wine(wine_name: str, is_pro: bool = False) -> Optional[Wine]:
-    url = compose_search_url(wine_name, country="usa")
-    response = await fetch_url(url, use_scraper_api=is_pro)
-    if response.status_code != 200:
-        return None
-
-    wine = parse_wine(response.text)
-    if wine:
-        asyncio.create_task(save_wine(wine))
-
-    return wine
 
 
 @timer

@@ -1,5 +1,6 @@
 import asyncio
 import itertools
+import os
 from typing import List, Optional
 
 import httpx
@@ -64,7 +65,7 @@ async def fetch_url(
 
     try:
         if use_scraper_api:
-            payload = {"api_key": "746d6963fe656750b2bfc9e615f93bb9", "url": url}
+            payload = {"api_key": os.getenv("SCRAPER_API_KEY"), "url": url}
             response = await client.get("https://api.scraperapi.com/", params=payload)
         else:
             response = await client.get(
