@@ -167,3 +167,6 @@ tmp*
 crawled_urls.txt
 uncrawled_urls.txt
 ws/
+
+.DS_Store*
+data/

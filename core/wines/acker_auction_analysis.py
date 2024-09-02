@@ -8,6 +8,9 @@ from loguru import logger
 
 from core.wines.wine_searcher import process_wine_list
 
+# Constants
+DATA_DIR = "data"
+
 
 def load_catalog_data(file_path: str) -> pd.DataFrame:
     """Load the catalog data from an Excel file."""
@@ -29,7 +32,6 @@ def extract_wine_names(catalog_df: pd.DataFrame) -> pd.DataFrame:
         return " ".join(part for part in parts if part)
 
     catalog_df["FullWineNameWithProducer"] = catalog_df.apply(combine_wine_name, axis=1)
-
     return catalog_df
 
 
@@ -72,10 +74,7 @@ def process_catalog_data(
         lambda row: calculate_unit_price(row, format_multipliers), axis=1
     )
 
-    # Calculate the new auction_on_hand_unit_price
     joined_df["auction_on_hand_unit_price"] = joined_df["auction_unit_price"] * 1.27 + 7
-
-    # Calculate discount percentage using auction_on_hand_unit_price
     joined_df["discount_percentage"] = (
         (joined_df["min_price"] - joined_df["auction_on_hand_unit_price"])
         / joined_df["min_price"]
@@ -86,14 +85,11 @@ def process_catalog_data(
 def reorder_columns(df: pd.DataFrame) -> pd.DataFrame:
     """Reorder columns in the DataFrame."""
     logger.info("Reordering columns")
-    columns_order = [
+    catalog_columns = [
         "Vintage",
         "LotNo",
         "WineName",
         "FullWineNameWithProducer",
-        "auction_unit_price",
-        "min_price",
-        "discount_percentage",
         "Low",
         "High",
         "Quantity",
@@ -101,8 +97,11 @@ def reorder_columns(df: pd.DataFrame) -> pd.DataFrame:
         "Producer",
         "RegionDescription",
         "WineType",
+    ]
+    search_columns = [
         "query",
         "average_price",
+        "min_price",
         "description",
         "url",
         "region",
@@ -112,6 +111,12 @@ def reorder_columns(df: pd.DataFrame) -> pd.DataFrame:
         "region_image",
         "offers_count",
     ]
+    calculated_columns = [
+        "auction_unit_price",
+        "auction_on_hand_unit_price",
+        "discount_percentage",
+    ]
+    columns_order = catalog_columns + search_columns + calculated_columns
     return df[columns_order]
 
 
@@ -126,12 +131,10 @@ async def analyze_auction_catalog(
 
     logger.info(f"Found {len(unique_wine_names)} unique wines")
 
-    # Create output file path based on catalog file name
     catalog_name = os.path.splitext(os.path.basename(catalog_file_path))[0]
-    output_file_path = f"{catalog_name}_wine_list.csv"
+    output_file_path = os.path.join(DATA_DIR, f"{catalog_name}_wine_list.csv")
+    temp_wine_list_file = os.path.join(DATA_DIR, f"{catalog_name}_temp_wine_list.txt")
 
-    # Create a temporary file to store wine names
-    temp_wine_list_file = f"{catalog_name}_temp_wine_list.txt"
     with open(temp_wine_list_file, "w") as f:
         for wine in unique_wine_names:
             f.write(f"{wine}\n")
@@ -147,26 +150,23 @@ async def analyze_auction_catalog(
 
     logger.info(f"Analysis complete. Processed {len(final_df)} wines.")
 
-    # Clean up temporary file
     os.remove(temp_wine_list_file)
 
     return final_df
 
 
-# Main execution
 if __name__ == "__main__":
-    from dotenv import load_dotenv
-
     load_dotenv()
-    logger.add("auction_analysis.log", rotation="10 MB")
+    logger.add(os.path.join(DATA_DIR, "auction_analysis.log"), rotation="10 MB")
 
-    catalog_file_path = "data/Catalog_241W_35.xlsx"
+    catalog_file_path = os.path.join(DATA_DIR, "Catalog_241W_35.xlsx")
 
     result_df = asyncio.run(analyze_auction_catalog(catalog_file_path))
 
-    # Create final output file path
-    catalog_name = os.path.splitext(os.path.basename(catalog_file_path))[0]
-    final_output_file_path = f"{catalog_name}_final_processed_wine_data.csv"
+    final_output_file_path = os.path.join(
+        DATA_DIR,
+        f"{os.path.splitext(os.path.basename(catalog_file_path))[0]}_final_processed_wine_data.csv",
+    )
 
     result_df.to_csv(final_output_file_path, index=False)
     logger.info(f"Results saved to {final_output_file_path}")
