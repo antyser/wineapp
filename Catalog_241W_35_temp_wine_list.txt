@@ -1,1637 +1,1906 @@
-K Vintners Syrah 2007
-Chateau de Chantegrieve Blanc 2012
-Chateau Bellevue Mondotte 2000
-Huet Vouvray 2020
-Carmes de Rieussec 2016
-Pont Des Arts Collection 2010
-Buty Red 2001
-Domaine du Pegau Chateauneuf du Pape 2017
-Mitolo Cabernet Sauvignon 2004
-Racines Pinot Noir 2020
-Chateau Beausejour Duffau Lagarrosse 1998
-E. Guigal Cote Rotie 1983
-Jaumandreu Pla de Bages NV
-H. Jouan Chambolle Musigny 2020
-Bodegas Muga Rioja 1985
-J.L. Jamet Cote Rotie 2020
-Pont Des Arts Collection 2012
-G. Barge Cote Rotie 2007
-Domaine La Barroche Chateauneuf du Pape 2005
-R. Perez Bierzo 2020
-Moulin Touchais Coteaux du Layon 1959
-La Rioja Alta Rioja 2004
-La Rioja Alta Rioja 1997
-Alejandro Bulgheroni Cabernet Sauvignon 2019
-Parallel Cabernet Sauvignon 2018
-Schrader Cabernet Sauvignon 2012
-Acumen Cabernet Sauvignon 2021
-O. Bernstein Chambertin 2020
-O. Bernstein Clos de la Roche 2019
-O. Bernstein Clos de la Roche 2020
-Domaine St. Prefert Chateauneuf du Pape 2009
-Sette Ponti Merlot 2019
-Sette Ponti Merlot 2020
-Taylor Fladgate Very Old Tawny Port NV
-Taylor Fladgate Vintage Port 1995
-Sine Qua Non Grenache 2020
-R. Chevillon Nuits St. Georges 2008
-Pont de Chevalier Cabernet Sauvignon 2007
-Pont de Chevalier Red 2007
-Delas Freres St. Joseph 2009
-Domaine de Cristia Chateauneuf du Pape 2009
-Domaine du Monteillet Cote Rotie 2012
-Domaine du Monteillet Cote Rotie 2013
-Domaine du Monteillet Cote Rotie 2009
-E. Guigal St. Joseph 2012
-E. Guigal St. Joseph 2014
-Tardieu-Laurent Chateauneuf du Pape 2010
-Tardieu-Laurent Cornas 2010
-J.F. Mugnier Nuits St. Georges 2021
-Chateau de France 2012
-Chateau Bouscaut Blanc 2013
-Chateau Le Bon Pasteur 1986
-Chateau Le Gay 1983
-Chateau Les Ormes de Pez 1989
-Chateau Petit Village 1989
-Maitre D'Estournel 1978
-Maitre D'Estournel 1979
-Moulin des Carruades 1983
-Vieux Chateau St. Andre 1990
-Chateau Malartic La Graviere Blanc 1988
-Chateau Rieussec 1971
-Les Plantiers du Haut Brion Blanc 1996
-Gros Frere et Soeur Richebourg 1988
-H. Jayer Vosne Romanee 1992
-H. Richard Gevrey Chambertin 1985
-J. Gros Vosne Romanee 1989
-J. Gros Vosne Romanee 1990
-Auffray Chablis 1992
-Bitouzet-Prieur Meursault 1983
-Domaine de la Maladiere (Fevre) Chablis 1984
-Domaine de la Maladiere (Fevre) Chablis 1986
-J. Chartron Chevalier Montrachet 1985
-Pinson Chablis 1983
-Pinson Chablis 1981
-Ponsot Morey St. Denis Blanc 1985
-Ponsot Morey St. Denis Blanc 1986
-Potinet-Ampeau Meursault 1983
-Rougeot Meursault 1986
-A. Voge Cornas 1980
-Beaurenard Chateauneuf du Pape 1990
-Bosquet des Papes Chateauneuf du Pape 1990
-Chateau La Nerthe Chateauneuf du Pape 1989
-Domaine Font de Michelle Chateauneuf du Pape 1982
-Domaine La Milliere Chateauneuf du Pape 1988
-Domaine de Marcoux Chateauneuf du Pape 1992
-Domaine Les Goubert Gigondas 1986
-Domaine Les Goubert Gigondas 1988
-Domaine Les Goubert Gigondas 1989
-Domaine les Pallieres Gigondas 1983
-Domaine Pradelle Crozes Hermitage 1979
-Domaine Saint Gayan Gigondas 1978
-Font de Michelle Chateauneuf du Pape 1982
-Font du Loup Chateauneuf du Pape 1989
-G. Faraud Gigondas 1978
-G. Duboeuf St. Joseph 1988
-H. Sorrel Hermitage 1980
-H. Sorrel Hermitage Blanc 1985
-H. Sorrel Hermitage Blanc 1990
-M. Sorrel Hermitage Blanc 1985
-Neyret-Gachet Chateau Grillet 1983
-P. Barge Cote Rotie 1984
-Jacquesson Vintage Champagne 1985
-Baumard Anjou 1995
-Baumard Savennieres 1990
-Chateau d'Epire Savennieres 1976
-Chateau de Vaugaudry Chinon 1995
-Chateau de Vaugaudry Chinon 1997
-Domaine Bourillan Dorleans Vouvray 1989
-J.C. Pichot Vouvray 1979
-Pichot Vouvray 1989
-A. Mann Tokay Pinot Gris 1991
-A. Mann Tokay Pinot Gris 1996
-Bott Freres Gewurztraminer 1988
-Bott Freres Gewurztraminer 1989
-Bott Freres Riesling 1989
-Josmeyer Gewurztraminer 1986
-Josmeyer Gewurztraminer 1988
-Josmeyer Gewurztraminer 1989
-Josmeyer Riesling 1989
-Lorentz Gewurztraminer 1986
-Schlumberger Gewurztraminer 1985
-Schlumberger Gewurztraminer 1981
-Schlumberger Riesling 1985
-Spielmann Pinot Blanc 1995
-Apollinar J. Koch Riesling Feine Auslese 1970
-Dr. Burklin-Wolf Riesling Auslese 1971
-F. Haag Riesling Auslese 1976
-Frederich-Wilhelm-Gymnasium Riesling Auslese 1971
-Frederich-Wilhelm-Gymnasium Riesling Auslese 1976
-K. Mertes Riesling Auslese 1971
-Hoffman Riesling Auslese 1971
-Kellerei Riesling Spatlese 1971
-Monchof Riesling Auslese 1979
-Mumm'sche Riesling Trockenbeerenauslese 1971
-Milz Laurentiushof Riesling Auslese 1976
-N. Veit-Benz Riesling Auslese 1971
-O. Dunweg Riesling Auslese 1971
-Othegraven Riesling Auslese 1976
-Othegraven Riesling Beerenauslese 1971
-P.J. Valckenberg Riesling Beerenauslese Cabinet 1967
-Pfeiffer Riesling Beerenauslese 1971
-R. Haas Riesling Auslese 1976
-Sanctus Jacobus Riesling Auslese 1976
-Staatsweinguter Riesling Beerenauslese 1976
-Von Simmern Riesling Beerenauslese 1971
-W. Tyrell Riesling Auslese 1976
-Castello di Volpaia Coltassala 1982
-Catignano Chianti Classico 1978
-Catignano Chianti Classico 1982
-Ceretto Barbaresco 1982
-Kalin Cellars Cabernet Sauvignon 1980
-Windsor Cabernet Sauvignon 1978
-Kalin Cellars Pinot Noir 1979
-Kalin Cellars Pinot Noir 1978
-Kalin Cellars Riesling 1980
-Kalin Cellars Riesling 1982
-Kalin Cellars Sauvignon Blanc 1983
-Hooper's Vintage Port 1963
-Taylor Fladgate Tawny Port NV
-E. Lustau Sherry NV
-Gonzalez Byass Sherry NV
-Jose Maria da Fonseca Periquita 1976
-Jose Maria da Fonseca Periquita 1980
-Jose Maria da Fonseca Estremadura Tinto 1982
-Faiveley Musigny 1990
-Chateau Latour 1961
-Chateau Brane Cantenac 1962
-S. Vedeau Cote Rotie 2010
-Behrens & Hitchcock Merlot 1999
-Behrens & Hitchcock Petite Sirah 2000
-Chateau Lalande Borie 2008
-M. Couvreur Clos de la Roche 1995
-Ahnfeldt Cabernet Sauvignon 2003
-Calistoga Cellars Cabernet Sauvignon 2009
-B Cellars Red 2004
-Brown Estate Cabernet Sauvignon 2002
-Clos du Val Cabernet Sauvignon 2008
-Cornerstone Cabernet Sauvignon 2002
-Cuvaison Cabernet Sauvignon 2001
-Erba Mountainside Vineyards Cabernet Sauvignon 2003
-Laurel Glen Cabernet Sauvignon 2005
-Marco Di Giulio Cabernet Sauvignon 2002
-Meyer Family Cabernet Sauvignon 2003
-David Bruce Pinot Noir 2008
-Kenwood Merlot 2010
-Kuleto Red 2016
-Chateau Langoa Barton 2009
-Chateau Le Prieure 2016
-P. Autard Chateauneuf du Pape 2016
-Bacio Divino Cabernet Sauvignon 2019
-Neal Family Cabernet Sauvignon 2002
-Robert Sinskey Cabernet Sauvignon 2010
-Del Dotto Red 2019
-Ram's Gate Pinot Noir 2017
-Ram's Gate Pinot Noir 2018
-Ram's Gate Pinot Noir 2019
-Skipstone Red 2013
-Skipstone Red 2014
-Domaine l'Aigueliere Montpeyroux 2015
-Cosentino Reserve Cabernet Sauvignon 1999
-William Hill Cabernet Sauvignon 1982
-Chateau L'Eglise Clinet 1985
-Domaine de la Vougeraie Gevrey Chambertin 2019
-Comte Lafon Volnay 1988
-P. Jaboulet Hermitage 1986
-Vieux Telegraphe Chateauneuf du Pape 2015
-F. Esmonin Gevrey Chambertin 2019
-A. Grivault Meursault 2019
-A.R. Lenoble Champagne NV
-A.R. Lenoble Vintage Champagne NV
-Domaine de Chevalier 2010
-Chateau d'Yquem 1983
-Chateau Grand Puy Lacoste 2007
-Chateau Leoville Barton 2006
-Chateau Pape Clement 2008
-Le G de Chateau Guiraud 2014
-Chateau Faugeres 2003
-Chateau Haut Brisson 2000
-Chateau La Louviere 2000
-Justin Cabernet Sauvignon 1999
-Dundee Springs Reserve Pinot Noir 1998
-Chateau Clinet 1986
-Chateau La Couspaude 2009
-Chateau La Dominique 1996
-Domaine de la Charbonniere Chateauneuf du Pape 2003
-G. Conterno Barolo 1958
-CVNE Rioja 1982
-CVNE Rioja 1994
-La Rioja Alta Rioja 1976
-A.P. Vin Pinot Noir 2013
-Sine Qua Non Petite Sirah 2012
-Penfolds Club Reserve Tawny Port NV
-Berthaut-Gerbet Clos Vougeot 2018
-Coquard-Loison-Fleurot Clos de la Roche 2021
-Clos de la Chapelle Volnay 2015
-Domaine Leroy Nuits St. Georges 2007
-Chateau Magdelaine 1999
-Chateau Bellevue Mondotte 2001
-Bouchard, Pere et Fils Pommard 2003
-Drouhin-Laroze Chapelle Chambertin 2018
-Delas Freres Cote Rotie 2009
-Taylor Fladgate Vintage Port 2007
-M. Gaunoux Pommard 2005
-Domaine de la Graveirette Chateauneuf du Pape 2007
-J. Royer Chateauneuf du Pape 2009
-J. Bourdy Cotes du Jura Blanc 1985
-Chateau Boswell Cabernet Sauvignon 2010
-Chateau Boswell Chardonnay 2007
-Nicholas Cole Red 2004
-Chateau Marquis de Terme 2016
-Chateau Taillefer 2015
-A.F. Gros Echezeaux 2021
-A.F. Gros Richebourg 2021
-Chateau de la Maltroye Chassagne Montrachet Rouge 2020
-Clos de la Chapelle Beaune Rouge 2020
-Faiveley Echezeaux 2020
-Genot-Boulanger Beaune Greves 2017
-Maison Leroy Vosne Romanee 2017
-P. Morey Pommard 2018
-P. Morey Pommard 2020
-R. Groffier Bourgogne Pinot Noir 2020
-Tollot-Beaut Beaune Rouge 2020
-Domaine de Beaurenard Chateauneuf du Pape 2015
-Domaine de Marcoux Chateauneuf du Pape 2020
-Domaine du Marcoux Chateauneuf du Pape 2020
-E. Guigal Condrieu 2022
-M. Sorrel Hermitage 2021
-Maison Stephan Cote Rotie 2019
-Maison Stephan Cote Rotie 2020
-Souillard Cornas 2019
-Dom Ruinart Vintage Champagne 2009
-Rene Geoffroy Vintage Champagne 2010
-Robert Moncuit Vintage Champagne 2015
-Salmon Champagne NV
-Veuve Clicquot Vintage Champagne 2008
-Monteraponi Trebbiano Colli della Toscana 2020
-Settecieli Scipio 2017
-Sloan Red 2018
-Sine Qua Non Syrah 2020
-Cloudy Bay Pinot Noir 2018
-Chateau Quinault L'Enclos 2005
-Argyle Pinot Noir 1999
-Vilmart et Cie Vintage Champagne 2009
-B. Giacosa Barolo 1982
-Chateau Grand Puy Lacoste 1986
-Maison Leroy Romanee St. Vivant 1976
-P. Amiot Morey St. Denis 2006
-P. Colin Chateauneuf du Pape 2010
-X. Vignon Chateauneuf du Pape NV
-Myriad Cabernet Sauvignon 2009
-Spelletich Cellars Cabernet Sauvignon 1999
-Burgaud Morgon 2018
-Krug Vintage Champagne 1998
-Domaine de la Romanee Conti Romanee Conti 1986
-H. Lignier Clos de la Roche 2017
-Coche-Dury Meursault 1982
-Domaine de la Grange des Peres Vin de Pays de L'Herault Blanc 1998
-Domaine de la Grange des Peres Vin de Pays de L'Herault Blanc 2018
-Domaine de la Grange des Peres Vin de Pays de L'Herault Blanc 2019
-Rostaing Cote Rotie 2009
-Domaine de Chevalier 2012
-Chateau de Fargues 2011
-Chateau La Tour du Pin 2010
-Justin Reserve Red 2013
-Elian Da Ros Cotes du Marmandais 2016
-Domaine l'Aigueliere Terrasses du Larzac 2015
-Screaming Eagle Sauvignon Blanc 2019
-J. Deydier Chateauneuf du Pape 2000
-Domaine de Barbeyrolles Bergerac Sec 1999
-Domaine de Barbeyrolles Bergerac Sec 2005
-Talbott Chardonnay 2015
-Hardy's Cabernet Sauvignon 1996
-Chateau Brane Cantenac 2014
-Chateau Camensac 2016
-Chateau Cantemerle 2016
-Chateau de Fieuzal 2013
-Chateau Grand Puy Lacoste 2014
-Chateau Haut Bailly 2011
-Chateau La Lagune 2012
-Chateau La Lagune 2014
-Chateau La Lagune 2016
-Chateau La Tour Carnet 2006
-Chateau La Tour Carnet 2015
-Chateau Lacoste Borie 2011
-Chateau Lagrange 2010
-Chateau Lalande Borie 2014
-Chateau Nenin 2011
-Chateau Petit Village 2011
-Chateau Phelan Segur 2015
-Chateau Potensac 2011
-Chateau Poujeaux 2012
-Chateau Poujeaux 2014
-Chateau Poujeaux 2015
-Chateau Poujeaux 2016
-Chateau Rauzan Segla 2011
-Chateau Doisy Daene 2011
-Aubert Vineyards Chardonnay 2017
-Turley Zinfandel 2009
-Turley Zinfandel 2011
-J.M. Fourrier Grands Echezeaux 2020
-Lamarche La Grande Rue 2019
-Bosquet des Papes Chateauneuf du Pape 1998
-Domaine les Pallieres Gigondas 1998
-Domaine Santa Duc Gigondas 1998
-M. Chapoutier Chateauneuf du Pape 1998
-Chateau de Fargues 1976
-G. Roumier Chambolle Musigny 2009
-G. Roumier Morey St. Denis 2003
-G. Roumier Morey St. Denis 2020
-Thibault Liger-Belair Richebourg 2008
-Jamet Cote Rotie 2005
-M. & S. Ogier Cote Rotie 2003
-M. & S. Ogier Cote Rotie 2009
-P. Thustrup Montrachet 1999
-Domaine de la Bongran (Thevenet) Macon Clesse 2013
-Domaine du Pegau Chateauneuf du Pape 2010
-Far Niente Cabernet Sauvignon 2010
-Altamura Cabernet Sauvignon 2006
-Frank Family Reserve Cabernet Sauvignon 2005
-Frias Private Reserve Cabernet Sauvignon 2005
-Paul Hobbs Cabernet Sauvignon 2019
-Peter Michael Red 2018
-Sherwin Family Cabernet Sauvignon 2016
-Aubert Vineyards Pinot Noir 2010
-Alban Vineyards Syrah 2012
-Brewer-Clifton Pinot Noir 2007
-Calera Pinot Noir 2006
-Carter Merlot 2004
-Paul Hobbs Pinot Noir 2020
-Sea Smoke Pinot Noir 2009
-Peter Michael Red 2017
-Ceritas Pinot Noir 2018
-Hirsch Vineyards Pinot Noir 2017
-Kosta Browne Pinot Noir 2017
-Aubert Vineyards Chardonnay 2018
-Myriad Cabernet Sauvignon 2012
-Bedrock Cabernet Sauvignon 2013
-Maybach Rose 2020
-Myriad Syrah 2012
-Switchback Ridge Petite Sirah 2012
-Bedrock Red 2013
-Bedrock Red 2014
-Bedrock Zinfandel 2014
-Lillian Syrah 2011
-Pott Wine Grenache 2013
-Rhys Syrah 2012
-Domaine Leroy Vosne Romanee 2004
-Saint Cosme Cote Rotie 2003
-M. Chapoutier St. Joseph 2003
-G. Bovio Barolo 2003
-La Poderina Brunello di Montalcino 2006
-B.V. Private Reserve Cabernet Sauvignon 2011
-Carte Blanche Cabernet Sauvignon 2008
-Carter Cabernet Sauvignon 2007
-Carter Cabernet Sauvignon 2008
-Alban Vineyards Syrah 2001
-Alban Vineyards Syrah 2009
-Alban Vineyards Syrah 2011
-Force Majeure Cabernet Sauvignon 2006
-Force Majeure Cabernet Sauvignon 2009
-J. Sanders Cotes du Rhone Blanc 1988
-Mas de Daumas Gassac Vin de Pays de l'Herault 2021
-Fanti Brunello di Montalcino 2012
-Domaine Roy & Fils Chardonnay 2021
-Et Fille Pinot Noir 2015
-Et Fille Pinot Noir 2017
-Camus Charmes Chambertin 1985
-Palmer & Co Champagne NV
-Clif Family Cabernet Sauvignon 2019
-Hesperian Cabernet Sauvignon 2019
-Sojourn Cabernet Sauvignon 2012
-Delectus Cabernet Sauvignon 2003
-Soliste Cellars Syrah 2010
-Coach House Cellars Red 2009
-Domaine de la Romanee Conti Montrachet 2000
-Krug Vintage Champagne 1996
-Paul Hobbs Cabernet Sauvignon 2020
-Coche-Dury Monthelie 2016
-Opus One 2005
-G. Roumier Chambolle Musigny 2011
-G. Roumier Chambolle Musigny 2012
-Chateau Lafite Rothschild 2008
-Hirsch Vineyards Reserve Pinot Noir 2017
-Occidental Pinot Noir 2017
-Williams Selyem Pinot Noir 2017
-Canalicchio Di Sopra Brunello di Montalcino 2010
-Canalicchio Di Sopra Brunello di Montalcino 2012
-Canalicchio Di Sopra Brunello di Montalcino 2015
-Colombini Brunello di Montalcino 2010
-Fanti Brunello di Montalcino 2010
-Fanti Brunello di Montalcino 2007
-Il Marroneto Brunello di Montalcino 2012
-Le Chiuse Brunello di Montalcino 2010
-Pertimali (Livio Sassetti) Brunello di Montalcino 2010
-Petrolo Galatrona 2013
-Salvioni Brunello di Montalcino 2012
-San Filippo Brunello di Montalcino 2012
-Valdicava Brunello di Montalcino 2010
-Halter Ranch Red 2015
-Kutch Pinot Noir 2014
-Kutch Pinot Noir 2015
-Sandhi Wines Pinot Noir 2012
-Kosta Browne Pinot Noir 2020
-Kosta Browne Pinot Noir 2019
-Kosta Browne Pinot Noir 2016
-Anthill Farms Pinot Noir 2012
-EMH Cabernet Sauvignon 2012
-Kutch Pinot Noir 2012
-Kosta Browne Pinot Noir 2021
-Kosta Browne Chardonnay 2019
-Williams Selyem Cabernet Sauvignon 2020
-Rivers Marie Chardonnay 2020
-Rivers Marie Chardonnay 2021
-St. Damien Gigondas 2007
-Ramey Chardonnay 2010
-Ramey Chardonnay 2012
-Ramey Chardonnay 2013
-Chateau Haut Brion 1989
-Chateau Lafite Rothschild 1982
-A. Rousseau Chambertin 1998
-A. Rousseau Gevrey Chambertin 2001
-E. Rouget Echezeaux 2003
-Pierre-Yves Colin Morey Montrachet 2004
-Roulot Meursault 2017
-Domaine Leflaive Chevalier Montrachet 2001
-Domaine Leflaive Puligny Montrachet 2005
-Domaine Leflaive Puligny Montrachet 2008
-J.M. Gaunoux Meursault 2007
-Latour-Giraud Puligny Montrachet 2006
-Warre's Vintage Port 1977
-A. Conterno Barolo 1978
-Chateau La Conseillante 2009
-Chateau La Mission Haut Brion 2010
-Chateau de Fargues 1998
-B. Dugat-Py Mazis Chambertin 2019
-Faiveley Chambertin 2016
-Fourrier Gevrey Chambertin 2019
-J. Grivot Richebourg 2019
-Meo Camuzet Vosne Romanee 2018
-Meo Camuzet Vosne Romanee 2020
-Meo Camuzet, Frere et Souers Chambolle Musigny 2021
-Faiveley Batard Montrachet 2020
-J.L. Chave Hermitage 2016
-Egly Ouriet Champagne NV
-Descendientes De J. Palacios Bierzo 2021
-Descendientes De J. Palacios Bierzo 2020
-D'Oliveiras Madeira 1895
-D'Oliveiras Madeira 1890
-Chateau Lafite Rothschild 1981
-B. Grivelet Chambertin 1972
-J. Prieur Clos Vougeot 1972
-J. Drouhin Montrachet 2005
-E. Guigal Cote Rotie 1999
-E. Guigal Cote Rotie 2001
-E. Guigal Cote Rotie 1980
-E. Guigal Cote Rotie 2018
-M. Chapoutier Ermitage Blanc 2011
-Rostaing Cote Rotie 2015
-Tardieu-Laurent Cote Rotie 1999
-La Rioja Alta Rioja 1973
-Croft Vintage Port 1963
-Dow's Vintage Port 1963
-Fonseca Vintage Port 1963
-Fonseca Vintage Port 1994
-Kopke Tawny Port NV
-Quinta do Noval Vintage Port 1985
-Taylor Fladgate Vintage Port 1970
-Taylor Fladgate Vintage Port 1985
-Taylor Fladgate Vintage Port 1994
-Warre's Vintage Port 1963
-Niepoort Port NV
-M. Niellon Chassagne Montrachet 2002
-Kistler Pinot Noir 2006
-Kistler Pinot Noir 2008
-Kistler Pinot Noir 2012
-Occidental Pinot Noir 2013
-Williams Selyem Pinot Noir 2011
-Williams Selyem Pinot Noir 2012
-Williams Selyem Pinot Noir 2010
-Williams Selyem Pinot Noir 2009
-Williams Selyem Pinot Noir 2008
-Williams Selyem Pinot Noir 2006
-Williams Selyem Pinot Noir 2007
-Williams Selyem Pinot Noir 2013
-Kistler Chardonnay 2008
-Kistler Chardonnay 2012
-Kistler Chardonnay 2006
-Kistler Chardonnay 2007
-Kistler Chardonnay 2011
-Kistler Chardonnay 2009
-J.L. Jamet Collines Rhodaniennes 2021
-Robert Moncuit Vintage Champagne 2007
-Moillard Clos Vougeot 1971
-Vieux Telegraphe Chateauneuf du Pape 1985
-Vieux Telegraphe Chateauneuf du Pape 1989
-Fratelli Barale Barolo 1978
-Prunotto Barolo 1964
-La Bastide Saint-Dominique Chateauneuf du Pape 2010
-Chateau Belair-Monange 2018
-Chateau Chantalouette 2018
-Chateau Clarke 2018
-Chateau de Pez 2019
-Chateau du Pin 2006
-Chateau Latour a Pomerol 2017
-Chateau Latour a Pomerol 2018
-Chateau Plince 2018
-Chateau Rouget 2018
-Esperance de Trotanoy 2018
-Haut Roc Blanquant 2018
-Crypes des Climens 2012
-Courcel Pommard 2018
-Domaine du Cellier aux Moines Givry 2020
-Maison Evenstad Aloxe Corton 2018
-J. Drouhin Chorey Les Beaune 2020
-L. Jadot Chablis 2020
-Bouchard, Pere et Fils Beaune Blanc 2017
-Drouhin-Vaudon Chablis 2022
-J. Drouhin Meursault 2022
-J. Drouhin Puligny Montrachet 2019
-L. Jadot Puligny Montrachet 2020
-P. Mayeul Nuits St. Georges Blanc 2018
-Chateau La Nerthe Chateauneuf du Pape 2016
-Chateau La Nerthe Chateauneuf du Pape 2019
-Chene Bleu Vaucluse 2015
-Chene Bleu Ventoux 2015
-Domaine de la Solitude Chateauneuf du Pape 2020
-Domaine de la Solitude Chateauneuf du Pape 2018
-L. & A. Brunel Chateauneuf du Pape 2020
-Les Vignerons de l'Enclave des Papes Cotes du Rhone Blanc 2020
-Ferraton Cotes du Rhone Blanc 2020
-L. & A. Brunel Chateauneuf du Pape 2019
-M. Chapoutier Ermitage Blanc 2012
-Saint Cosme Cote Rotie 2020
-Joao Portugal Ramos Vinho Verde 2019
-Casa do Valle Vinho Verde 2020
-Joao Portugal Ramos Vinho Verde 2020
-Durnberg Welschriesling 2018
-Alfred Gratien Champagne NV
-Delamotte Champagne NV
-JCB Champagne NV
-Billecart Salmon Champagne NV
-Dom Perignon Vintage Champagne 2009
-Drappier Champagne NV
-JCB Vintage Champagne 2010
-Jeeper Champagne NV
-La Caravelle Champagne NV
-Lallier Champagne NV
-Moet & Chandon Vintage Champagne 2015
-Palmer & Co Vintage Champagne 2015
-Penfolds x Thienot Vintage Champagne 2013
-Piper Heidsieck Champagne NV
-Piper Heidsieck Vintage Champagne 2014
-Veuve Clicquot Champagne NV
-Veuve Clicquot Vintage Champagne 2015
-Channing Daughters Pinot Grigio 2020
-Dr. Konstantin Frank Riesling 2020
-Dr. Konstantin Frank Sauvignon Blanc 2021
-Lieb Cellars Pinot Blanc 2020
-Beau Joie Champagne NV
-Cote Mas Cremant de Limoux NV
-Bouvet-Ladubay Cremant de Loire 2019
-Vin de Pays d'Oc 2020
-Domaine de Vodanis Vouvray 2018
-G. Bertrand Clos d'Ora 2019
-H. Champliau Cremant de Bourgogne NV
-H. Brochard Sancerre 2020
-Laroche Vin de Pays d'Oc 2020
-Dopff & Irion Cremant d'Alsace NV
-Clean Slate Riesling 2020
-Dr. Pauly Bergweiler Riesling 2020
-E. Walch Gewurztraminer 2020
-Tramin Gewurztraminer 2020
-Gustave Lorentz Riesling 2018
-Sattlerhof Sauvignon Blanc 2020
-Schloss Johannisberg Riesling Feinherb 2018
-Tiefenbrunner Weissburgunder 2020
-Adami Valdobbiadene Prosecco 2020
-Allegrini Amarone 2019
-Argiano Brunello di Montalcino 2018
-Alessandro di Camporeale Catarratto 2020
-Altemasi Trentino 2010
-Argiolas Vermentino 2020
-B. Graetz Colore 2020
-B. Graetz Testamatta 2020
-Barone Pizzini Franciacorta 2011
-Bel Colle Barolo 2013
-Bellavista Franciacorta 2018
-Beni di Batasiolo Barolo 2015
-Berlucchi Franciacorta 2015
-Bottega Prosecco NV
-Bottega Vinaia Trentino 2017
-Bisol Valdobbiadene Prosecco NV
-Biondi Santi Rosso di Montalcino 2020
-Biserno Biserno 2020
-Ca' del Bosco Franciacorta 2014
-Caparzo Brunello di Montalcino 2016
-Carpineto Brunello di Montalcino 2018
-Campo Al Mare Bolgheri 2020
-Caruso & Minini Catarratto 2020
-Castello di Monsanto Chardonnay 2019
-Caruso & Minini Sicilia Bianco 2020
-Colle Massari Montecucco 2016
-Corvo Sicilia 2020
-Corvo Sicilia Bianco 2020
-Duca di Salaparuta Sicilia Bianco 2020
-E. Cogno Barolo 2016
-F. Tornatore Etna Bianco 2019
-Graci Etna Bianco 2020
-Donnachiara Greco Di Tufo 2019
-H. Rottensteiner Pinot Grigio 2020
-Ferrari Trentino 2010
-Ferrari Trentino 2011
-Ferrari Trentino NV
-Feudo Montoni Catarratto 2020
-Gorghi Tondi Catarratto 2020
-Feudo Maccari Sicilia Bianco 2020
-La Doria Gavi 2020
-La Scolca Gavi di Gavi 2008
-L. Maffini Kratos 2020
-Jermann Venezia Giulia Bianco 2019
-La Mannella Brunello di Montalcino 2016
-Pertinace Langhe Bianco 2018
-P. Cesare Langhe Chardonnay 2018
-P. Cesare Langhe Chardonnay 2019
-Merotto Valdobbiadene Prosecco 2020
-M. Lucchetti Verdicchio dei Castelli di Jesi 2020
-Petilia Fiano di Avellino 2020
-Petilia Greco Di Tufo 2019
-Pieropan Soave 2017
-Pieropan Soave 2019
-R. Ratti Barolo 2019
-Pighin Collio Pinot Grigio 2020
-Pievalta Verdicchio dei Castelli di Jesi 2020
-S. Nardi Brunello di Montalcino 2017
-Ricci Curbastro Franciacorta 2013
-Suavia Soave 2020
-Tedeschi Amarone 2016
-Tenuta Cucco Barolo 2019
-Tenuta di Arceno Valadorna 2018
-Tenuta La Fuga Brunello di Montalcino 2017
-Tenuta San Guido Guidalberto 2021
-Tenuta San Guido Le Difese 2022
-Tenuta Sette Ponti Oreno 2020
-Villa Matilde Greco Di Tufo 2020
-Zenato Lugana 2020
-Zenato Pinot Grigio 2021
-Valle Reale Trebbiano D'Abruzzo 2020
-Kopke Colheita Port 2005
-Bardos Ribera del Duero 2020
-Aspaldi Rioja 2015
-Altos Ibericos Rioja 2016
-Bodegas Breca Garnacha 2018
-Bodegas Breca Garnacha 2019
-Bodegas Estefania Bierzo Blanco 2020
-Bodegas Eidosela Rias Baixas Albarino 2020
-Bodegas Castillejo de Robledo Ribera del Duero 2015
-Bodegas Luzon Jumilla 2017
-Bodegas Luzon Jumilla 2019
-Bodegas Naia Rueda Blanco 2020
-Bodegas Neo Ribera del Duero 2019
-Bodegas Ostatu Rioja 2015
-Broken Slates Priorat 2021
-Bodegas Vina Nora Rias Baixas Albarino 2020
-Bodegas y Vinedos Escudero Rioja 2011
-Bodegas Taron Rioja Blanco 2020
-Bodegas Vizcarra Ramos Ribera del Duero 2020
-Bodegas Volver Vino de la Tierra de Castilla 2020
-Ferrer Bobet Priorat 2018
-E. Moro Ribera del Duero 2021
-Godelia Bierzo Blanco 2020
-Grifoll Declara Priorat 2019
-Lagar de Cervera Rias Baixas Albarino 2020
-Marques de Caceres Rias Baixas Albarino 2020
-Herencia Altes Terra Alta 2018
-Martin Codax Rias Baixas Albarino 2020
-Marques de Caceres Rioja 2016
-Martinez Bujanda Rioja Blanco 2019
-Matarromera Ribera del Duero 2015
-Otazu Pago de Otazu 2010
-Paco & Lola Rias Baixas Albarino 2020
-Pago de Carraovejas Ribera del Duero 2020
-Pagos de Rey Rias Baixas Albarino 2019
-Pazos de Lusco Rias Baixas Albarino 2021
-Pago del Vicario Vino de la Tierra de Castilla 2020
-Perinet Priorat 2017
-Perinet Priorat 2018
-Torres Conca de Barbera 2019
-Torres Penedes 2017
-Torres Penedes 2018
-Torres Penedes 2019
-Venta la Vega Almansa Blanco 2021
-Tabula Ribera del Duero 2018
-Valdelacierva Rioja 2018
-Vegalfaro Valencia 2020
-Vina Gormaz Ribera del Duero 2019
-Vilano Ribera del Duero 2019
-Vina Gormaz Ribera del Duero 2020
-Vilano Ribera del Duero 2020
-Vizcarra Ribera del Duero 2019
-Vizcarra Ribera del Duero 2020
-Acumen Cabernet Sauvignon 2013
-Acumen Cabernet Sauvignon 2019
-Acumen Cabernet Sauvignon 2016
-Aloft Cabernet Sauvignon 2019
-Alpha Omega Red 2021
-Amulet Estate Cabernet Sauvignon 2021
-Arkenstone Cabernet Sauvignon 2020
-Au Sommet Cabernet Sauvignon 2019
-B.V. Private Reserve Cabernet Sauvignon 2019
-Baldacci Red 2021
-Bella Oaks Red 2017
-Benovia Cabernet Sauvignon 2019
-Beringer Cabernet Sauvignon 2020
-Brion Cabernet Sauvignon 2019
-Bonterra Red 2020
-Calla Lily Cabernet Sauvignon 2019
-Canvasback Cabernet Sauvignon 2020
-Cardinale Red 2014
-Chappellet Cabernet Sauvignon 2005
-Chappellet Cabernet Sauvignon 2019
-Chateau Montelena Cabernet Sauvignon 2019
-Clif Family Cabernet Sauvignon 2018
-Cliff Lede Cabernet Sauvignon 2019
-Clos du Val Cabernet Sauvignon 2021
-Orin Swift Cabernet Sauvignon 2021
-Corison Cabernet Sauvignon 2014
-Cornerstone Cabernet Sauvignon 2018
-Covert Estate Cabernet Sauvignon 2019
-Crosby Roamann Cabernet Sauvignon 2019
-Crosby Roamann Cabernet Sauvignon 2018
-Darioush Cabernet Sauvignon 2019
-Ehlers Estate Cabernet Sauvignon 2021
-Tablas Creek Mourvedre 2021
-Ehlers Estate Cabernet Franc 2019
-Eleven-Eleven Cabernet Sauvignon 2020
-Eleven-Eleven Reserve Cabernet Sauvignon 2019
-Etude Cabernet Sauvignon 2019
-Farella Cabernet Sauvignon 2019
-Force & Grace Cabernet Sauvignon 2021
-Freemark Abbey Cabernet Sauvignon 2019
-Frog's Leap Cabernet Sauvignon 2018
-Girard Cabernet Sauvignon 2021
-Hall Cabernet Sauvignon 2019
-Inglenook Cabernet Sauvignon 2013
-Inglenook Cabernet Sauvignon 2018
-Inglenook Cabernet Sauvignon 2019
-Ink Grade Estate Cabernet Sauvignon 2019
-J. Moss Cabernet Sauvignon 2018
-J.O. Sullivan Cabernet Sauvignong 2019
-Joseph Phelps Cabernet Sauvignon 2021
-Ladera Cabernet Sauvignon 2019
-Lail Vineyards Cabernet Sauvignon 2019
-Larkmead Red 2019
-Larkmead Red 2013
-Llamas Family Cabernet Sauvignon 2017
-Lobo Cabernet Sauvignon 2019
-Lobo Cabernet Sauvignon 2020
-Lobo Cabernet Sauvignon 2021
-Louis Martini Cabernet Sauvignon 2018
-Louis Martini Cabernet Sauvignon 2019
-Memento Mori Cabernet Cauvignon 2019
-Merriam Vineyards Red 2019
-Merus Cabernet Sauvignon 2011
-Merus Cabernet Sauvignon 2013
-Merus Cabernet Sauvignon 2019
-Miner Family Red 2018
-Neal Family Cabernet Sauvignon 2019
-Palmaz Vineyards Cabernet Sauvignon 2017
-Pas de Cheval Cabernet Sauvignon 2019
-Patrimony Cabernet Sauvignon 2020
-Paul Hobbs Cabernet Sauvignon 2015
-Pine Ridge Cabernet Sauvignon 2019
-Pine Ridge Cabernet Sauvignon 2021
-Quintessa Red 2020
-Robert Craig Cabernet Sauvignon 2019
-Rodney Strong Cabernet Sauvignon 2018
-Rowen Wine Cabernet Sauvignon 2018
-Rowen Wine Red 2018
-Roy Estate Cabernet Sauvignon 2018
-Sequoia Grove Cabernet Sauvignon 2016
-Signorello Cabernet Sauvignon 2019
-Silverado Cabernet Sauvignon 2019
-Skipstone Cabernet Sauvignon 2019
-Stone Edge Farm Cabernet Sauvignon 2018
-Tarpon Cellars Cabernet Sauvignon 2018
-The Vice Cabernet Sauvignon 2019
-The Vice Cabernet Sauvignon NV
-To Kalon Vineyard Company Red 2018
-Tor Cabernet Sauvignon 2019
-Tor Cabernet Sauvignon 2021
-Torcia Cabernet Sauvignon 2018
-Trefethen Cabernet Sauvignon 2018
-Trois Noix Cabernet Sauvignon 2020
-V. Sattui Cabernet Sauvignon 2015
-Viader Red 2019
-Benovia Sparkling Wine 2018
-Bricoleur Sparkling Wine NV
-Cline Mourvedre 2011
-Hawk & Horse Sparkling Wine 2019
-J Vineyards & Winery Sparkling Wine 2012
-Matanzas Creek Sparkling Wine NV
-Roederer Estate Sparkling Wine 2015
-Sonoma-Cutrer Sparkling Wine 2019
-Acumen Cabernet Franc 2021
-Arkenstone Red 2020
-Benovia Pinot Noir 2020
-Benovia Pinot Noir 2019
-Boar's View Pinot Noir 2021
-Bouchaine Pinot Noir 2021
-Brandlin Malbec 2021
-Brewer-Clifton Pinot Noir 2021
-Bricoleur Pinot Noir 2019
-Bricoleur Pinot Noir 2021
-Cattleya Pinot Noir 2021
-Cattleya Syrah 2021
-Chamisal Pinot Noir 2020
-Chappellet Pinot Noir 2021
-CHEV Pinot Noir 2021
-Cirq Pinot Noir 2021
-Clarice Pinot Noir 2022
-Clos du Val Red 2021
-Clos Solene Red 2021
-Cobb Pinot Noir 2021
-Convene Pinot Noir 2021
-Coil Pinot Noir 2019
-Crosby Roamann Merlot 2019
-Cuvaison Merlot 2019
-Cuvaison Syrah 2019
-Dark Matter Cabernet Sauvignon 2018
-Denner Red 2019
-Diora Pinot Noir 2018
-Dry Creek Merlot 2014
-Ehlers Estate Merlot 2019
-Dutton Goldfield Pinot Noir 2021
-Dutton Goldfield Syrah 2019
-Dutton Goldfield Zinfandel 2021
-Emeritus Pinot Noir 2020
-Emeritus Pinot Noir 2019
-Flowers Pinot Noir 2022
-Freeman Pinot Noir 2021
-Goldeneye Pinot Noir 2020
-Goldeneye Pinot Noir 2021
-Hamel Family Red 2018
-J Vineyards & Winery Pinot Noir 2021
-JCB Chardonnay 2019
-Larry Hyde & Sons Merlot 2019
-Larry Hyde & Sons Pinot Noir 2019
-Merriam Vineyards Cabernet Franc 2021
-Merriam Vineyards Merlot 2019
-Merriam Vineyards Cabernet Sauvignon 2019
-Mt. Brave Merlot 2019
-Pahlmeyer Merlot 2019
-Lobo Pinot Noir 2018
-Perlegos Wine Co. Zinfandel 2020
-Robert Biale Zinfandel 2021
-Roy Estate Red 2018
-Seghesio Red 2018
-Seghesio Red 2021
-Serres Ranch Red 2018
-Skipstone Cabernet Franc 2019
-Skipstone Red 2019
-Skipstone Red 2021
-St. Francis Red 2017
-Tablas Creek Red 2021
-Talbott Pinot Noir 2011
-Talbott Pinot Noir 2018
-Tarpon Cellars Zinfandel 2020
-Terre et Sang Grenache 2020
-damir ranch Jeff Runquist Petit Verdot 2017
-Terre et Sang Syrah 2020
-Alpha Omega Chardonnay 2020
-Amici Chardonnay 2021
-Arkenstone Reserve Sauvignon Blanc 2017
-Arkenstone Sauvignon Blanc 2020
-Cakebread Cellars Chardonnay 2021
-Cambria Chardonnay 2020
-Cattleya Chardonnay 2021
-Chalk Hill Sauvignon Blanc 2019
-Chandon Sparkling Wine NV
-Chappellet Chardonnay 2021
-Charles Woodson Chardonnay 2020
-CHEV Chardonnay 2021
-Cuvaison Chardonnay 2022
-David Arthur Chardonnay 2021
-De Negoce Sauvignon Blanc 2019
-DeLoach Vineyards Chardonnay 2019
-Ettore Chardonnay 2018
-Gary Farrell Chardonnay 2021
-Gloria Ferrer Sparkling Wine 2010
-Harken Chardonnay 2020
-Inglenook White 2021
-J Vineyards & Winery Pinot Gris 2021
-K2 Wine & Spirits Chardonnay 2020
-La Crema Chardonnay 2020
-Lail Vineyards Sauvignon Blanc 2022
-Macrostie Chardonnay 2020
-Merryvale Chardonnay 2018
-Oberon Chardonnay 2019
-Palmaz Vineyards Chardonnay 2019
-Piper Sonoma Sparkling Wine NV
-Quintessa Sauvignon Blanc 2022
-RouteStock Chardonnay 2020
-Smith Madrone Riesling 2017
-St. Francis Chardonnay 2020
-Tablas Creek Grenache Blanc 2021
-Talbott Chardonnay 2018
-Talbott Chardonnay 2019
-Terra d'Oro White 2018
-The Vineyard House Chardonnay 2019
-Tor Chardonnay 2021
-Andante Reserve Pinot Noir 2021
-Gran Moraine Chardonnay 2018
-Bledsoe-McDaniels Pinot Noir 2021
-Domaine Nicolas Jay Pinot Noir 2021
-Hamilton Russell Vineyards Pinot Noir 2018
-Lange Winery Pinot Noir 2021
-Penner-Ash Chardonnay 2019
-Penner-Ash Riesling 2019
-Penner-Ash Pinot Noir 2021
-Willakenzie Pinot Noir 2021
-Barnard Griffin Albarino 2020
-Bledsoe Family Winery Cabernet Sauvignon 2020
-Bledsoe Family Winery Cabernet Sauvignon 2021
-Bledsoe-McDaniels Syrah 2021
-Chateau St. Michelle Red 2018
-Col Solare Cabernet Sauvignon 2020
-Cote Bonneville Red 2015
-Delille Cellars Red 2020
-Doubleback Cabernet Sauvignon 2021
-Doubleback Reserve Red 2020
-Doubleback Reserve Red 2021
-Dusted Valley Pinot Gris 2019
-Gramercy Cellars Red 2020
-Leonetti Cellars Cabernet Sauvignon 2021
-Mark Ryan Cabernet Sauvignon 2021
-Matthews Cellars Reserve Cabernet Franc 2021
-Matthews Reserve Claret 2021
-Quilceda Creek Cabernet Sauvignon 2020
-Sagebreaker Red 2021
-Pacific Rim Red 2018
-Spring Valley Cabernet Franc 2021
-Spring Valley Red 2021
-Trothe Cabernet Sauvignon 2020
-Trothe Cabernet Sauvignon 2021
-Trothe Grenache 2021
-Trothe Malbec 2019
-Trothe Syrah 2020
-Trothe Syrah 2021
-Valdemar Cabernet Sauvignon 2019
-Valdemar Cabernet Sauvignon 2020
-Valdemar Syrah 2020
-William Grassie Pinot Gris 2021
-Wilridge Pinot Grigio 2018
-Wines of Sagemoor White 2018
-Woodward Canyon Cabernet Sauvignon 2021
-Woodward Canyon Reserve Red 2021
-Beaumont Chenin Blanc 2020
-Brokenwood Semillon 2017
-Clonakilla Shiraz/Viognier 2021
-Domaine Chandon Sparkling Wine NV
-Dr. Edge Pinot Noir 2021
-Frederick Stevenson Pinot Noir 2021
-Giant Steps Chardonnay 2021
-Moorilla Pinot Noir 2017
-Henschke Cabernet Sauvignon 2018
-Hickinbotham Red 2020
-Joshua Cooper Pinot Noir 2021
-Kanonkop Red 2008
-Neldner Road Shiraz 2019
-Penfolds Cabernet Sauvignon 2019
-Powell & Son Grenache/Shiraz/Mataro 2017
-Powell & Son Shiraz 2018
-Powell & Son Shiraz 2017
-Patrick Sullivan Pinot Noir 2021
-Shaw & Smith Shiraz 2019
-Shaw & Smith Shiraz 2020
-Tolpuddle Chardonnay 2021
-Tolpuddle Pinot Noir 2021
-Tyrrell's Semillon 2017
-Vasse Felix Chardonnay 2019
-Vasse Felix Chardonnay 2020
-Vasse Felix Red 2018
-Wynns Coonawarra Estate Cabernet Sauvignon 2020
-Worlds Apart Pinot Noir 2022
-Yalumba Viognier 2020
-Yalumba Viognier 2021
-Felton Road Pinot Noir 2021
-Craggy Range Pinot Noir 2018
-Jules Taylor Sauvignon Blanc 2022
-Nobilo Sauvignon Blanc 2020
-Peregrine Sauvignon Blanc 2021
-Saint Clair Family Sauvignon Blanc 2020
-Tohu Sauvignon Blanc 2021
-Whitehaven Sauvignon Blanc 2021
-Wild Rock Sauvignon Blanc 2021
-Villa Maria Cabernet Sauvignon 2018
-Villa Maria Sauvignon Blanc 2021
-Royal Tokaji Tokaji 2016
-Chateau d'Auvernier 2019
-Mulderbosch Sauvignon Blanc 2021
-Cloudy Bay Sauvignon Blanc 2019
-Cloudy Bay Sauvignon Blanc 2020
-Cloudy Bay Sauvignon Blanc 2021
-Quinta Do Vallado Vintage Port 2019
-Rustenberg Chardonnay 2017
-Susana Balbo Malbec 2019
-Taylor Fladgate Vintage Port 2018
-J. et P. Testuz Dezaley 2018
-Valdespino Sherry NV
-Terrazas de los Andes Malbec 2020
-Tokara Chardonnay 2019
-Concha Y Toro Cabernet Sauvignon 2020
-Lapostolle Sauvignon Blanc 2021
-Lenz Gewurztraminer 2015
-Montes Alpha Chardonnay 2019
-Montes Alpha Chardonnay 2020
-Vik Red 2019
-Vina Vik Red 2019
-Kopke 30 Year Tawny Port NV
-Kopke 40 Year Tawny Port NV
-Quinta do Vallado Douro 2020
-Quinta Do Vallado 20 Year Tawny Port NV
-Alheit Vineyards White 2020
-Bellingham Chenin Blanc 2020
-Cederberg Sauvignon Blanc 2021
-DeMorgenzon Reserve Chenin Blanc 2019
-Kara Tara Pinot Noir 2018
-Lismore Reserve Viognier 2018
-Mulderbosch Chenin Blanc 2021
-Raats Chenin Blanc 2018
-Raats Chenin Blanc 2021
-Alta Vista Sparkling Wine NV
-Sadie Family Red 2017
-Argento Malbec 2017
-Bodega Norton Torrontes 2021
-El Enemigo Semillon 2018
-Catena Zapata Chardonnay 2021
-Catena Zapata Malbec 2021
-Catena Zapata Malbec 2020
-Catena Zapata Red 2020
-Luigi Bosca Malbec 2020
-Luigi Bosca Red 2019
-Luigi Bosca Sauvignon Blanc 2019
-Otronia Chardonnay 2018
-Otronia Pinot Noir 2018
-Otronia Pinot Noir 2019
-Pascual Toso Cabernet Sauvignon 2020
-Tilia Torrontes 2020
-Zuccardi Chardonnay 2021
-Zuccardi Chardonnay 2022
-Zuccardi Malbec 2018
-Zuccardi Malbec 2020
-Zuccardi Sparkling Wine 2017
-Gaia Peloponnese 2020
-Argyros Santorini 2020
-L. Jadot Bonnes Mares 2006
-Dom Perignon Vintage Champagne 2008
-Antinori Solaia 2012
-Chateau Pichon Lalande 2015
-Chateau Pichon Lalande 2016
-Alpha Omega Cabernet Sauvignon 2015
-Alpha Omega Cabernet Sauvignon 2016
-Alpha Omega Cabernet Sauvignon 2018
-Alpha Omega Cabernet Sauvignon 2019
-Alpha Omega Red 2013
-Alpha Omega Red 2014
-Alpha Omega Red 2015
-Alpha Omega Red 2016
-Alpha Omega Red 2017
-Alpha Omega Red 2018
-Alpha Omega Red 2019
-Kata Cabernet Sauvignon 2015
-Kata Cabernet Sauvignon 2016
-Perchance Cabernet Sauvignon 2021
-Quintessa Red 2014
-Stewart Cabernet Sauvignon 2016
-Stewart Cabernet Sauvignon 2018
-Stewart Cabernet Sauvignon 2019
-Chateau Batailley 1953
-Chateau Batailley 1961
-Chateau Bouscaut 1955
-Chateau Brane Cantenac 1959
-Chateau de Fieuzal 1989
-Chateau Ducru Beaucaillou 1982
-Chateau Ducru Beaucaillou 1989
-Chateau Duhart Milon 1978
-Chateau Gruaud Larose 1978
-Chateau Haut Brion 1981
-Chateau L'Evangile 1982
-Chateau La Dominique 1989
-Chateau La Fleur 1982
-Chateau La Gaffeliere Naudes 1959
-Chateau La Lagune 1982
-Chateau La Mission Haut Brion 1976
-Chateau La Mission Haut Brion 1979
-Chateau La Mission Haut Brion 1981
-Chateau La Tour Haut Brion 1982
-Chateau Lafite Rothschild 1970
-Chateau Lafite Rothschild 1976
-Chateau Latour 1934
-Chateau Latour 1975
-Chateau Latour 1979
-Chateau Latour 1981
-Chateau Latour 1985
-Chateau Leoville Las Cases 1970
-Chateau Meyney 1989
-Chateau Mouton Rothschild 1970
-Chateau Mouton Rothschild 1971
-Chateau Mouton Rothschild 1976
-Chateau Mouton Rothschild 1978
-Chateau Palmer 1981
-Chateau Pichon Lalande 1985
-Chateau Pichon Lalande 1989
-Chateau St. Georges 1967
-Chateau Talbot 1970
-Chateau Talbot 1978
-Chateau Trotanoy 1975
-Chateau Trotanoy 1979
-Chateau Trotte Vieille 1961
-Clos du Marquis 1989
-Clos Fourtet 1949
-Les Tourelles de Longueville 1989
-Pavillon Rouge du Chateau Margaux 1986
-Chateau Climens 1975
-Chateau de Fargues 1975
-Chateau Suduiraut 1971
-Pavillon Blanc du Chateau Margaux 1986
-Y de Chateau d'Yquem 1978
-Chandon de Briailles Corton Bressandes 1966
-Domaine des Varoilles Gevrey Chambertin 1978
-Dujac Morey St. Denis 1983
-F. Chauvenet Charmes Chambertin 1985
-Faiveley Latricieres Chambertin 1969
-Faiveley Latricieres Chambertin 1978
-L. Trapet Chambertin 1985
-Marquis d'Angerville Volnay 1990
-Mongeard Mugneret Echezeaux 1983
-Mongeard Mugneret Grands Echezeaux 1984
-L. Jadot Meursault 1990
-L. Jadot Meursault 1995
-Roulot Meursault 1993
-Chateau de Beaucastel Chateauneuf du Pape 1983
-Domaine du Cayron Gigondas 1988
-E. Guigal Cote Rotie 1985
-E. Guigal Cote Rotie 1984
-Mont Redon Chateauneuf du Pape 1961
-Domaine Tempier Bandol 1988
-Dr. Thanisch Riesling Feine Auslese 1967
-Dr. Thanisch Riesling Spatlese Cabinet 1969
-E. Muller Riesling Kabinett 1981
-E. Muller Riesling Kabinett 1983
-E. Muller Riesling Spatlese 1966
-H. Braun Riesling Trockenbeerenauslese 1976
-J.J. Prum Riesling Auslese 1969
-Karthauserhof Riesling Auslese 1959
-Karthauserhof Riesling Feinste Auslese 1959
-Schloss Reinharthausen Riesling Auslese 1976
-Zentralkellerrei am Ruster Berg Riesling Trockenbeerenauslese 1967
-B.V. Cabernet Sauvignon 1967
-Joseph Phelps Winery 1996
-Joseph Phelps Winery 1997
-Torres Gran Coronas 1978
-Los Vascos Cabernet Sauvignon 1996
-Real Companhia Velha Douro 1975
-Chateau Duhart Milon 2005
-Chateau Gloria 2005
-Chateau Gruaud Larose 1982
-Chateau Leoville Poyferre 2003
-Chateau Pavie Decesse 2000
-Clos de L'Oratoire 2000
-Chateau Rieussec 1983
-Andre Clouet Champagne NV
-Billecart Salmon Vintage Champagne 1998
-Billecart Salmon Vintage Champagne 1999
-A. Conterno Barolo 2004
-A. Conterno Barolo 1998
-A. Conterno Barolo 2001
-A. Conterno Barolo 2009
-A. Conterno Barolo 1995
-Altesino Brunello di Montalcino 2009
-Altesino Brunello di Montalcino 2006
-Altesino Brunello di Montalcino 1999
-Anselma Barolo 1995
-Antinori Tignanello 2005
-B. Giacosa Barbaresco 1998
-B. Giacosa Barolo 1998
-B. Mascarello Barolo 2011
-Bertani Recioto della Valpolicella 1980
-Bertani Recioto della Valpolicella 1981
-Bertani Recioto della Valpolicella 1987
-Biondi Santi Brunello di Montalcino 2001
-Casanova di Neri Brunello di Montalcino 2004
-Castell'in Villa Chianti Classico 1971
-Castello di Camigliano Brunello di Montalcino 2004
-Castell'in Villa Chianti Classico 2008
-Castello Dei Rampolla Sammarco 2003
-Castello Dei Rampolla Sammarco 2004
-Castello Dei Rampolla Vigna d'Alceo 2000
-Castello Dei Rampolla Vigna d'Alceo 2001
-Castello Dei Rampolla Vigna d'Alceo 2003
-Castello Dei Rampolla Vigna d'Alceo 2004
-Castello di Ama L'Apparita 2008
-Castello di Ama L'Apparita 2009
-Ceretto Barolo 1989
-Ciacci Piccolomini d'Aragona Brunello di Montalcino 2012
-Col D' Orcia Brunello di Montalcino 2003
-Col D' Orcia Brunello di Montalcino 2004
-Conti Costanti Brunello di Montalcino 2004
-Cupano Brunello di Montalcino 2001
-Cupano Brunello di Montalcino 2004
-Cupano Brunello di Montalcino 2008
-D. Clerico Barolo 2003
-E. Pepe Montepulciano D'Abruzzo 2001
-E. Sandri Barolo 2009
-F. Nada Barbaresco 2009
-Falesco Montiano 2012
-Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco 1985
-Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco 1986
-Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco 1987
-Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco 1989
-Fontodi Flaccianello Della Pieve 2004
-Fontodi Flaccianello Della Pieve 2005
-Fontodi Flaccianello Della Pieve 2008
-Fontodi Flaccianello Della Pieve 2009
-Fuligni Brunello di Montalcino 2004
-G. Borgogno Barolo 1998
-G. Brunelli Brunello di Montalcino 2001
-G. Brunelli Brunello di Montalcino 2010
-G. Conterno Barolo 1998
-G. Conterno Barolo 2002
-Gaja Barbaresco 1998
-Gaja Barbaresco 1999
-Gaja Barbaresco 2005
-Gaja Barolo 2003
-Gaja Langhe Chardonnay 2006
-Grattamacco Grattamacco 2000
-Grattamacco Grattamacco 2008
-Grattamacco Grattamacco 2009
-Grattamacco Grattamacco 2012
-Il Palazzone Brunello di Montalcino 1998
-Il Poggione Brunello di Montalcino 2004
-Isole e Olena Cepparello 2009
-J. Gravner Ribolla Gialla 2002
-J. Gravner Ribolla Gialla 2003
-L. Sandrone Barolo 2009
-La Poderina Brunello di Montalcino 1997
-La Gerla Brunello di Montalcino 2004
-La Spinetta Barbaresco 2005
-La Spinetta Barolo 2003
-Le Macchiole Messorio 2004
-Le Macchiole Messorio 2008
-Le Macchiole Scrio Syrah 2008
-Le Pupille Saffredi 2005
-Miani Colli Orientali del Friuli 2014
-Montepeloso Gabbro 2009
-Montevetrano Colli di Salerno 2001
-Montevetrano Colli di Salerno 2002
-Ornellaia Ornellaia 2004
-Ornellaia Ornellaia 2014
-P. Bea Sagrantino di Montefalco 2003
-P. Scavino Barolo 1999
-P. Scavino Barolo 2003
-Pertimali (Livio Sassetti) Brunello di Montalcino 2009
-Petrolo Galatrona 2005
-Petrolo Galatrona 2006
-Pieve Santa Restituta (Gaja) Brunello di Montalcino 2010
-Pieve Santa Restituta (Gaja) Brunello di Montalcino 1997
-Pieve Santa Restituta (Gaja) Brunello di Montalcino 2004
-Pieve Santa Restituta (Gaja) Brunello di Montalcino 2000
-Poggio di Sotto Brunello di Montalcino 2001
-Produttori del Barbaresco Barbaresco 2009
-Produttori del Barbaresco Barbaresco 2014
-Produttori del Barbaresco Barbaresco 2005
-Produttori del Barbaresco Barbaresco 1995
-Produttori del Barbaresco Barbaresco 2011
-Querciabella Camartina 1986
-Querciabella Camartina 1991
-Querciabella Camartina 1999
-Querciabella Camartina 2000
-R. Seghesio Barolo 1998
-R. Voerzio Barolo 1998
-R. Voerzio Barolo 2005
-R. Voerzio Barolo 2009
-R. Voerzio Barolo 2000
-R. Voerzio Barolo 2001
-R. Voerzio Barolo 2004
-R. Voerzio Fontanazza 2005
-Rocche dei Manzoni Barolo 2005
-Rocche dei Manzoni Barolo 2009
-Rocche dei Manzoni Quatr Nas 1998
-S. Pacenti Brunello di Montalcino 2004
-S. Pacenti Brunello di Montalcino 2010
-San Felice Brunello di Montalcino 2010
-San Filippo Brunello di Montalcino 2010
-San Giusto a Rentennano La Ricolma 2008
-San Giusto a Rentennano La Ricolma 2009
-San Giusto a Rentennano Percarlo 2008
-T. Bussola Recioto della Valpolicella 2001
-Talenti Brunello di Montalcino 2001
-Talenti Brunello di Montalcino 2004
-Tenuta di Biserno Biserno 2009
-Tenuta di Trinoro Tenuta di Trinoro 2008
-Tenuta di Trinoro Tenuta di Trinoro 2009
-Tenuta le Potazzine Brunello di Montalcino 2012
-Tenuta San Guido Sassicaia 2001
-Tenuta San Guido Sassicaia 2008
-Tenuta San Guido Sassicaia 2012
-Tua Rita Perlato del Bosco 2005
-Tua Rita Redigaffi 2009
-Tua Rita Redigaffi 2012
-Tua Rita Syrah di Toscana 2001
-Tua Rita Syrah di Toscana 2004
-Tua Rita Syrah di Toscana 2005
-Uccelliera Brunello di Montalcino 2004
-Valdicava Brunello di Montalcino 2003
-Valdicava Brunello di Montalcino 2004
-Valdicava Brunello di Montalcino 2005
-Valdicava Brunello di Montalcino 2009
-Valentini Montepulciano D'Abruzzo 2001
-Vietti Barolo 1988
-Vietti Barolo 2001
-A. Palacios Priorat 1995
-Artadi Rioja 2006
-B. Romeo Rioja 2008
-Bodegas el Nido El Nido 2006
-Chateau Montelena Cabernet Sauvignon 2011
-Pahlmeyer Red 2005
-Pahlmeyer Red 2006
-Pine Ridge Cabernet Sauvignon 2006
-Pine Ridge Cabernet Sauvignon 2011
-La Jota Merlot 2012
-La Jota Merlot 2013
-Rhys Pinot Noir 2012
-Marcassin Chardonnay 2003
-Rhys Chardonnay 2014
-00 Wines Chardonnay 2017
-Achaval Ferrer Malbec 2006
-Achaval Ferrer Red 2005
-Bodega Chacra Pinot Noir 2006
-Bodega Chacra Pinot Noir 2007
-Bodega Chacra Pinot Noir 2008
-Bodega Chacra Pinot Noir 2009
-Bodega Chacra Pinot Noir 2010
-Riojanas Rioja 2008
-Chateau Ducru Beaucaillou 1975
-Chateau La Mission Haut Brion 1988
-Chateau Montrose 1989
-Chateau Mouton Rothschild 1985
-Chateau Pavie 2000
-Dujac Charmes Chambertin 1995
-Dujac Morey St. Denis 1995
-Chateau de Beaucastel Chateauneuf du Pape 2003
-E. Guigal Cote Rotie 2013
-A. Rousseau Ruchottes Chambertin 2005
-Arnoux-Lachaux Romanee St. Vivant 2009
-B. Dugat-Py Gevrey Chambertin 2009
-B. Dugat-Py Gevrey Chambertin 2010
-Bouchard, Pere et Fils Bonnes Mares 2014
-C. Dugat Chapelle Chambertin 1999
-C. Roumier Charmes Chambertin 2001
-Chandon de Briailles Corton 2009
-Chandon de Briailles Savigny les Beaune 2014
-Comte de Vogue Bonnes Mares 1999
-Comte de Vogue Chambolle Musigny 2009
-Comte Lafon Volnay 1995
-D. Bachelet Charmes Chambertin 2008
-D. Bachelet Cotes de Nuits Villages 2009
-D. Bachelet Gevrey Chambertin 2002
-Domaine D'Eugenie Clos Vougeot 2009
-Domaine de l'Arlot Nuits St. Georges 1999
-Domaine de l'Arlot Nuits St. Georges 2002
-Domaine de l'Arlot Nuits St. Georges 2005
-Domaine de Montille Pommard 2002
-Domaine de Montille Pommard 2009
-Domaine de Montille Pommard 2010
-Domaine de Montille Volnay 2009
-Domaine de Montille Volnay 2002
-Domaine de Montille Vosne Romanee 2010
-Domaine de Montille Vosne Romanee 2012
-Domaine des Lambrays Clos des Lambrays 2012
-Domaine des Lambrays Clos des Lambrays 2014
-Domaine du Clos de Tart Clos de Tart 2008
-F. Gay Aloxe Corton 2009
-F. Gay Chorey Les Beaune 2009
-F. Gay Corton 2010
-Faiveley Chambertin 2009
-Follin-Arbelet Aloxe Corton 1999
-G. Barthod Chambolle Musigny 2009
-G. Barthod Chambolle Musigny 1996
-G. Noellat Vosne Romanee 1990
-G. Roumier Chambolle Musigny 2005
-G. Roumier Morey St. Denis 2009
-Geantet-Pansiot Gevrey Chambertin 2014
-H. Gouges Nuits St. Georges 2005
-H. Gouges Nuits St. Georges 2010
-Humbert Charmes Chambertin 1999
-Humbert Gevrey Chambertin 1999
-J. Drouhin Beaune Greves 2009
-J. Drouhin Beaune Rouge 2005
-J. Drouhin Beaune Rouge 2009
-J. Drouhin Chambolle Musigny 2009
-J. Drouhin Clos Vougeot 2002
-J. Drouhin Clos Vougeot 2009
-J. Drouhin Echezeaux 2002
-J. Drouhin Griottes Chambertin 1993
-J. Drouhin Griottes Chambertin 2009
-J. Drouhin Morey St. Denis 2009
-J. Drouhin Volnay 2005
-J. Drouhin Volnay 2009
-J. Drouhin Vosne Romanee 2009
-J. Voillot Volnay 2009
-J.F. Mugnier Nuits St. Georges 2005
-J.M. Pavelot Savigny les Beaune 2009
-L. Jadot Beaune Rouge 2010
-L. Jadot Bonnes Mares 2002
-L. Jadot Bonnes Mares 2005
-L. Jadot Bonnes Mares 2009
-L. Jadot Chambertin 2009
-L. Jadot Chambolle Musigny 1997
-L. Jadot Chambolle Musigny 2009
-L. Jadot Corton 2009
-L. Jadot Echezeaux 2005
-L. Jadot Gevrey Chambertin 1997
-L. Jadot Gevrey Chambertin 2009
-L. Jadot Latricieres Chambertin 2005
-L. Jadot Latricieres Chambertin 2009
-L. Jadot Pernand Vergelesses 2005
-L. Jadot Vosne Romanee 2005
-L. Jadot Vosne Romanee 2010
-La Famille Claude Dugat Charmes Chambertin 2012
-M. Lafarge Beaune Greves 2002
-M. Lafarge Beaune Greves 2009
-M. Lafarge Pommard 2002
-M. Lafarge Pommard 2009
-M. Lafarge Volnay 2009
-Maison Leroy Bourgogne Rouge 1990
-Marquis d'Angerville Volnay 2009
-Marquis d'Angerville Volnay 2013
-Marquis d'Angerville Volnay 2002
-Marquis d'Angerville Volnay 2005
-Meo Camuzet Clos Vougeot 2009
-Meo Camuzet Vosne Romanee 2009
-R. Arnoux Nuits St. Georges 2002
-R. Arnoux Vosne Romanee 2002
-S. Bize Savigny les Beaune 2009
-S. Bize Savigny les Beaune 2010
-S. Cathiard Chambolle Musigny 1999
-S. Cathiard Vosne Romanee 2005
-Taupenot-Merme Charmes Chambertin 2005
-Chandon de Briailles Corton Blanc 2005
-Chateau de la Maltroye Chassagne Montrachet 1996
-Chateau de la Maltroye Chassagne Montrachet 2002
-Domaine de l'Arlot Nuits St. Georges Blanc 2005
-L. Jadot Bienvenue Batard Montrachet 2009
-Tua Rita Redigaffi 2018
-Palmaz Vineyards Cabernet Sauvignon 2019
-Bart Marsannay 2015
-Berthaut-Gerbet Bourgogne Hautes-Cotes de Nuits 2016
-Berthaut-Gerbet Fixin 2016
-Bouchard, Pere et Fils Volnay 2011
-C. Audoin Marsannay 2010
-C. Giroud Gevrey Chambertin 2007
-C. Giroud Maranges 2010
-C. Giroud Nuits St. Georges 2007
-C. Marechal Pommard 2010
-Chandon de Briailles Pernand Vergelesses 2011
-Chandon de Briailles Pernand Vergelesses 2012
-Chandon de Briailles Savigny les Beaune 2011
-Clos de la Chapelle Corton 2014
-Clos de la Chapelle Pommard 2006
-Clos de la Chapelle Volnay 2010
-Clos de la Roilette Fleurie 2009
-Clos de la Roilette Fleurie 2010
-Clos de la Roilette Fleurie 2011
-Clos de la Roilette Fleurie 2013
-Comte Lafon Volnay 2009
-Comte Lafon Volnay 2011
-Confuron-Gindre Bourgogne Rouge 2015
-D. Bachelet Gevrey Chambertin 2011
-D. Bouland Cote de Brouilly 2016
-D. Bouland Morgon 2016
-Domaine de Bellene Vosne Romanee 2014
-Domaine de la Voute des Crozes Cote de Brouilly 2005
-Domaine de la Voute des Crozes Cote de Brouilly 2017
-Domaine des Terres Dorees (Jean-Paul Brun) Fleurie 2009
-Domaine Diochon Moulin a Vent 2010
-Domaine du Chateau de Chorey Beaune Rouge 2009
-Domaine du Vissoux Fleurie 2009
-Domaine du Vissoux Fleurie 2010
-Domaine du Vissoux Fleurie 2011
-Domaine du Vissoux Moulin a Vent 2010
-Domaine du Vissoux Moulin a Vent 2011
-Faiveley Volnay 2002
-Fourrier Gevrey Chambertin 2008
-Fourrier Gevrey Chambertin 2013
-Fourrier Morey St. Denis 2010
-Gros Frere et Soeur Clos Vougeot 2004
-H. Gouges Nuits St. Georges 2009
-H. Lignier Hospices de Nuits, Nuits St. Georges 2008
-H. Lignier Pommard 2010
-H. Sigaut Chambolle Musigny 2010
-Harmand-Geoffroy Gevrey Chambertin 2010
-Hudelot-Noellat Chambolle Musigny 2013
-Hudelot-Noellat Chambolle Musigny 2005
-Hudelot-Noellat Vosne Romanee 2012
-Hudelot-Noellat Vosne Romanee 2011
-Hudelot-Noellat Vosne Romanee 2013
-Hudelot-Noellat Vougeot 2011
-G. Descombes Morgon 2009
-J. Chamonard Morgon 2013
-J. Chezeaux Nuits St. Georges 2010
-J. Chezeaux Vosne Romanee 2010
-J. Cruchandeau Bourgogne Hautes-Cotes de Nuits 2015
-J. Galeyrand Cote de Nuits Villages 2014
-J. Grivot Vosne Romanee 2004
-J. L. & E. Burguet Bourgogne Rouge 2015
-J. Marechal Mercurey 2010
-J. Sunier Morgon 2011
-J.C. Boisset Corton 2002
-J.C. Boisset Echezeaux 2002
-J.C. Boisset Volnay 2002
-J.F. Mugnier Nuits St. Georges 2009
-J.G. Lafouge Auxey Duresses Rouge 2009
-J.G. Lafouge Pommard 2010
-J.J. Girard Savigny les Beaune 2012
-J.J. Girard Savigny les Beaune 2014
-J.M. Fourrier Chambolle Musigny 2011
-L. & A. Lignier Clos de la Roche 2004
-L. Jadot Beaune Rouge 2011
-L. Jadot Beaune Rouge 2012
-L. Jadot Gevrey Chambertin 2006
-L. Jadot Savigny les Beaune 2015
-L. Jadot Vosne Romanee 2011
-Louis Boillot Pommard 2007
-Lucien Boillot Volnay 2009
-M. Gaunoux Corton 2005
-M. Juillot Mercurey 2010
-Maison Leroy Bourgogne Rouge 2009
-Marquis d'Angerville Volnay 1999
-Marquis d'Angerville Volnay 2006
-Marquis d'Angerville Volnay 2007
-Marquis d'Angerville Volnay 2010
-N. Faure Nuits St. Georges 2013
-P. Bouley Bourgogne Rouge 2016
-P. Bouree Santenay 2001
-P. Bouley Volnay 2016
-P. Bouley Volnay 2017
-P. Bouley Volnay 2015
-P. Bouree Pommard 2010
-P. Brisset Volnay 2017
-Perrot-Minot Gevrey Chambertin 2009
-Perrot-Minot Gevrey Chambertin 2011
-R. & P. Bouley Pommard 2015
-R. & P. Bouley Volnay 2017
-R. & P. Bouley Volnay 2014
-R. Belland Maranges 2010
-R. Chevillon Nuits St. Georges 2009
-R. Chevillon Nuits St. Georges 2014
-R. Jeanniard Morey St. Denis 2012
-S. Bize Latricieres Chambertin 2006
-S. Bize Savigny les Beaune 2002
-S. Bize Savigny les Beaune 2011
-S. Magnien Chambolle Musigny 2010
-S. Magnien Charmes Chambertin 2009
-S. Magnien Morey St. Denis 2009
-S. Magnien Morey St. Denis 2010
-V. Dauvissat Irancy 2012
-Comte Lafon Meursault 2012
-G. Duplessis Chablis 2012
-J. Dauvissat Chablis 2014
-J. Dauvissat Chablis 2018
-M. Niellon Chevalier Montrachet 2011
-P. Pacalet Chablis 2013
-Dauvissat-Camus Petit Chablis 2012
-Pierre-Yves Colin Morey St. Aubin 2013
-Roulot Bourgogne Blanc 2013
-Domaine des Billards Saint Amour 2009
-Domaine des Billards Saint Amour 2011
-Bilbainas Rioja 1970
-Faustino Rioja 1978
-La Rioja Alta Rioja 1978
-La Rioja Alta Rioja 1995
-Bodegas Ostatu Rioja 2000
-Bodegas Ostatu Rioja 2001
-Lopez de Heredia Rioja 1978
-Sierra Cantabria Rioja 2004
-Jean Luc Aegerter Musigny 1978
-A. Conterno Barolo 1985
-G. Conterno Barolo 1964
-G. Conterno Barolo 1961
-Marcarini Barolo 1985
-Marchesi di Barolo Barolo 1943
-Marchesi di Barolo Barolo 1947
-Marchesi di Barolo Barolo 1951
-Marchesi di Barolo Barolo 1952
-Marchesi di Barolo Barolo 1957
-Bouchard, Pere et Fils Corton 1996
+2007 K Vintners Syrah Old Bones
+2012 Chateau de Chantegrieve Blanc
+2000 Chateau Bellevue Mondotte
+2020 Huet Vouvray Le Haut Lieu, Demi-Sec
+2016 Carmes de Rieussec
+2010 Pont Des Arts Collection
+2001 Buty Red
+2017 Domaine du Pegau Chateauneuf du Pape Cuvee Reservee
+2004 Mitolo Cabernet Sauvignon Serpico
+2020 Racines Pinot Noir La Rinconada
+1998 Chateau Beausejour Duffau Lagarrosse
+1983 E. Guigal Cote Rotie Brune et Blonde
+NV Jaumandreu Pla de Bages
+2020 H. Jouan Chambolle Musigny Vieilles Vignes
+1985 Bodegas Muga Rioja
+2020 J.L. Jamet Cote Rotie Les Terrasses
+2012 Pont Des Arts Collection
+2007 G. Barge Cote Rotie Cote Brune
+2005 Domaine La Barroche Chateauneuf du Pape Pure
+2020 R. Perez Bierzo El Rapolao
+1959 Moulin Touchais Coteaux du Layon
+2004 La Rioja Alta Rioja Gran Reserva '904'
+1997 La Rioja Alta Rioja Vina Arana, Reserva
+2019 Alejandro Bulgheroni Cabernet Sauvignon Napa Valley
+2018 Parallel Cabernet Sauvignon Captivator
+2012 Schrader Cabernet Sauvignon CCS
+2021 Acumen Cabernet Sauvignon Peak Edcora Vineyard
+2020 O. Bernstein Chambertin
+2019 O. Bernstein Clos de la Roche
+2020 O. Bernstein Clos de la Roche
+2009 Domaine St. Prefert Chateauneuf du Pape Auguste Favier Reserve
+2019 Sette Ponti Merlot Selected Vineyards
+2020 Sette Ponti Merlot Selected Vineyards
+NV Taylor Fladgate Very Old Tawny Port Kingsman Edition
+1995 Taylor Fladgate Vintage Port Quinta de Vargellas Vinha Velha
+2020 Sine Qua Non Grenache Distenta 2
+2008 R. Chevillon Nuits St. Georges Les St. Georges
+2007 Pont de Chevalier Cabernet Sauvignon
+2007 Pont de Chevalier Red Le Chevalier
+2009 Delas Freres St. Joseph Cuvee Francois de Tournon
+2009 Domaine de Cristia Chateauneuf du Pape Vieilles Vignes
+2012 Domaine du Monteillet Cote Rotie Fortis
+2013 Domaine du Monteillet Cote Rotie Fortis
+2009 Domaine du Monteillet Cote Rotie Les Grandes Places
+2012 E. Guigal St. Joseph Lieu Dit
+2014 E. Guigal St. Joseph Lieu Dit
+2010 Tardieu-Laurent Chateauneuf du Pape Cuvee Speciale
+2010 Tardieu-Laurent Chateauneuf du Pape Vieilles Vignes
+2010 Tardieu-Laurent Cornas Vieilles Vignes
+2021 J.F. Mugnier Nuits St. Georges Clos de la Marechale
+2012 Chateau de France
+2013 Chateau Bouscaut Blanc
+1986 Chateau Le Bon Pasteur
+1983 Chateau Le Gay
+1989 Chateau Les Ormes de Pez
+1989 Chateau Petit Village
+1978 Maitre D'Estournel
+1979 Maitre D'Estournel
+1983 Moulin des Carruades
+1990 Vieux Chateau St. Andre
+1988 Chateau Malartic La Graviere Blanc
+1971 Chateau Rieussec
+1996 Les Plantiers du Haut Brion Blanc
+1988 Gros Frere et Soeur Richebourg
+1992 H. Jayer Vosne Romanee
+1985 H. Richard Gevrey Chambertin
+1989 J. Gros Vosne Romanee Clos des Reas
+1990 J. Gros Vosne Romanee Clos des Reas
+1992 Auffray Chablis Les Clos
+1983 Bitouzet-Prieur Meursault Clos du Cromin
+1984 Domaine de la Maladiere (Fevre) Chablis Bougros
+1984 Domaine de la Maladiere (Fevre) Chablis Grenouilles
+1986 Domaine de la Maladiere (Fevre) Chablis Les Preuses
+1985 J. Chartron Chevalier Montrachet
+1983 Pinson Chablis Les Clos
+1981 Pinson Chablis Mont de Milieu
+1981 Pinson Chablis Montmain
+1985 Ponsot Morey St. Denis Blanc Clos des Monts Luisants, Vieilles Vignes
+1986 Ponsot Morey St. Denis Blanc Clos des Monts Luisants, Vieilles Vignes
+1983 Potinet-Ampeau Meursault
+1986 Rougeot Meursault Charmes
+1980 A. Voge Cornas
+1990 Beaurenard Chateauneuf du Pape Boisrenard
+1990 Bosquet des Papes Chateauneuf du Pape Cuvee Chantemerle
+1989 Chateau La Nerthe Chateauneuf du Pape Cuvee des Cadettes
+1982 Domaine Font de Michelle Chateauneuf du Pape
+1988 Domaine La Milliere Chateauneuf du Pape
+1992 Domaine de Marcoux Chateauneuf du Pape Vieilles Vignes
+1986 Domaine Les Goubert Gigondas
+1988 Domaine Les Goubert Gigondas Cuvee Florence
+1989 Domaine Les Goubert Gigondas Cuvee Florence
+1983 Domaine les Pallieres Gigondas
+1979 Domaine Pradelle Crozes Hermitage
+1978 Domaine Saint Gayan Gigondas
+1982 Font de Michelle Chateauneuf du Pape
+1989 Font du Loup Chateauneuf du Pape
+1978 G. Faraud Gigondas
+1988 G. Duboeuf St. Joseph
+1980 H. Sorrel Hermitage
+1985 H. Sorrel Hermitage Blanc Les Rocoules
+1990 H. Sorrel Hermitage Blanc Les Rocoules
+1985 M. Sorrel Hermitage Blanc Les Rocoules
+1983 Neyret-Gachet Chateau Grillet
+1984 P. Barge Cote Rotie
+1985 Jacquesson Vintage Champagne Perfection
+1995 Baumard Anjou Logis de la Giraudiere
+1990 Baumard Savennieres Trie Speciale
+1976 Chateau d'Epire Savennieres
+1995 Chateau de Vaugaudry Chinon Clos du Plessis-Gerbault
+1997 Chateau de Vaugaudry Chinon Clos du Plessis-Gerbault
+1989 Domaine Bourillan Dorleans Vouvray Demi-Sec
+1989 Domaine Bourillan Dorleans Vouvray La Coulee d'or, Moelleux
+1989 Domaine Bourillan Dorleans Vouvray La Coulee D'or, Tris De Nobles Grains, Moelleux
+1979 J.C. Pichot Vouvray Domaine Le Peu de la Moriette, Demi-Sec
+1989 Pichot Vouvray Domaine Le Peu de la Moriette
+1991 A. Mann Tokay Pinot Gris Furstentum
+1996 A. Mann Tokay Pinot Gris Furstentum
+1988 Bott Freres Gewurztraminer Cuvee Exceptionelle
+1989 Bott Freres Gewurztraminer Reserve Personnelle
+1989 Bott Freres Riesling Cuvee Exceptionelle
+1986 Josmeyer Gewurztraminer Cuvee des Folastries
+1988 Josmeyer Gewurztraminer Cuvee des Folastries
+1989 Josmeyer Gewurztraminer Cuvee des Folastries
+1989 Josmeyer Riesling Le Kottabe
+1986 Lorentz Gewurztraminer Reserve
+1985 Schlumberger Gewurztraminer Fleur de Guebwiller
+1981 Schlumberger Gewurztraminer Grande Reserve
+1985 Schlumberger Riesling Saering
+1995 Spielmann Pinot Blanc Reserve
+1970 Apollinar J. Koch Riesling Feine Auslese Scharzhofberger
+1971 Dr. Burklin-Wolf Riesling Auslese Deidesheimer Hohenmorgen
+1976 F. Haag Riesling Auslese Braunberger Juffer Sonnenuhr
+1976 F. Haag Riesling Auslese Braunberger Juffer Sonnenuhr, Goldkapsel
+1971 Frederich-Wilhelm-Gymnasium Riesling Auslese Dhron Hofberg
+1971 Frederich-Wilhelm-Gymnasium Riesling Auslese Graacher Domprobst
+1971 Frederich-Wilhelm-Gymnasium Riesling Auslese Zeltinger Sonnenuhr
+1976 Frederich-Wilhelm-Gymnasium Riesling Auslese Bernkasteler Badstube
+1971 K. Mertes Riesling Auslese Brauneberger Juffer
+1971 Hoffman Riesling Auslese Wiltinger Klosterberg
+1971 Kellerei Riesling Spatlese Hattenheimer Pfaffenberg
+1971 Kellerei Riesling Spatlese Rudesheimer Berg Rottland
+1979 Monchof Riesling Auslese Urziger Wurzgarten
+1971 Mumm'sche Riesling Trockenbeerenauslese Johannisberger Mittelhölle
+1976 Milz Laurentiushof Riesling Auslese Trittenheimer Felsenkopf
+1971 N. Veit-Benz Riesling Auslese Piesporter Goldtropfchen
+1971 O. Dunweg Riesling Auslese Dhroner Grosser Hengelberg Mittelstuck
+1976 Othegraven Riesling Auslese Kanzemer Altenberg
+1971 O. Dunweg Riesling Auslese Dhronhofberger
+1971 Othegraven Riesling Beerenauslese Kanzemer Berg
+1967 P.J. Valckenberg Riesling Beerenauslese Cabinet Liebfrauenstift Klostergarten
+1971 Pfeiffer Riesling Beerenauslese Erdener Treppchen
+1971 Pfeiffer Riesling Beerenauslese Wehlener Sonnenuhr
+1976 R. Haas Riesling Auslese Schlossbockelheimer Burgweg
+1976 Sanctus Jacobus Riesling Auslese Scharzhofberger
+1976 Staatsweinguter Riesling Beerenauslese Steinberger
+1971 Von Simmern Riesling Beerenauslese Eltviller Sonnenberg
+1976 W. Tyrell Riesling Auslese Eitelsbacher Karthauserhofberger Kronenberg
+1982 Castello di Volpaia Coltassala
+1978 Catignano Chianti Classico
+1982 Catignano Chianti Classico
+1982 Ceretto Barbaresco Asij
+1980 Kalin Cellars Cabernet Sauvignon Santa Barbara
+1978 Windsor Cabernet Sauvignon River West Vineyard
+1979 Kalin Cellars Pinot Noir Cuvee D
+1978 Kalin Cellars Pinot Noir Sonoma
+1980 Kalin Cellars Riesling Mendocino
+1982 Kalin Cellars Riesling Mendocino
+1983 Kalin Cellars Sauvignon Blanc Sonoma County
+1963 Hooper's Vintage Port
+NV Taylor Fladgate Tawny Port
+NV E. Lustau Sherry Old East India
+NV Gonzalez Byass Sherry Tres Cortados
+1976 Jose Maria da Fonseca Periquita Reserva
+1980 Jose Maria da Fonseca Periquita Reserva
+1982 Jose Maria da Fonseca Estremadura Tinto Garrafeira RA
+1990 Faiveley Musigny
+1961 Chateau Latour
+1962 Chateau Brane Cantenac
+2010 S. Vedeau Cote Rotie J. Boutin, "Bonnevaux"
+1999 Behrens & Hitchcock Merlot Los Amigos
+2000 Behrens & Hitchcock Petite Sirah Barcini Vineyard
+2008 Chateau Lalande Borie
+1995 M. Couvreur Clos de la Roche
+2003 Ahnfeldt Cabernet Sauvignon Napa Valley
+2009 Calistoga Cellars Cabernet Sauvignon
+2004 B Cellars Red Blend 24
+2002 Brown Estate Cabernet Sauvignon
+2008 Clos du Val Cabernet Sauvignon Napa Valley
+2002 Cornerstone Cabernet Sauvignon Napa Valley
+2001 Cuvaison Cabernet Sauvignon Napa Valley
+2003 Erba Mountainside Vineyards Cabernet Sauvignon Napa Valley
+2005 Laurel Glen Cabernet Sauvignon Counterpoint
+2002 Marco Di Giulio Cabernet Sauvignon Mark K Vineyard
+2003 Meyer Family Cabernet Sauvignon
+2008 David Bruce Pinot Noir Santa Cruz Mountains
+2010 Kenwood Merlot Jack London Vineyard
+2016 Kuleto Red Native Son
+2009 Chateau Langoa Barton
+2016 Chateau Le Prieure
+2016 P. Autard Chateauneuf du Pape Cote Ronde
+2019 Bacio Divino Cabernet Sauvignon Janzen, Missouri Hopper
+2002 Neal Family Cabernet Sauvignon Chafen Vineyard
+2010 Robert Sinskey Cabernet Sauvignon SLD
+2019 Del Dotto Red Caves, Calistoga BDX Style
+2017 Ram's Gate Pinot Noir Robert's Road
+2018 Ram's Gate Pinot Noir Gap's Crown
+2018 Ram's Gate Pinot Noir Silver Eagle Vineyard
+2019 Ram's Gate Pinot Noir El Diablo Vineyard
+2013 Skipstone Red Oliver's Blend
+2014 Skipstone Red Faultline
+2015 Domaine l'Aigueliere Montpeyroux Cote Rousse
+1999 Cosentino Reserve Cabernet Sauvignon
+1982 William Hill Cabernet Sauvignon Gold Label
+1985 Chateau L'Eglise Clinet
+2019 Domaine de la Vougeraie Gevrey Chambertin Les Evocelles
+1988 Comte Lafon Volnay Champans
+1986 P. Jaboulet Hermitage La Chapelle
+2015 Vieux Telegraphe Chateauneuf du Pape La Crau
+2019 F. Esmonin Gevrey Chambertin
+2019 F. Esmonin Gevrey Chambertin Clos Prieur
+2019 A. Grivault Meursault Clos du Murger
+NV A.R. Lenoble Champagne Rose, Terroirs, Mag15
+NV A.R. Lenoble Vintage Champagne Rose, Terroirs
+2010 Domaine de Chevalier
+1983 Chateau d'Yquem
+2007 Chateau Grand Puy Lacoste
+2006 Chateau Leoville Barton
+2008 Chateau Pape Clement
+2014 Le G de Chateau Guiraud
+2003 Chateau Faugeres
+2000 Chateau Haut Brisson
+2000 Chateau La Louviere
+1999 Justin Cabernet Sauvignon
+1998 Dundee Springs Reserve Pinot Noir
+1986 Chateau Clinet
+2009 Chateau La Couspaude
+1996 Chateau La Dominique
+2003 Domaine de la Charbonniere Chateauneuf du Pape Cuvee Speciale, Les Hautes Brusquieres
+1958 G. Conterno Barolo Vini Pregiati Riserva
+1982 CVNE Rioja Imperial Reserva
+1994 CVNE Rioja Imperial Reserva
+1976 La Rioja Alta Rioja Vina Arana
+2013 A.P. Vin Pinot Noir Clos Pepe
+2013 A.P. Vin Pinot Noir Garys' Vineyard
+2012 Sine Qua Non Petite Sirah The Writing on the Wall
+NV Penfolds Club Reserve Tawny Port 50 Years Old
+2018 Berthaut-Gerbet Clos Vougeot
+2021 Coquard-Loison-Fleurot Clos de la Roche
+2015 Clos de la Chapelle Volnay Taillepieds
+2007 Domaine Leroy Nuits St. Georges Aux Allots
+1999 Chateau Magdelaine
+2001 Chateau Bellevue Mondotte
+2003 Bouchard, Pere et Fils Pommard Les Rugiens
+2018 Drouhin-Laroze Chapelle Chambertin
+2009 Delas Freres Cote Rotie Seigneur de Maugiron
+2007 Taylor Fladgate Vintage Port Vargellas Vinha Velha
+2005 M. Gaunoux Pommard Les Rugiens
+2007 Domaine de la Graveirette Chateauneuf du Pape
+2009 J. Royer Chateauneuf du Pape Cuvee Tradition
+1985 J. Bourdy Cotes du Jura Blanc
+2010 Chateau Boswell Cabernet Sauvignon Jacquelynn
+2007 Chateau Boswell Chardonnay Dutton Ranch, Sebastopol Vineyard
+2004 Nicholas Cole Red Camille
+2016 Chateau Marquis de Terme
+2015 Chateau Taillefer
+2021 A.F. Gros Echezeaux
+2021 A.F. Gros Richebourg
+2020 Chateau de la Maltroye Chassagne Montrachet Rouge Clos du Chateau de la Maltroye
+2020 Clos de la Chapelle Beaune Rouge Les Champs Pimont
+2020 Faiveley Echezeaux En Orveaux
+2017 Genot-Boulanger Beaune Greves Premier Cru
+2017 Maison Leroy Vosne Romanee
+2018 P. Morey Pommard Les Grands Epenots
+2020 P. Morey Pommard Les Grands Epenots
+2020 R. Groffier Bourgogne Pinot Noir
+2020 Tollot-Beaut Beaune Rouge Clos du Roi
+2015 Domaine de Beaurenard Chateauneuf du Pape Gran Partita
+2020 Domaine de Marcoux Chateauneuf du Pape
+2020 Domaine du Marcoux Chateauneuf du Pape Vieilles Vignes
+2022 E. Guigal Condrieu La Doriane
+2021 M. Sorrel Hermitage Le Greal
+2019 Maison Stephan Cote Rotie Coteaux de Bassenon
+2020 Maison Stephan Cote Rotie Les Binardes
+2019 Souillard Cornas St. Pierre
+2009 Dom Ruinart Vintage Champagne
+2010 Rene Geoffroy Vintage Champagne Terre
+2015 Robert Moncuit Vintage Champagne Vozemieux
+NV Salmon Champagne Elevee en Fut de Chene
+2008 Veuve Clicquot Vintage Champagne La Grande Dame
+2020 Monteraponi Trebbiano Colli della Toscana
+2017 Settecieli Scipio
+2018 Sloan Red
+2020 Sine Qua Non Syrah Distenta 2
+2018 Cloudy Bay Pinot Noir Te Wahi
+2005 Chateau Quinault L'Enclos
+1999 Argyle Pinot Noir Spirit House
+2009 Vilmart et Cie Vintage Champagne Blanc de Blancs
+1982 B. Giacosa Barolo Collina Rionda di Serralunga, Riserva
+1986 Chateau Grand Puy Lacoste
+1976 Maison Leroy Romanee St. Vivant
+2006 P. Amiot Morey St. Denis
+2010 P. Colin Chateauneuf du Pape Les Chaumees
+NV X. Vignon Chateauneuf du Pape La Reserve VII IX X
+2009 Myriad Cabernet Sauvignon Three Twins Vineyard
+1999 Spelletich Cellars Cabernet Sauvignon
+2018 Burgaud Morgon Cote Du Py
+1998 Krug Vintage Champagne Clos d'Ambonnay
+1986 Domaine de la Romanee Conti Romanee Conti
+2017 H. Lignier Clos de la Roche MCMLV
+1982 Coche-Dury Meursault Perrieres
+1998 Domaine de la Grange des Peres Vin de Pays de L'Herault Blanc
+2018 Domaine de la Grange des Peres Vin de Pays de L'Herault Blanc
+2019 Domaine de la Grange des Peres Vin de Pays de L'Herault Blanc
+2009 Rostaing Cote Rotie La Landonne
+2012 Domaine de Chevalier
+2011 Chateau de Fargues
+2010 Chateau La Tour du Pin
+2013 Justin Reserve Red Isosceles
+2016 Elian Da Ros Cotes du Marmandais Clos Baquey
+2020 Racines Pinot Noir Sanford & Benedict
+2015 Domaine l'Aigueliere Terrasses du Larzac Velours
+2019 Screaming Eagle Sauvignon Blanc
+2000 J. Deydier Chateauneuf du Pape Les Clefs d'Or
+1999 Domaine de Barbeyrolles Bergerac Sec Cuvee Raymond Chandou
+2005 Domaine de Barbeyrolles Bergerac Sec Cuvee Raymond Chandou
+2015 Talbott Chardonnay Sleepy Hollow Vineyard
+1996 Hardy's Cabernet Sauvignon Thomas Hardy
+2014 Chateau Brane Cantenac
+2016 Chateau Camensac
+2016 Chateau Cantemerle
+2013 Chateau de Fieuzal
+2014 Chateau Grand Puy Lacoste
+2011 Chateau Haut Bailly
+2012 Chateau La Lagune
+2014 Chateau La Lagune
+2016 Chateau La Lagune
+2006 Chateau La Tour Carnet
+2015 Chateau La Tour Carnet
+2011 Chateau Lacoste Borie
+2010 Chateau Lagrange
+2014 Chateau Lalande Borie
+2011 Chateau Nenin
+2011 Chateau Petit Village
+2015 Chateau Phelan Segur
+2011 Chateau Potensac
+2012 Chateau Poujeaux
+2014 Chateau Poujeaux
+2015 Chateau Poujeaux
+2016 Chateau Poujeaux
+2011 Chateau Rauzan Segla
+2011 Chateau Doisy Daene
+2017 Aubert Vineyards Chardonnay Hudson Vineyard
+2009 Turley Zinfandel Juvenile
+2011 Turley Zinfandel Juvenile
+2020 J.M. Fourrier Grands Echezeaux Vieilles Vignes
+2019 Lamarche La Grande Rue
+1998 Bosquet des Papes Chateauneuf du Pape Cuvee Grenache
+1998 Domaine les Pallieres Gigondas
+1998 Domaine Santa Duc Gigondas Prestige des Hautes Garrigues
+1998 M. Chapoutier Chateauneuf du Pape La Bernardine
+1976 Chateau de Fargues
+2009 G. Roumier Chambolle Musigny
+2003 G. Roumier Morey St. Denis Clos de la Bussiere
+2020 G. Roumier Morey St. Denis Clos de la Bussiere
+2008 Thibault Liger-Belair Richebourg
+2005 Jamet Cote Rotie
+2003 M. & S. Ogier Cote Rotie Cuvee la Belle Helene
+2009 M. & S. Ogier Cote Rotie Lancement
+1999 P. Thustrup Montrachet
+2013 Domaine de la Bongran (Thevenet) Macon Clesse
+2010 Domaine du Pegau Chateauneuf du Pape Cuvee da Capo
+2010 Far Niente Cabernet Sauvignon
+2006 Altamura Cabernet Sauvignon
+2005 Frank Family Reserve Cabernet Sauvignon
+2005 Frias Private Reserve Cabernet Sauvignon Spring Mountain
+2019 Paul Hobbs Cabernet Sauvignon Beckstoffer Dr. Crane Vineyard
+2019 Paul Hobbs Cabernet Sauvignon Coomsville
+2018 Peter Michael Red Au Paradis
+2016 Sherwin Family Cabernet Sauvignon
+2010 Aubert Vineyards Pinot Noir UV Vineyard
+2012 Alban Vineyards Syrah Patrina
+2007 Brewer-Clifton Pinot Noir Mount Carmel
+2006 Calera Pinot Noir Selleck Vineyard
+2004 Carter Merlot Truchard Vineyards
+2020 Paul Hobbs Pinot Noir Fraenkle Cheshier Vineyard
+2009 Sea Smoke Pinot Noir Southing
+2017 Peter Michael Red Au Paradis
+2018 Ceritas Pinot Noir Old Shop Block, Hellenthal Vineyard
+2017 Hirsch Vineyards Pinot Noir Old Vineyard
+2017 Hirsch Vineyards Pinot Noir West Ridge
+2017 Kosta Browne Pinot Noir Keefer Ranch Vineyard
+2018 Aubert Vineyards Chardonnay Russian River
+2012 Myriad Cabernet Sauvignon
+2013 Bedrock Cabernet Sauvignon Montecillo Vineyard
+2020 Maybach Rose Roseira
+2012 Myriad Syrah Whole Cluster, Sugarloaf Mountain Vineyard
+2012 Switchback Ridge Petite Sirah Peterson Family Vineyard
+2013 Bedrock Red Bedrock Heritage Wine
+2014 Bedrock Red Bedrock Heritage Wine
+2014 Bedrock Zinfandel Monte Rosso Vineyard
+2011 Lillian Syrah Gold Series No. 1
+2013 Pott Wine Grenache Original Gangster
+2012 Rhys Syrah Horseshoe Vineyard
+2004 Domaine Leroy Vosne Romanee
+2003 Saint Cosme Cote Rotie
+2003 M. Chapoutier St. Joseph Les Granits
+2003 G. Bovio Barolo Bricco Parussi Riserva
+2006 La Poderina Brunello di Montalcino Riserva Poggio del Abate
+2011 B.V. Private Reserve Cabernet Sauvignon
+2008 Carte Blanche Cabernet Sauvignon
+2007 Carter Cabernet Sauvignon Revilo Vineyards
+2008 Carter Cabernet Sauvignon Coliseum Block
+2001 Alban Vineyards Syrah Seymour's Vineyard
+2009 Alban Vineyards Syrah Reva
+2011 Alban Vineyards Syrah Reva
+2006 Force Majeure Cabernet Sauvignon Collaboration Series IV, Ciel du Cheval
+2009 Force Majeure Cabernet Sauvignon Collaboration Series V, Ciel du Cheval
+1988 J. Sanders Cotes du Rhone Blanc
+2021 Mas de Daumas Gassac Vin de Pays de l'Herault
+2012 Fanti Brunello di Montalcino Vallocchio
+2021 Domaine Roy & Fils Chardonnay Iron Filbert Vineyards
+2021 Domaine Roy & Fils Chardonnay Iron Filbert Vineyards, Incline
+2015 Et Fille Pinot Noir Kalita Vineyard
+2017 Et Fille Pinot Noir Kalita Vineyard
+1985 Camus Charmes Chambertin
+NV Palmer & Co Champagne Blanc de Blancs
+2019 Clif Family Cabernet Sauvignon Croquet Vineyard
+2019 Hesperian Cabernet Sauvignon Kitoko Vineyard
+2012 Sojourn Cabernet Sauvignon Georges III Vineyard
+2003 Delectus Cabernet Sauvignon Sacrashe Vineyard
+2010 Soliste Cellars Syrah La Sauvage
+2009 Coach House Cellars Red Garage
+2000 Domaine de la Romanee Conti Montrachet
+1996 Krug Vintage Champagne Clos d'Ambonnay
+2020 Paul Hobbs Cabernet Sauvignon Beckstoffer Dr. Crane Vineyard
+2016 Coche-Dury Monthelie
+2005 Opus One
+2011 G. Roumier Chambolle Musigny Les Cras
+2012 G. Roumier Chambolle Musigny
+2012 G. Roumier Chambolle Musigny Les Cras
+2008 Chateau Lafite Rothschild
+2017 Hirsch Vineyards Pinot Noir Block 8
+2017 Hirsch Vineyards Pinot Noir East Ridge
+2017 Hirsch Vineyards Pinot Noir Raschen Ridge
+2017 Hirsch Vineyards Reserve Pinot Noir
+2017 Occidental Pinot Noir Occidental Station Vineyard
+2017 Williams Selyem Pinot Noir Weir Vineyard
+2010 Canalicchio Di Sopra Brunello di Montalcino
+2012 Canalicchio Di Sopra Brunello di Montalcino
+2015 Canalicchio Di Sopra Brunello di Montalcino
+2010 Colombini Brunello di Montalcino
+2010 Fanti Brunello di Montalcino Le Macchiarelle, Riserva
+2007 Fanti Brunello di Montalcino Riserva
+2012 Il Marroneto Brunello di Montalcino Madonna delle Grazie
+2010 Le Chiuse Brunello di Montalcino Dieci Anni Riserva
+2010 Pertimali (Livio Sassetti) Brunello di Montalcino
+2013 Petrolo Galatrona
+2012 Salvioni Brunello di Montalcino Cerbaiola
+2012 San Filippo Brunello di Montalcino Le Lucere Riserva
+2010 Valdicava Brunello di Montalcino
+2015 Halter Ranch Red Cotes de Paso
+2014 Kutch Pinot Noir Bohan
+2015 Kutch Pinot Noir Bohan
+2012 Sandhi Wines Pinot Noir Mt. Carmel
+2020 Kosta Browne Pinot Noir Anderson Valley
+2017 Kosta Browne Pinot Noir Cerise Vineyard
+2019 Kosta Browne Pinot Noir Cerise Vineyard
+2016 Kosta Browne Pinot Noir Gap's Crown
+2020 Kosta Browne Pinot Noir Gap's Crown
+2020 Kosta Browne Pinot Noir Giusti Ranch Vineyard
+2020 Kosta Browne Pinot Noir Gowan Creek Vineyard
+2016 Kosta Browne Pinot Noir Keefer Ranch Vineyard
+2019 Kosta Browne Pinot Noir Pisoni Vineyard
+2020 Kosta Browne Pinot Noir Radian Vineyard
+2017 Kosta Browne Pinot Noir Santa Lucia Highlands
+2016 Kosta Browne Pinot Noir Santa Rita Hills
+2017 Kosta Browne Pinot Noir Sonoma Coast
+2016 Kosta Browne Pinot Noir Treehouse Vineyard
+2020 Kosta Browne Pinot Noir Sonoma Coast
+2017 Kosta Browne Pinot Noir Treehouse Vineyard
+2012 Anthill Farms Pinot Noir Abbey-Harris Vineyard
+2012 EMH Cabernet Sauvignon Black Cat
+2012 Kutch Pinot Noir McDougall Ranch
+2021 Kosta Browne Pinot Noir Anderson Valley
+2019 Kosta Browne Pinot Noir Gary's Vineyard
+2021 Kosta Browne Pinot Noir Gary's Vineyard
+2017 Kosta Browne Pinot Noir Keefer Ranch
+2020 Kosta Browne Pinot Noir Keefer Ranch
+2019 Kosta Browne Pinot Noir Rosella's Vineyard
+2020 Kosta Browne Pinot Noir Santa Rita Hills
+2021 Kosta Browne Pinot Noir Willamette Valley
+2019 Kosta Browne Chardonnay Bootlegger's Hill
+2020 Williams Selyem Cabernet Sauvignon Beckstoffer To-Kalon Vineyard
+2020 Rivers Marie Chardonnay Sonoma Coast
+2021 Rivers Marie Chardonnay Sonoma Coast
+2007 St. Damien Gigondas Vieilles Vignes
+2010 Ramey Chardonnay Ritchie Vineyard
+2012 Ramey Chardonnay Platt Vineyard
+2013 Ramey Chardonnay Platt Vineyard
+1989 Chateau Haut Brion
+1982 Chateau Lafite Rothschild
+1998 A. Rousseau Chambertin Clos de Beze
+2001 A. Rousseau Gevrey Chambertin Clos St. Jacques
+2003 E. Rouget Echezeaux
+2004 Pierre-Yves Colin Morey Montrachet
+2017 Roulot Meursault A Mon Plaisir, Clos du Haut Tesson
+2001 Domaine Leflaive Chevalier Montrachet
+2005 Domaine Leflaive Puligny Montrachet Les Combettes
+2008 Domaine Leflaive Puligny Montrachet Les Pucelles
+2007 J.M. Gaunoux Meursault Perrieres
+2006 Latour-Giraud Puligny Montrachet Champ Canet
+1977 Warre's Vintage Port
+1978 A. Conterno Barolo Vigna Cicala, Bricco Bussia
+2009 Chateau La Conseillante
+2010 Chateau La Mission Haut Brion
+1998 Chateau de Fargues
+2019 B. Dugat-Py Mazis Chambertin Tres Vieilles Vignes
+2016 Faiveley Chambertin Clos de Beze, Les Ouvrees Rodin
+2019 Fourrier Gevrey Chambertin Les Champeaux, Vieilles Vignes
+2019 J. Grivot Richebourg
+2018 Meo Camuzet Vosne Romanee Aux Brulees
+2020 Meo Camuzet Vosne Romanee Aux Brulees
+2021 Meo Camuzet, Frere et Souers Chambolle Musigny Les Feusselottes
+2020 Faiveley Batard Montrachet
+2016 J.L. Chave Hermitage
+NV Egly Ouriet Champagne Extra Brut
+2021 Descendientes De J. Palacios Bierzo Corullon Las Lamas
+2020 Descendientes De J. Palacios Bierzo Corullon Moncerbal
+1895 D'Oliveiras Madeira Malvasia, Frasqueira
+1890 D'Oliveiras Madeira Verdelho, Frasqueira
+1981 Chateau Lafite Rothschild
+1972 B. Grivelet Chambertin Clos de Beze, Longe Prospicio
+1972 J. Prieur Clos Vougeot
+2005 J. Drouhin Montrachet Marquis de Laguiche
+1999 E. Guigal Cote Rotie Brune et Blonde
+2001 E. Guigal Cote Rotie Brune et Blonde
+1980 E. Guigal Cote Rotie La Landonne
+2018 E. Guigal Cote Rotie La Mouline
+2018 E. Guigal Cote Rotie La Turque
+2011 M. Chapoutier Ermitage Blanc Plaine des Murets
+2011 M. Chapoutier Ermitage Blanc Terrasses de Galets
+2015 Rostaing Cote Rotie La Landonne
+1999 Tardieu-Laurent Cote Rotie
+1973 La Rioja Alta Rioja Reserva '904'
+1963 Croft Vintage Port Berry Bros & Rudd
+1963 Dow's Vintage Port
+1963 Fonseca Vintage Port
+1994 Fonseca Vintage Port
+NV Kopke Tawny Port CNK
+1985 Quinta do Noval Vintage Port Nacional
+1970 Taylor Fladgate Vintage Port
+1985 Taylor Fladgate Vintage Port
+1994 Taylor Fladgate Vintage Port
+1963 Warre's Vintage Port
+NV Niepoort Port VV
+2002 M. Niellon Chassagne Montrachet Les Champs Gains
+2006 Kistler Pinot Noir Cuvee Catherine
+2008 Kistler Pinot Noir Cuvee Natalie, Silver Belt
+2012 Kistler Pinot Noir Cuvee Natalie, Silver Belt
+2006 Kistler Pinot Noir Kistler Vineyard
+2012 Kistler Pinot Noir Kistler Vineyard
+2013 Occidental Pinot Noir SWK Vineyard
+2011 Williams Selyem Pinot Noir Calegari Vineyard
+2012 Williams Selyem Pinot Noir Calegari Vineyard
+2010 Williams Selyem Pinot Noir Central Coast
+2010 Williams Selyem Pinot Noir Coastlands Vineyard
+2009 Williams Selyem Pinot Noir Eastside Road Neighbors
+2010 Williams Selyem Pinot Noir Eastside Road Neighbors
+2009 Williams Selyem Pinot Noir Ferrington Vineyard
+2010 Williams Selyem Pinot Noir Ferrington Vineyard
+2011 Williams Selyem Pinot Noir Ferrington Vineyard
+2008 Williams Selyem Pinot Noir Flax Vineyard
+2009 Williams Selyem Pinot Noir Flax Vineyard
+2012 Williams Selyem Pinot Noir Foss Vineyard
+2011 Williams Selyem Pinot Noir Peay Vineyard
+2010 Williams Selyem Pinot Noir Precious Mountain
+2011 Williams Selyem Pinot Noir Precious Mountain
+2012 Williams Selyem Pinot Noir Precious Mountain
+2006 Williams Selyem Pinot Noir Precious Mountain
+2008 Williams Selyem Pinot Noir Rochioli Riverblock Vineyard
+2009 Williams Selyem Pinot Noir Rochioli Riverblock Vineyard
+2010 Williams Selyem Pinot Noir Rochioli Riverblock Vineyard
+2011 Williams Selyem Pinot Noir Rochioli Riverblock Vineyard
+2012 Williams Selyem Pinot Noir Rochioli Riverblock Vineyard
+2007 Williams Selyem Pinot Noir Russian River Valley
+2010 Williams Selyem Pinot Noir Russian River Valley
+2008 Williams Selyem Pinot Noir Sonoma Coast
+2010 Williams Selyem Pinot Noir Sonoma Coast
+2013 Williams Selyem Pinot Noir Sonoma Coast
+2011 Williams Selyem Pinot Noir Vista Verde Vineyard
+2012 Williams Selyem Pinot Noir Vista Verde Vineyard
+2010 Williams Selyem Pinot Noir Weir Vineyard
+2012 Williams Selyem Pinot Noir Weir Vineyard
+2010 Williams Selyem Pinot Noir Williams Selyem Estate
+2012 Williams Selyem Pinot Noir Williams Selyem Estate
+2008 Kistler Chardonnay Cuvee Cathleen
+2008 Kistler Chardonnay Durell Vineyard
+2012 Kistler Chardonnay Durell Vineyard
+2006 Kistler Chardonnay Dutton Ranch
+2012 Kistler Chardonnay Dutton Ranch
+2006 Kistler Chardonnay Hudson Vineyard
+2007 Kistler Chardonnay Hyde Vineyard
+2008 Kistler Chardonnay Hyde Vineyard
+2011 Kistler Chardonnay Hyde Vineyard
+2012 Kistler Chardonnay Hyde Vineyard
+2008 Kistler Chardonnay Kistler Vineyard
+2009 Kistler Chardonnay Kistler Vineyard
+2006 Kistler Chardonnay McCrea Vineyard
+2008 Kistler Chardonnay McCrea Vineyard
+2012 Kistler Chardonnay McCrea Vineyard
+2012 Kistler Chardonnay Stone Flat Vineyard
+2008 Kistler Chardonnay Stone Flat Vineyard, Parmelee Hill
+2012 Kistler Chardonnay Trenton Roadhouse
+2006 Kistler Chardonnay Vine Hill Vineyard
+2007 Kistler Chardonnay Vine Hill Vineyard
+2008 Kistler Chardonnay Vine Hill Vineyard
+2009 Kistler Chardonnay Vine Hill Vineyard
+2021 J.L. Jamet Collines Rhodaniennes Valine
+2007 Robert Moncuit Vintage Champagne Blanc de Blancs
+1971 Moillard Clos Vougeot
+1985 Vieux Telegraphe Chateauneuf du Pape
+1989 Vieux Telegraphe Chateauneuf du Pape
+1978 Fratelli Barale Barolo Castellero Riserva
+1964 Prunotto Barolo
+2010 La Bastide Saint-Dominique Chateauneuf du Pape Secrets de Pignan
+2018 Chateau Belair-Monange
+2018 Chateau Belair-Monange Annonce
+2018 Chateau Chantalouette
+2018 Chateau Clarke La Merle Blanc
+2019 Chateau de Pez
+2006 Chateau du Pin
+2017 Chateau Latour a Pomerol
+2018 Chateau Latour a Pomerol
+2018 Chateau Plince
+2018 Chateau Rouget
+2018 Esperance de Trotanoy
+2018 Haut Roc Blanquant
+2012 Crypes des Climens
+2018 Courcel Pommard Grand Clos des Epenots
+2020 Domaine du Cellier aux Moines Givry Clos du Cellier Aux Moines, Les Dessus
+2020 Domaine du Cellier aux Moines Givry Clos Pascal
+2018 Maison Evenstad Aloxe Corton
+2020 J. Drouhin Chorey Les Beaune
+2020 L. Jadot Chablis Fourchaume
+2017 Bouchard, Pere et Fils Beaune Blanc Clos St. Landry
+2022 Drouhin-Vaudon Chablis Les Clos
+2022 J. Drouhin Meursault
+2019 J. Drouhin Puligny Montrachet
+2020 L. Jadot Puligny Montrachet Les Referts
+2018 P. Mayeul Nuits St. Georges Blanc
+2016 Chateau La Nerthe Chateauneuf du Pape Cuvee des Cadettes
+2019 Chateau La Nerthe Chateauneuf du Pape
+2015 Chene Bleu Vaucluse Heloise
+2015 Chene Bleu Ventoux Abelard
+2020 Domaine de la Solitude Chateauneuf du Pape Cuvee Barberini
+2018 Domaine de la Solitude Chateauneuf du Pape Cuvee Cornelia Constanza
+2020 L. & A. Brunel Chateauneuf du Pape Les Cailloux
+2020 Les Vignerons de l'Enclave des Papes Cotes du Rhone Blanc La Resistance
+2020 Ferraton Cotes du Rhone Blanc Samorens
+2019 L. & A. Brunel Chateauneuf du Pape Les Cailloux, Cuvee Centenaire
+2012 M. Chapoutier Ermitage Blanc De l'Oree
+2020 Saint Cosme Cote Rotie
+2019 Joao Portugal Ramos Vinho Verde Alvarinho
+2020 Casa do Valle Vinho Verde Grande Escolha
+2020 Joao Portugal Ramos Vinho Verde Loureiro
+2018 Durnberg Welschriesling Elementum
+NV Alfred Gratien Champagne Brut
+NV Delamotte Champagne Blanc de Blancs
+NV JCB Champagne Gala, Brut Rose
+NV Billecart Salmon Champagne Sous Bois
+2009 Dom Perignon Vintage Champagne Rose
+NV Drappier Champagne Carte d'Or
+2010 JCB Vintage Champagne Gala, Brut
+NV Jeeper Champagne Grande Reserve, Blanc de Blancs
+NV La Caravelle Champagne Blanc de Blancs
+NV La Caravelle Champagne Cuvee Nina Brut
+NV La Caravelle Champagne Rose
+NV Lallier Champagne Blanc de Blancs
+NV Lallier Champagne Grand Rose
+2015 Moet & Chandon Vintage Champagne Grand Vintage
+2015 Moet & Chandon Vintage Champagne Grand Vintage, Rose
+NV Palmer & Co Champagne Amazone
+NV Palmer & Co Champagne Rose Solera
+2015 Palmer & Co Vintage Champagne Grands Terroirs
+2013 Penfolds x Thienot Vintage Champagne Blanc de Blancs
+2013 Penfolds x Thienot Vintage Champagne Blanc de Noirs
+NV Piper Heidsieck Champagne Essentiel, Blanc de Noirs
+2014 Piper Heidsieck Vintage Champagne Rare, Rose
+NV Veuve Clicquot Champagne Brut
+NV Veuve Clicquot Champagne Rose
+2015 Veuve Clicquot Vintage Champagne La Grande Dame, Reserve Edition
+2020 Channing Daughters Pinot Grigio
+2020 Dr. Konstantin Frank Riesling Dry
+2021 Dr. Konstantin Frank Sauvignon Blanc
+2020 Lieb Cellars Pinot Blanc
+NV Beau Joie Champagne Brut Rose, Special Cuvee
+NV Cote Mas Cremant de Limoux Rose
+2019 Bouvet-Ladubay Cremant de Loire Excellence
+2020 Vin de Pays d'Oc
+2018 Domaine de Vodanis Vouvray Sec
+2019 G. Bertrand Clos d'Ora
+NV H. Champliau Cremant de Bourgogne Authentique
+2020 H. Brochard Sancerre Aujourd'Hui Comme Autrefois
+2020 Laroche Vin de Pays d'Oc de la Chevaliere
+NV Dopff & Irion Cremant d'Alsace Blanc de Blancs
+2020 Clean Slate Riesling
+2020 Dr. Pauly Bergweiler Riesling
+2020 E. Walch Gewurztraminer Kastelaz
+2020 Tramin Gewurztraminer Nussbaumer
+2018 Gustave Lorentz Riesling Altenberg de Bergheim
+2020 Sattlerhof Sauvignon Blanc Sudsteiermark
+2018 Schloss Johannisberg Riesling Feinherb Gelblack Trocken
+2020 Tiefenbrunner Weissburgunder Merus
+2020 Adami Valdobbiadene Prosecco Vigneto Giardino
+2019 Allegrini Amarone
+2018 Argiano Brunello di Montalcino
+2020 Alessandro di Camporeale Catarratto Benede
+2010 Altemasi Trentino Millesimato
+2020 Argiolas Vermentino Costamolino
+2020 B. Graetz Colore
+2020 B. Graetz Testamatta
+2011 Barone Pizzini Franciacorta Bagnadore Riserva
+2013 Bel Colle Barolo Riserva 10 anni
+2018 Bellavista Franciacorta La Scala
+2015 Beni di Batasiolo Barolo Brunate
+2015 Berlucchi Franciacorta '61, Nature
+NV Bottega Prosecco Gold
+2017 Bottega Vinaia Trentino Pinot Noir
+NV Bisol Valdobbiadene Prosecco Crede
+2020 Biondi Santi Rosso di Montalcino Greppo
+2020 Biserno Biserno
+2014 Ca' del Bosco Franciacorta Cuvee Annamaria Clementi
+2016 Caparzo Brunello di Montalcino La Casa
+2018 Carpineto Brunello di Montalcino
+2020 Campo Al Mare Bolgheri
+2020 Caruso & Minini Catarratto Naturalmente
+2019 Castello di Monsanto Chardonnay Fabrizio Bianchi, Collezione
+2020 Caruso & Minini Sicilia Bianco Grillo
+2016 Colle Massari Montecucco Poggio Lombrone Riserva
+2020 Corvo Sicilia Irmana
+2020 Corvo Sicilia Bianco Grillo
+2020 Duca di Salaparuta Sicilia Bianco Calanica
+2016 E. Cogno Barolo Vigna Elena, Riserva
+2019 F. Tornatore Etna Bianco
+2020 Graci Etna Bianco
+2019 Donnachiara Greco Di Tufo Aletheia Riserva
+2020 H. Rottensteiner Pinot Grigio
+2010 Ferrari Trentino Perle
+2011 Ferrari Trentino Perle
+NV Ferrari Trentino
+2020 Feudo Montoni Catarratto Masso
+2020 Gorghi Tondi Catarratto Midor
+2020 Feudo Maccari Sicilia Bianco Olli
+2020 La Doria Gavi
+2008 La Scolca Gavi di Gavi
+2020 L. Maffini Kratos Kratos
+2019 Jermann Venezia Giulia Bianco Where Dreams Have No End
+2016 La Mannella Brunello di Montalcino Riserva
+2018 Pertinace Langhe Bianco Arneis
+2018 P. Cesare Langhe Chardonnay Piodilei
+2019 P. Cesare Langhe Chardonnay L'Altro
+2020 Merotto Valdobbiadene Prosecco Cuvee del Fondatore
+2020 M. Lucchetti Verdicchio dei Castelli di Jesi Birbaccio
+2020 Petilia Fiano di Avellino
+2019 Petilia Greco Di Tufo
+2017 Pieropan Soave La Rocca
+2019 Pieropan Soave
+2019 R. Ratti Barolo Marcenasco
+2020 Pighin Collio Pinot Grigio
+2020 Pievalta Verdicchio dei Castelli di Jesi Tre Ripe
+2017 S. Nardi Brunello di Montalcino
+2013 Ricci Curbastro Franciacorta Gualberto
+2020 Suavia Soave
+2016 Tedeschi Amarone Maternigo Riserva
+2019 Tenuta Cucco Barolo Bricco Voghera
+2019 Tenuta Cucco Barolo Cerrati
+2019 Tenuta Cucco Barolo Serralunga d'Alba
+2018 Tenuta di Arceno Valadorna
+2017 Tenuta La Fuga Brunello di Montalcino
+2021 Tenuta San Guido Guidalberto
+2022 Tenuta San Guido Le Difese
+2020 Tenuta Sette Ponti Oreno
+2020 Villa Matilde Greco Di Tufo
+2020 Zenato Lugana San Benedetto
+2021 Zenato Pinot Grigio
+2020 Valle Reale Trebbiano D'Abruzzo
+2005 Kopke Colheita Port
+2020 Bardos Ribera del Duero Suprema
+2015 Aspaldi Rioja Reserva
+2016 Altos Ibericos Rioja Reserva
+2018 Bodegas Breca Garnacha Brega
+2019 Bodegas Breca Garnacha
+2020 Bodegas Estefania Bierzo Blanco Tilenus Monteseiros
+2020 Bodegas Eidosela Rias Baixas Albarino Ethereo
+2015 Bodegas Castillejo de Robledo Ribera del Duero Valcozar Reserva
+2017 Bodegas Luzon Jumilla Por Ti
+2019 Bodegas Luzon Jumilla Alma de Luzon
+2020 Bodegas Naia Rueda Blanco Naia
+2019 Bodegas Neo Ribera del Duero Sentido, Crianza
+2015 Bodegas Ostatu Rioja Gran Reserva
+2021 Broken Slates Priorat
+2020 Bodegas Vina Nora Rias Baixas Albarino
+2011 Bodegas y Vinedos Escudero Rioja Solar de Becquer, Gran Reserva
+2020 Bodegas Taron Rioja Blanco Taron
+2020 Bodegas Vizcarra Ramos Ribera del Duero Celia
+2020 Bodegas Vizcarra Ramos Ribera del Duero Torralvo
+2020 Bodegas Volver Vino de la Tierra de Castilla Paso a Paso
+2018 Ferrer Bobet Priorat
+2021 E. Moro Ribera del Duero La Felisa
+2020 Godelia Bierzo Blanco Godello
+2019 Grifoll Declara Priorat Predicat
+2020 Lagar de Cervera Rias Baixas Albarino
+2020 Marques de Caceres Rias Baixas Albarino Deusa Nai
+2018 Herencia Altes Terra Alta L'Estel
+2020 Martin Codax Rias Baixas Albarino
+2016 Marques de Caceres Rioja Gaudium Reserva
+2019 Martinez Bujanda Rioja Blanco Vina Bujanda
+2015 Matarromera Ribera del Duero Gran Reserva
+2010 Otazu Pago de Otazu Altar
+2020 Paco & Lola Rias Baixas Albarino
+2020 Pago de Carraovejas Ribera del Duero
+2019 Pagos de Rey Rias Baixas Albarino Pulpo
+2021 Pazos de Lusco Rias Baixas Albarino Licia
+2020 Pago del Vicario Vino de la Tierra de Castilla 6 Meses
+2017 Perinet Priorat Merit
+2018 Perinet Priorat Merit
+2019 Torres Conca de Barbera Grans Muralles
+2017 Torres Penedes Reserva Real
+2018 Torres Penedes Reserva Real
+2019 Torres Penedes Reserva Real
+2021 Venta la Vega Almansa Blanco Adaras Lluvia
+2018 Tabula Ribera del Duero
+2018 Valdelacierva Rioja Reserva
+2020 Vegalfaro Valencia Rebel.lia
+2019 Vina Gormaz Ribera del Duero 12 Linajes, Reserva
+2019 Vilano Ribera del Duero La Baraja
+2020 Vina Gormaz Ribera del Duero 12 Linajes
+2020 Vilano Ribera del Duero Terra Incognita
+2019 Vizcarra Ribera del Duero Celia
+2020 Vizcarra Ribera del Duero Ines
+2013 Acumen Cabernet Sauvignon Peak
+2019 Acumen Cabernet Sauvignon Peak
+2021 Acumen Cabernet Sauvignon Mountainside Vineyard
+2021 Acumen Cabernet Sauvignon Peak
+2016 Acumen Cabernet Sauvignon Peak Edcora Vineyard
+2019 Aloft Cabernet Sauvignon Cold Springs Vineyard
+2021 Alpha Omega Red Era
+2021 Amulet Estate Cabernet Sauvignon
+2020 Arkenstone Cabernet Sauvignon Godward Vineyard
+2019 Au Sommet Cabernet Sauvignon Atlas Peak
+2019 B.V. Private Reserve Cabernet Sauvignon
+2021 Baldacci Red
+2021 Baldacci Red Fraternity
+2017 Bella Oaks Red
+2019 Benovia Cabernet Sauvignon Cooley Vineyard
+2020 Beringer Cabernet Sauvignon Single Vineyard, Lampyridae Vineyard
+2019 Brion Cabernet Sauvignon Caldwell Vineyard
+2019 Brion Cabernet Sauvignon Oakville Ranch
+2019 Brion Cabernet Sauvignon Sleeping Lady Vineyard
+2020 Bonterra Red The Butler, Single Vineyard
+2019 Calla Lily Cabernet Sauvignon Ultimate Red
+2020 Canvasback Cabernet Sauvignon Grand Passage
+2020 Canvasback Cabernet Sauvignon Longwinds Vineyard
+2014 Cardinale Red
+2005 Chappellet Cabernet Sauvignon
+2019 Chappellet Cabernet Sauvignon Hideaway Vineyard
+2019 Chappellet Cabernet Sauvignon Prichard Hill
+2019 Chateau Montelena Cabernet Sauvignon
+2018 Clif Family Cabernet Sauvignon Cold Springs Vineyard
+2019 Cliff Lede Cabernet Sauvignon Beckstoffer To-Kalon Vineyard
+2019 Cliff Lede Cabernet Sauvignon Roundabout Midnight
+2021 Clos du Val Cabernet Sauvignon
+2021 Orin Swift Cabernet Sauvignon Palermo
+2014 Corison Cabernet Sauvignon
+2018 Cornerstone Cabernet Sauvignon Rutherford
+2019 Covert Estate Cabernet Sauvignon Clone 337/191
+2019 Crosby Roamann Cabernet Sauvignon
+2018 Crosby Roamann Cabernet Sauvignon Crosby's Reserve
+2019 Crosby Roamann Cabernet Sauvignon Crosby's Reserve
+2019 Darioush Cabernet Sauvignon
+2019 Darioush Cabernet Sauvignon Sage Vineyard
+2021 Ehlers Estate Cabernet Sauvignon 1886
+2021 Tablas Creek Mourvedre
+2021 Ehlers Estate Cabernet Sauvignon J. Leducq
+2019 Ehlers Estate Cabernet Franc
+2020 Eleven-Eleven Cabernet Sauvignon
+2020 Eleven-Eleven Cabernet Sauvignon Laki's Vineyard
+2019 Eleven-Eleven Reserve Cabernet Sauvignon Enaxi
+2019 Etude Cabernet Sauvignon Coombsville
+2019 Farella Cabernet Sauvignon Coombsville
+2021 Force & Grace Cabernet Sauvignon Napa Valley
+2021 Force & Grace Cabernet Sauvignon Oakville
+2021 Force & Grace Cabernet Sauvignon Revelist
+2021 Force & Grace Cabernet Sauvignon Rutherford
+2019 Freemark Abbey Cabernet Sauvignon Sycamore Vineyard
+2018 Frog's Leap Cabernet Sauvignon
+2018 Frog's Leap Cabernet Sauvignon Williams Rossi Vineyard
+2021 Girard Cabernet Sauvignon Mount Veeder
+2019 Hall Cabernet Sauvignon Kathryn Hall
+2013 Inglenook Cabernet Sauvignon Rubicon
+2018 Inglenook Cabernet Sauvignon Rubicon
+2019 Inglenook Cabernet Sauvignon Rubicon
+2019 Ink Grade Estate Cabernet Sauvignon
+2018 J. Moss Cabernet Sauvignon Steffensen Vineyard
+2019 J.O. Sullivan Cabernet Sauvignong Founder's Reserve
+2021 Joseph Phelps Cabernet Sauvignon Napa Valley
+2019 Ladera Cabernet Sauvignon Atlas Peak
+2019 Lail Vineyards Cabernet Sauvignon Blueprint
+2019 Larkmead Red Firebelle
+2013 Larkmead Red LMV Salon
+2017 Llamas Family Cabernet Sauvignon Stagecoach Vineyard
+2019 Lobo Cabernet Sauvignon Atlas Peak, Wulff Vineyards
+2020 Lobo Cabernet Sauvignon Wulff Vineyards
+2021 Lobo Cabernet Sauvignon Wulff Vineyards
+2018 Louis Martini Cabernet Sauvignon Lot No. 1
+2019 Louis Martini Cabernet Sauvignon Lot No. 1
+2019 Louis Martini Cabernet Sauvignon Stagecoach Vineyard
+2019 Memento Mori Cabernet Cauvignon
+2019 Merriam Vineyards Red Miktos
+2011 Merus Cabernet Sauvignon
+2013 Merus Cabernet Sauvignon
+2019 Merus Cabernet Sauvignon
+2018 Miner Family Red The Oracle
+2019 Neal Family Cabernet Sauvignon Howell Mountain
+2017 Palmaz Vineyards Cabernet Sauvignon Napa Valley
+2019 Pas de Cheval Cabernet Sauvignon Finale
+2019 Pas de Cheval Cabernet Sauvignon Intermezzo
+2019 Pas de Cheval Cabernet Sauvignon Prelude
+2020 Patrimony Cabernet Sauvignon
+2015 Paul Hobbs Cabernet Sauvignon Nathan Coombs
+2019 Pine Ridge Cabernet Sauvignon
+2021 Pine Ridge Cabernet Sauvignon Carneros
+2019 Pine Ridge Cabernet Sauvignon Epitome
+2020 Quintessa Red
+2019 Robert Craig Cabernet Sauvignon Howell Mountain
+2018 Rodney Strong Cabernet Sauvignon Alexander's Crown
+2018 Rodney Strong Cabernet Sauvignon Brothers
+2018 Rodney Strong Cabernet Sauvignon Rockaway Vineyard
+2018 Rowen Wine Cabernet Sauvignon 2040
+2018 Rowen Wine Cabernet Sauvignon Cooley Ranch
+2018 Rowen Wine Red 600R
+2018 Rowen Wine Red Sonoma County
+2018 Roy Estate Cabernet Sauvignon
+2016 Sequoia Grove Cabernet Sauvignon Rutherford Ranch Reserve
+2019 Signorello Cabernet Sauvignon Padrone Vineyard
+2019 Silverado Cabernet Sauvignon Estate Grown
+2019 Silverado Cabernet Sauvignon GEO
+2019 Silverado Cabernet Sauvignon Solo
+2019 Skipstone Cabernet Sauvignon Sofia's Vineyard
+2018 Stone Edge Farm Cabernet Sauvignon Mount Pisgah Vineyard
+2018 Stone Edge Farm Cabernet Sauvignon Silver Cloud
+2018 Tarpon Cellars Cabernet Sauvignon
+2019 The Vice Cabernet Sauvignon Double Oak, Coombsville
+2019 The Vice Cabernet Sauvignon Double Oak, Stag's Leap District
+2019 The Vice Cabernet Sauvignon Tee Time, Coombsville
+2019 The Vice Cabernet Sauvignon The Golden Years
+NV The Vice Cabernet Sauvignon The House, Batch #2019
+2018 To Kalon Vineyard Company Red Eliza's Red
+2019 Tor Cabernet Sauvignon Beckstoffer To-Kalon Vineyard
+2021 Tor Cabernet Sauvignon Oakville
+2019 Tor Cabernet Sauvignon Tierra Roja Vineyard
+2018 Torcia Cabernet Sauvignon Atlas Peak
+2018 Trefethen Cabernet Sauvignon Halo
+2020 Trois Noix Cabernet Sauvignon Rancho Pequeno
+2015 V. Sattui Cabernet Sauvignon Morisoli Vineyard
+2019 Viader Red
+2018 Benovia Sparkling Wine Blanc de Noirs
+NV Bricoleur Sparkling Wine Flying By The Seat of Our Pants
+2011 Cline Mourvedre Ancient Vines
+2019 Hawk & Horse Sparkling Wine Rose
+2012 J Vineyards & Winery Sparkling Wine Brut
+NV Matanzas Creek Sparkling Wine Brut Rose
+2015 Roederer Estate Sparkling Wine L'Ermitage
+2019 Sonoma-Cutrer Sparkling Wine Grand Brut Rose
+2021 Acumen Cabernet Franc Peak
+2020 Arkenstone Red Howell Mountain
+2020 Benovia Pinot Noir Cohn Vineyard
+2019 Benovia Pinot Noir Martaella Vineyard
+2021 Boar's View Pinot Noir BDR
+2021 Bouchaine Pinot Noir Calera Clone
+2021 Bouchaine Pinot Noir Mt. Eden Clone
+2021 Brandlin Malbec Mount Veeder
+2021 Brewer-Clifton Pinot Noir Perilune
+2019 Bricoleur Pinot Noir Russian River Valley
+2021 Bricoleur Pinot Noir Russian River Valley
+2021 Cattleya Pinot Noir Belly of the Whale
+2021 Cattleya Pinot Noir The Goddess
+2021 Cattleya Syrah The Initiation
+2021 Cattleya Syrah The Reward
+2020 Chamisal Pinot Noir Morrito
+2021 Chappellet Pinot Noir Dutton Ranch, Grower Collection
+2021 CHEV Pinot Noir
+2021 CHEV Pinot Noir Russian River Valley
+2021 CHEV Pinot Noir Santa Rita Hills
+2021 Cirq Pinot Noir Russian River Valley
+2022 Clarice Pinot Noir Rosella's Vineyard
+2022 Clarice Pinot Noir Santa Lucia Highlands
+2021 Clos du Val Red Yettalil
+2021 Clos Solene Red Fleur de Solene
+2021 Cobb Pinot Noir Coastlands Vineyard
+2021 Cobb Pinot Noir Coastlands Vineyard, Old Firs Block
+2021 Convene Pinot Noir Russian River Valley
+2021 Convene Pinot Noir Sonoma Coast
+2019 Coil Pinot Noir Signal Ridge Vineyard
+2019 Crosby Roamann Merlot
+2019 Cuvaison Merlot Arcilla
+2019 Cuvaison Syrah Diablo
+2018 Dark Matter Cabernet Sauvignon Limitless
+2019 Denner Red Mother of Exiles
+2019 Denner Red The Dirt Worshipper
+2018 Diora Pinot Noir La Petite Grace
+2014 Dry Creek Merlot
+2019 Ehlers Estate Merlot
+2021 Dutton Goldfield Pinot Noir Devil's Gulch Vineyard, Old Guys
+2021 Dutton Goldfield Pinot Noir Redwood Ridge
+2021 Dutton Goldfield Pinot Noir Van der Kamp Vineyard
+2019 Dutton Goldfield Syrah Dutton Ranch, Cherry Ridge Vineyard
+2021 Dutton Goldfield Zinfandel Dutton Ranch, Morelli Lane Vineyard
+2020 Emeritus Pinot Noir Hallberg Ranch Elite
+2019 Emeritus Pinot Noir Pinot Hill Cruz
+2020 Emeritus Pinot Noir Pinot Hill Elite
+2022 Flowers Pinot Noir Sea View Ridge
+2021 Freeman Pinot Noir Akiko's Cuvee
+2020 Goldeneye Pinot Noir Gowan Creek Vineyard
+2021 Goldeneye Pinot Noir Anderson Valley
+2018 Hamel Family Red Hamel Family Ranch
+2021 J Vineyards & Winery Pinot Noir Russian River Valley
+2019 JCB Chardonnay No. 81
+2019 Larry Hyde & Sons Merlot Hyde Vineyard
+2019 Larry Hyde & Sons Pinot Noir Hyde Vineyard
+2021 Merriam Vineyards Cabernet Franc Windacre
+2019 Merriam Vineyards Merlot Windacre
+2019 Merriam Vineyards Cabernet Sauvignon Gloeckner Turner Ranch, Rockpile
+2019 Mt. Brave Merlot
+2019 Mt. Brave Merlot Mt. Veeder
+2019 Pahlmeyer Merlot
+2018 Lobo Pinot Noir Wulff Vineyards
+2020 Perlegos Wine Co. Zinfandel Stampede Vineyard
+2021 Robert Biale Zinfandel Aldo's Vineyard
+2021 Robert Biale Zinfandel Black Chicken
+2021 Robert Biale Zinfandel Morisoli Vineyard
+2021 Robert Biale Zinfandel First Grade
+2018 Roy Estate Red Mr. Evans
+2018 Seghesio Red Omaggio
+2021 Seghesio Red Omaggio
+2018 Serres Ranch Red Buchanan
+2019 Skipstone Cabernet Franc Luka's Blend
+2019 Skipstone Red Oliver's Blend
+2021 Skipstone Red Oliver's Blend
+2017 St. Francis Red Anthem
+2021 Tablas Creek Red Esprit de Tablas
+2011 Talbott Pinot Noir Kali Hart Vineyard
+2018 Talbott Pinot Noir Kali Hart Vineyard
+2020 Tarpon Cellars Zinfandel Rebirth, Old Vines
+2020 Terre et Sang Grenache Kissing Vipers
+2017 damir ranch Jeff Runquist Petit Verdot R
+2020 Terre et Sang Syrah The Patriarch
+2020 Alpha Omega Chardonnay Toyon Vineyard
+2021 Amici Chardonnay Hyde Vineyard
+2017 Arkenstone Reserve Sauvignon Blanc
+2020 Arkenstone Sauvignon Blanc
+2021 Cakebread Cellars Chardonnay
+2020 Cambria Chardonnay Katherine's Vineyard
+2021 Cattleya Chardonnay Beyond the Threshold
+2021 Cattleya Chardonnay The Temptress
+2019 Chalk Hill Sauvignon Blanc
+NV Chandon Sparkling Wine By the Bay, Blanc de Blancs Reserve
+NV Chandon Sparkling Wine Etoile
+2021 Chappellet Chardonnay Grower Collection, Sangiacomo
+2020 Charles Woodson Chardonnay Intercept
+2021 CHEV Chardonnay Russian River Valley
+2022 Cuvaison Chardonnay Kite Tail
+2021 David Arthur Chardonnay
+2019 De Negoce Sauvignon Blanc OG N.16
+2019 DeLoach Vineyards Chardonnay Hawk Hill Vineyard
+2019 DeLoach Vineyards Chardonnay O.F.S.
+2018 Ettore Chardonnay Pure
+2021 Gary Farrell Chardonnay Durell Vineyard
+2021 Gary Farrell Chardonnay Olivet Lane
+2021 Gary Farrell Chardonnay Ritchie Vineyard
+2021 Gary Farrell Chardonnay Rochioli Vineyard
+2010 Gloria Ferrer Sparkling Wine Anniversary Cuvee
+2020 Harken Chardonnay
+2021 Inglenook White Blancaneaux
+2021 J Vineyards & Winery Pinot Gris
+2020 K2 Wine & Spirits Chardonnay The Simple Grape
+2020 La Crema Chardonnay Sonoma Coast
+2022 Lail Vineyards Sauvignon Blanc Blueprint
+2020 Macrostie Chardonnay Nightwing Vineyard
+2018 Merryvale Chardonnay Carneros
+2019 Oberon Chardonnay Los Carneros
+2019 Palmaz Vineyards Chardonnay Amalia
+NV Piper Sonoma Sparkling Wine Blanc de Blancs
+NV Piper Sonoma Sparkling Wine Brut Rose
+2022 Quintessa Sauvignon Blanc Illumination
+2020 RouteStock Chardonnay Carneros
+2017 Smith Madrone Riesling
+2020 St. Francis Chardonnay Sonoma County
+2021 Tablas Creek Grenache Blanc
+2018 Talbott Chardonnay Sleepy Hollow Vineyard
+2019 Talbott Chardonnay Kali Hart Vineyard
+2018 Terra d'Oro White
+2019 The Vineyard House Chardonnay
+2021 Tor Chardonnay Torchiana Beresini Vineyard
+2021 Andante Reserve Pinot Noir No. 6
+2018 Gran Moraine Chardonnay Yamhill-Carlton
+2021 Bledsoe-McDaniels Pinot Noir
+2021 Bledsoe-McDaniels Pinot Noir Eola-Amity Hills
+2021 Domaine Nicolas Jay Pinot Noir Bishop Creek
+2021 Domaine Nicolas Jay Pinot Noir Momtazi Vineyard
+2021 Domaine Nicolas Jay Pinot Noir L'Ensemble
+2021 Domaine Nicolas Jay Pinot Noir Temperance Hill Vineyard
+2018 Hamilton Russell Vineyards Pinot Noir Bramble Hill
+2021 Lange Winery Pinot Noir Freedom Hill Vineyard
+2019 Penner-Ash Chardonnay
+2019 Penner-Ash Riesling Hyland Vineyard
+2021 Penner-Ash Pinot Noir Pas de Nom
+2021 Willakenzie Pinot Noir
+2020 Barnard Griffin Albarino
+2020 Bledsoe Family Winery Cabernet Sauvignon
+2021 Bledsoe Family Winery Cabernet Sauvignon
+2021 Bledsoe-McDaniels Syrah McQueen Vineyard
+2018 Chateau St. Michelle Red Artist Series
+2020 Col Solare Cabernet Sauvignon
+2015 Cote Bonneville Red Dubrul Vineyard
+2020 Delille Cellars Red Chaleur Estate
+2021 Doubleback Cabernet Sauvignon
+2020 Doubleback Reserve Red
+2021 Doubleback Reserve Red
+2019 Dusted Valley Pinot Gris Boomtown
+2020 Gramercy Cellars Red
+2021 Leonetti Cellars Cabernet Sauvignon
+2021 Mark Ryan Cabernet Sauvignon Lonely Heart
+2021 Mark Ryan Cabernet Sauvignon Old Vines
+2021 Matthews Cellars Reserve Cabernet Franc
+2021 Matthews Reserve Claret
+2020 Quilceda Creek Cabernet Sauvignon
+2021 Sagebreaker Red
+2018 Pacific Rim Red Thick Skinned
+2021 Spring Valley Cabernet Franc Katherine Corkrum
+2021 Spring Valley Red Frederick
+2020 Trothe Cabernet Sauvignon
+2021 Trothe Cabernet Sauvignon
+2021 Trothe Grenache Limited
+2019 Trothe Malbec Limited
+2020 Trothe Syrah
+2021 Trothe Syrah
+2019 Valdemar Cabernet Sauvignon Klipsun Vineyard
+2020 Valdemar Cabernet Sauvignon
+2020 Valdemar Syrah
+2021 William Grassie Pinot Gris
+2018 Wilridge Pinot Grigio Acadia Vineyard
+2018 Wines of Sagemoor White Without Rehearsal
+2021 Woodward Canyon Cabernet Sauvignon Old Vines
+2021 Woodward Canyon Reserve Red
+2020 Beaumont Chenin Blanc Hope Marguerite
+2017 Brokenwood Semillon ILR Reserve
+2021 Clonakilla Shiraz/Viognier
+NV Domaine Chandon Sparkling Wine Etoile
+2021 Dr. Edge Pinot Noir Tasmania
+2021 Frederick Stevenson Pinot Noir Adelaide Hills
+2021 Giant Steps Chardonnay Yarra Valley
+2017 Moorilla Pinot Noir Muse
+2018 Henschke Cabernet Sauvignon Cyril Henschke
+2020 Hickinbotham Red The Peake
+2021 Joshua Cooper Pinot Noir Doug's Vineyard
+2008 Kanonkop Red Paul Sauer
+2019 Neldner Road Shiraz Hermann
+2019 Neldner Road Shiraz Loechel
+2019 Penfolds Cabernet Sauvignon Quantum Bin 98 Wine of the World
+2017 Powell & Son Grenache/Shiraz/Mataro Brennecke
+2018 Powell & Son Shiraz Chatterton's
+2017 Powell & Son Shiraz Kraehe
+2021 Patrick Sullivan Pinot Noir Millstream
+2019 Shaw & Smith Shiraz Balhannah
+2020 Shaw & Smith Shiraz Adelaide Hills
+2021 Tolpuddle Chardonnay
+2021 Tolpuddle Pinot Noir
+2017 Tyrrell's Semillon Single Vineyard HVD
+2017 Tyrrell's Semillon Vat 1
+2019 Vasse Felix Chardonnay Margaret River
+2020 Vasse Felix Chardonnay Filius
+2018 Vasse Felix Red Tom Cullity
+2020 Wynns Coonawarra Estate Cabernet Sauvignon John Riddoch
+2022 Worlds Apart Pinot Noir Mountain Tops
+2020 Yalumba Viognier Samuel's Collection
+2021 Yalumba Viognier The Y Series
+2021 Felton Road Pinot Noir Calvert
+2021 Felton Road Pinot Noir Cornish Point
+2018 Craggy Range Pinot Noir Te Muna Road Vineyard
+2022 Jules Taylor Sauvignon Blanc
+2020 Nobilo Sauvignon Blanc
+2021 Peregrine Sauvignon Blanc
+2020 Saint Clair Family Sauvignon Blanc Dillons Point
+2021 Tohu Sauvignon Blanc
+2021 Whitehaven Sauvignon Blanc
+2021 Wild Rock Sauvignon Blanc The Infamous Goose
+2018 Villa Maria Cabernet Sauvignon Ngakirikiri
+2021 Villa Maria Sauvignon Blanc Earth Garden
+2021 Villa Maria Sauvignon Blanc Private Bin
+2016 Royal Tokaji Tokaji Late Harvest
+2019 Chateau d'Auvernier
+2021 Mulderbosch Sauvignon Blanc
+2019 Cloudy Bay Sauvignon Blanc Te Koko
+2020 Cloudy Bay Sauvignon Blanc Te Koko
+2021 Cloudy Bay Sauvignon Blanc Marlborough
+2019 Quinta Do Vallado Vintage Port
+2017 Rustenberg Chardonnay Five Soldiers
+2019 Susana Balbo Malbec Nosotros
+2018 Taylor Fladgate Vintage Port
+2018 J. et P. Testuz Dezaley l'Arbalete
+NV Valdespino Sherry Fino
+2020 Terrazas de los Andes Malbec Reserva
+2019 Tokara Chardonnay
+2020 Concha Y Toro Cabernet Sauvignon Don Melchor, Puente Alto Vineyard
+2021 Lapostolle Sauvignon Blanc Grand Selection
+2015 Lenz Gewurztraminer Old Vines
+2019 Montes Alpha Chardonnay Casablanca Vineyard
+2020 Montes Alpha Chardonnay Classic Series
+2019 Vik Red Millahue
+2019 Vina Vik Red Millahue
+NV Kopke 30 Year Tawny Port
+NV Kopke 40 Year Tawny Port
+2020 Quinta do Vallado Douro Reserva Field Blend
+NV Quinta Do Vallado 20 Year Tawny Port
+2020 Alheit Vineyards White Cartology Bushvines
+2020 Bellingham Chenin Blanc The Bernard Series, Old Vine
+2021 Cederberg Sauvignon Blanc
+2019 DeMorgenzon Reserve Chenin Blanc
+2018 Kara Tara Pinot Noir
+2018 Lismore Reserve Viognier Estate Reserve
+2021 Mulderbosch Chenin Blanc Steen Op Hout
+2018 Raats Chenin Blanc Old Vine
+2021 Raats Chenin Blanc Original
+NV Alta Vista Sparkling Wine Blanc de Blancs
+NV Alta Vista Sparkling Wine Brut Nature
+2017 Sadie Family Red Columella
+2017 Argento Malbec Single Block
+2021 Bodega Norton Torrontes Coleccion 1895
+2018 El Enemigo Semillon
+2021 Catena Zapata Chardonnay Adrianna Vineyard, White Bones
+2021 Catena Zapata Malbec
+2020 Catena Zapata Malbec Adrianna Vineyard, River Stones
+2020 Catena Zapata Malbec Mundus Bacillus Terrae, Adrianna Vineyard
+2020 Catena Zapata Red Nicolas
+2020 Luigi Bosca Malbec Los Nobles
+2019 Luigi Bosca Red De Sangre
+2019 Luigi Bosca Sauvignon Blanc
+2018 Otronia Chardonnay III & VI
+2018 Otronia Pinot Noir Rugientes 45
+2019 Otronia Pinot Noir I
+2020 Pascual Toso Cabernet Sauvignon Alta
+2020 Tilia Torrontes
+2021 Zuccardi Chardonnay Fosil
+2022 Zuccardi Chardonnay Fosil
+2018 Zuccardi Malbec Aluvional Paraje Altamira
+2020 Zuccardi Malbec Concreto
+2017 Zuccardi Sparkling Wine Blanc de Blancs, Cuvee Especial
+2020 Gaia Peloponnese Monograph
+2020 Argyros Santorini Assyrtiko
+2006 L. Jadot Bonnes Mares
+2008 Dom Perignon Vintage Champagne
+2012 Antinori Solaia
+2015 Chateau Pichon Lalande
+2016 Chateau Pichon Lalande
+2015 Alpha Omega Cabernet Sauvignon Beckstoffer Dr. Crane Vineyard
+2015 Alpha Omega Cabernet Sauvignon Beckstoffer Las Piedras
+2016 Alpha Omega Cabernet Sauvignon Beckstoffer Dr. Crane Vineyard
+2016 Alpha Omega Cabernet Sauvignon Beckstoffer Las Piedras
+2018 Alpha Omega Cabernet Sauvignon Beckstoffer Dr. Crane Vineyard
+2015 Alpha Omega Cabernet Sauvignon Beckstoffer Georges III Vineyard
+2015 Alpha Omega Cabernet Sauvignon Stagecoach Vineyard
+2016 Alpha Omega Cabernet Sauvignon Beckstoffer Georges III Vineyard
+2016 Alpha Omega Cabernet Sauvignon Stagecoach Vineyard
+2018 Alpha Omega Cabernet Sauvignon Beckstoffer Georges III Vineyard
+2019 Alpha Omega Cabernet Sauvignon Beckstoffer Georges III Vineyard
+2015 Alpha Omega Cabernet Sauvignon Beckstoffer To-Kalon Vineyard
+2015 Alpha Omega Cabernet Sauvignon Thomas Vineyard
+2016 Alpha Omega Cabernet Sauvignon Beckstoffer To-Kalon Vineyard
+2018 Alpha Omega Cabernet Sauvignon Beckstoffer To-Kalon Vineyard
+2019 Alpha Omega Cabernet Sauvignon Sacrashe Vineyard
+2019 Alpha Omega Cabernet Sauvignon Sleeping Lady Vineyard
+2019 Alpha Omega Cabernet Sauvignon Sunshine Valley
+2016 Alpha Omega Cabernet Sauvignon Thomas Vineyard
+2019 Alpha Omega Cabernet Sauvignon Thomas Vineyard
+2013 Alpha Omega Red AOX
+2014 Alpha Omega Red AOX
+2015 Alpha Omega Red AOX
+2016 Alpha Omega Red AOX
+2017 Alpha Omega Red AOX
+2018 Alpha Omega Red AOX
+2014 Alpha Omega Red Era
+2015 Alpha Omega Red Era
+2016 Alpha Omega Red Era
+2017 Alpha Omega Red Era
+2018 Alpha Omega Red Era
+2019 Alpha Omega Red Era
+2015 Kata Cabernet Sauvignon Beckstoffer Bourn
+2016 Kata Cabernet Sauvignon Beckstoffer Bourn
+2021 Perchance Cabernet Sauvignon Beckstoffer Georges III Vineyard
+2014 Quintessa Red
+2016 Stewart Cabernet Sauvignon Beckstoffer Bourn Vineyard
+2018 Stewart Cabernet Sauvignon Beckstoffer Bourn Vineyard
+2019 Stewart Cabernet Sauvignon Beckstoffer Bourn Vineyard
+2019 Stewart Cabernet Sauvignon Beckstoffer Dr. Crane Vineyard
+2019 Stewart Cabernet Sauvignon Beckstoffer Georges III Vineyard
+1953 Chateau Batailley
+1961 Chateau Batailley
+1955 Chateau Bouscaut
+1959 Chateau Brane Cantenac
+1989 Chateau de Fieuzal
+1982 Chateau Ducru Beaucaillou
+1989 Chateau Ducru Beaucaillou
+1978 Chateau Duhart Milon
+1978 Chateau Gruaud Larose
+1981 Chateau Haut Brion
+1982 Chateau L'Evangile
+1989 Chateau La Dominique
+1982 Chateau La Fleur
+1959 Chateau La Gaffeliere Naudes
+1982 Chateau La Lagune
+1976 Chateau La Mission Haut Brion
+1979 Chateau La Mission Haut Brion
+1981 Chateau La Mission Haut Brion
+1982 Chateau La Tour Haut Brion
+1970 Chateau Lafite Rothschild
+1976 Chateau Lafite Rothschild
+1934 Chateau Latour
+1975 Chateau Latour
+1979 Chateau Latour
+1981 Chateau Latour
+1985 Chateau Latour
+1970 Chateau Leoville Las Cases
+1989 Chateau Meyney
+1970 Chateau Mouton Rothschild
+1971 Chateau Mouton Rothschild
+1976 Chateau Mouton Rothschild
+1978 Chateau Mouton Rothschild
+1981 Chateau Palmer
+1985 Chateau Pichon Lalande
+1989 Chateau Pichon Lalande
+1967 Chateau St. Georges
+1970 Chateau Talbot
+1978 Chateau Talbot
+1975 Chateau Trotanoy
+1979 Chateau Trotanoy
+1961 Chateau Trotte Vieille
+1989 Clos du Marquis
+1949 Clos Fourtet
+1989 Les Tourelles de Longueville
+1986 Pavillon Rouge du Chateau Margaux
+1975 Chateau Climens
+1975 Chateau de Fargues
+1971 Chateau Suduiraut
+1986 Pavillon Blanc du Chateau Margaux
+1978 Y de Chateau d'Yquem
+1966 Chandon de Briailles Corton Bressandes
+1978 Domaine des Varoilles Gevrey Chambertin Clos des Varoilles
+1983 Dujac Morey St. Denis
+1985 F. Chauvenet Charmes Chambertin
+1969 Faiveley Latricieres Chambertin
+1978 Faiveley Latricieres Chambertin
+1985 L. Trapet Chambertin
+1990 Marquis d'Angerville Volnay Premier Cru
+1983 Mongeard Mugneret Echezeaux
+1984 Mongeard Mugneret Grands Echezeaux
+1990 L. Jadot Meursault
+1995 L. Jadot Meursault
+1993 Roulot Meursault Les Vireuils
+1983 Chateau de Beaucastel Chateauneuf du Pape
+1988 Domaine du Cayron Gigondas
+1985 E. Guigal Cote Rotie Brune et Blonde
+1984 E. Guigal Cote Rotie La Mouline
+1961 Mont Redon Chateauneuf du Pape
+1988 Domaine Tempier Bandol La Tourtine, Cuvee Speciale
+1967 Dr. Thanisch Riesling Feine Auslese Bernkasteler Doctor
+1969 Dr. Thanisch Riesling Spatlese Cabinet Bernkasteler Doctor
+1981 E. Muller Riesling Kabinett Scharzhofberger
+1983 E. Muller Riesling Kabinett Scharzhofberger
+1966 E. Muller Riesling Spatlese Scharzhofberger
+1976 H. Braun Riesling Trockenbeerenauslese Niersteiner Pattenthal
+1969 J.J. Prum Riesling Auslese Wehlener Sonnenuhr
+1959 Karthauserhof Riesling Auslese Eitelsbacher Karthauserhofberger Orthsberg
+1959 Karthauserhof Riesling Feinste Auslese Eitelsbacher Karthauserhofberger Kronenberg
+1976 Schloss Reinharthausen Riesling Auslese Erbacher Siegelsberg
+1967 Zentralkellerrei am Ruster Berg Riesling Trockenbeerenauslese Original Ruster
+1967 B.V. Cabernet Sauvignon
+1996 Joseph Phelps Winery Insignia
+1997 Joseph Phelps Winery Insignia
+1978 Torres Gran Coronas Black Label, Reserva
+1996 Los Vascos Cabernet Sauvignon
+1975 Real Companhia Velha Douro Evel Garrafeira
+2005 Chateau Duhart Milon
+2005 Chateau Gloria
+1982 Chateau Gruaud Larose
+2003 Chateau Leoville Poyferre
+2000 Chateau Pavie Decesse
+2000 Clos de L'Oratoire
+1983 Chateau Rieussec
+NV Andre Clouet Champagne Un Jour de 1911
+1998 Billecart Salmon Vintage Champagne Cuvee Elisabeth Salmon, Rose
+1999 Billecart Salmon Vintage Champagne Cuvee Nicolas Francois
+2004 A. Conterno Barolo
+1998 A. Conterno Barolo Bussia
+2001 A. Conterno Barolo Colonnello
+2009 A. Conterno Barolo Colonnello
+1995 A. Conterno Barolo Granbussia Riserva
+1998 A. Conterno Barolo Granbussia Riserva
+2009 Altesino Brunello di Montalcino
+2006 Altesino Brunello di Montalcino Montosoli
+1999 Altesino Brunello di Montalcino Riserva
+1995 Anselma Barolo Adasi
+2005 Antinori Tignanello
+1998 B. Giacosa Barbaresco Asili
+1998 B. Giacosa Barolo Le Rocche del Falletto di Serralunga
+2011 B. Mascarello Barolo
+1980 Bertani Recioto della Valpolicella
+1981 Bertani Recioto della Valpolicella
+1987 Bertani Recioto della Valpolicella
+2001 Biondi Santi Brunello di Montalcino Greppo
+2004 Casanova di Neri Brunello di Montalcino Tenuta Nuova
+1971 Castell'in Villa Chianti Classico Riserva
+2004 Castello di Camigliano Brunello di Montalcino Gualto, Riserva
+2008 Castell'in Villa Chianti Classico Riserva
+2003 Castello Dei Rampolla Sammarco
+2004 Castello Dei Rampolla Sammarco
+2000 Castello Dei Rampolla Vigna d'Alceo
+2001 Castello Dei Rampolla Vigna d'Alceo
+2003 Castello Dei Rampolla Vigna d'Alceo
+2004 Castello Dei Rampolla Vigna d'Alceo
+2008 Castello di Ama L'Apparita
+2009 Castello di Ama L'Apparita
+1989 Ceretto Barolo Bricco Rocche
+2012 Ciacci Piccolomini d'Aragona Brunello di Montalcino
+2012 Ciacci Piccolomini d'Aragona Brunello di Montalcino Vigna di Pianrosso
+2003 Col D' Orcia Brunello di Montalcino
+2004 Col D' Orcia Brunello di Montalcino Poggio Al Vento Riserva
+2004 Conti Costanti Brunello di Montalcino Riserva
+2001 Cupano Brunello di Montalcino
+2004 Cupano Brunello di Montalcino
+2008 Cupano Brunello di Montalcino
+2003 D. Clerico Barolo Pajana
+2001 E. Pepe Montepulciano D'Abruzzo
+2009 E. Sandri Barolo Riserva
+2009 F. Nada Barbaresco Rombone
+2012 Falesco Montiano
+1985 Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco
+1986 Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco
+1987 Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco
+1989 Fiorano (Boncompagni Ludovisi) Vino da Tavola Bianco
+2004 Fontodi Flaccianello Della Pieve
+2005 Fontodi Flaccianello Della Pieve
+2008 Fontodi Flaccianello Della Pieve
+2009 Fontodi Flaccianello Della Pieve
+2004 Fuligni Brunello di Montalcino Riserva
+1998 G. Borgogno Barolo Riserva
+2001 G. Brunelli Brunello di Montalcino Riserva
+2010 G. Brunelli Brunello di Montalcino Riserva
+1998 G. Conterno Barolo Monfortino Riserva
+2002 G. Conterno Barolo Monfortino Riserva
+1998 Gaja Barbaresco
+1999 Gaja Barbaresco
+2005 Gaja Barbaresco Costa Russi
+2005 Gaja Barbaresco Sori Tildin
+2003 Gaja Barolo Sperss
+2006 Gaja Langhe Chardonnay Gaia & Rey
+2000 Grattamacco Grattamacco
+2008 Grattamacco Grattamacco
+2009 Grattamacco Grattamacco
+2012 Grattamacco Grattamacco
+1998 Il Palazzone Brunello di Montalcino
+2004 Il Poggione Brunello di Montalcino Vigna Paganelli, Riserva
+2009 Isole e Olena Cepparello
+2002 J. Gravner Ribolla Gialla Anfora
+2003 J. Gravner Ribolla Gialla Anfora
+2009 L. Sandrone Barolo Cannubi Boschis
+2009 L. Sandrone Barolo Le Vigne
+1997 La Poderina Brunello di Montalcino
+2004 La Gerla Brunello di Montalcino Riserva gli Angeli
+2005 La Spinetta Barbaresco Vursu Vigneto Gallina
+2005 La Spinetta Barbaresco Vursu Vigneto Starderi
+2005 La Spinetta Barbaresco Vursu Vigneto Valeirano
+2003 La Spinetta Barolo Vursu, Vigneto Campe
+2004 Le Macchiole Messorio
+2008 Le Macchiole Messorio
+2008 Le Macchiole Scrio Syrah
+2005 Le Pupille Saffredi
+2014 Miani Colli Orientali del Friuli
+2009 Montepeloso Gabbro
+2001 Montevetrano Colli di Salerno
+2002 Montevetrano Colli di Salerno
+2004 Ornellaia Ornellaia
+2014 Ornellaia Ornellaia L'Essenza
+2003 P. Bea Sagrantino di Montefalco Passito
+1999 P. Scavino Barolo Carobric
+2003 P. Scavino Barolo Carobric
+2009 Pertimali (Livio Sassetti) Brunello di Montalcino
+2005 Petrolo Galatrona
+2006 Petrolo Galatrona
+2010 Pieve Santa Restituta (Gaja) Brunello di Montalcino
+1997 Pieve Santa Restituta (Gaja) Brunello di Montalcino Rennina
+2004 Pieve Santa Restituta (Gaja) Brunello di Montalcino Rennina
+2000 Pieve Santa Restituta (Gaja) Brunello di Montalcino Sugarille
+2001 Poggio di Sotto Brunello di Montalcino
+2009 Produttori del Barbaresco Barbaresco
+2014 Produttori del Barbaresco Barbaresco
+2005 Produttori del Barbaresco Barbaresco Asili Riserva
+2014 Produttori del Barbaresco Barbaresco Asili Riserva
+2005 Produttori del Barbaresco Barbaresco Moccagatta Riserva
+2005 Produttori del Barbaresco Barbaresco Montefico Riserva
+2009 Produttori del Barbaresco Barbaresco Montefico Riserva
+2014 Produttori del Barbaresco Barbaresco Montefico Riserva
+2005 Produttori del Barbaresco Barbaresco Montestefano Riserva
+2014 Produttori del Barbaresco Barbaresco Montestefano Riserva
+2014 Produttori del Barbaresco Barbaresco Muncagota Riserva
+2005 Produttori del Barbaresco Barbaresco Ovello Riserva
+2005 Produttori del Barbaresco Barbaresco Paje Riserva
+2014 Produttori del Barbaresco Barbaresco Ovello Riserva
+2005 Produttori del Barbaresco Barbaresco Pora Riserva
+2014 Produttori del Barbaresco Barbaresco Pora Riserva
+2014 Produttori del Barbaresco Barbaresco Paje Riserva
+1995 Produttori del Barbaresco Barbaresco Rabaja Riserva
+2005 Produttori del Barbaresco Barbaresco Rabaja Riserva
+2009 Produttori del Barbaresco Barbaresco Rabaja Riserva
+2011 Produttori del Barbaresco Barbaresco Rabaja Riserva
+2014 Produttori del Barbaresco Barbaresco Rabaja Riserva
+2005 Produttori del Barbaresco Barbaresco Rio Sordo Riserva
+2014 Produttori del Barbaresco Barbaresco Rio Sordo Riserva
+1986 Querciabella Camartina
+1991 Querciabella Camartina
+1999 Querciabella Camartina
+2000 Querciabella Camartina
+1998 R. Seghesio Barolo Pajana
+1998 R. Voerzio Barolo Cerequio
+2005 R. Voerzio Barolo Cerequio
+2009 R. Voerzio Barolo Cerequio
+1998 R. Voerzio Barolo La Serra
+2000 R. Voerzio Barolo La Serra
+2001 R. Voerzio Barolo La Serra
+2004 R. Voerzio Barolo La Serra
+2009 R. Voerzio Barolo Rocche dell'Annunziata Torriglione
+2005 R. Voerzio Fontanazza Pissotta
+2005 Rocche dei Manzoni Barolo Big'd Big
+2009 Rocche dei Manzoni Barolo Rocche
+2005 Rocche dei Manzoni Barolo Vigna d'La Roul
+1998 Rocche dei Manzoni Quatr Nas
+2004 S. Pacenti Brunello di Montalcino
+2010 S. Pacenti Brunello di Montalcino Vecchie Vigne
+2010 San Felice Brunello di Montalcino Campogiovanni
+2010 San Filippo Brunello di Montalcino Le Lucere
+2008 San Giusto a Rentennano La Ricolma
+2009 San Giusto a Rentennano La Ricolma
+2008 San Giusto a Rentennano Percarlo
+2001 T. Bussola Recioto della Valpolicella TB
+2001 Talenti Brunello di Montalcino
+2004 Talenti Brunello di Montalcino
+2004 Talenti Brunello di Montalcino Pian di Conte, Riserva
+2009 Tenuta di Biserno Biserno
+2008 Tenuta di Trinoro Tenuta di Trinoro
+2009 Tenuta di Trinoro Tenuta di Trinoro
+2012 Tenuta le Potazzine Brunello di Montalcino Gorelli
+2001 Tenuta San Guido Sassicaia
+2008 Tenuta San Guido Sassicaia
+2012 Tenuta San Guido Sassicaia
+2005 Tua Rita Perlato del Bosco
+2009 Tua Rita Redigaffi
+2012 Tua Rita Redigaffi
+2001 Tua Rita Syrah di Toscana
+2004 Tua Rita Syrah di Toscana
+2005 Tua Rita Syrah di Toscana
+2004 Uccelliera Brunello di Montalcino Riserva
+2003 Valdicava Brunello di Montalcino
+2004 Valdicava Brunello di Montalcino
+2005 Valdicava Brunello di Montalcino
+2009 Valdicava Brunello di Montalcino
+2001 Valentini Montepulciano D'Abruzzo
+1988 Vietti Barolo Brunate
+2001 Vietti Barolo Lazzarito
+1995 A. Palacios Priorat L'Ermita, Velles Vinyes
+2006 Artadi Rioja Pagos Viejos
+2006 Artadi Rioja Vina El Pison
+2008 B. Romeo Rioja Contador
+2006 Bodegas el Nido El Nido
+2011 Chateau Montelena Cabernet Sauvignon
+2005 Pahlmeyer Red
+2006 Pahlmeyer Red
+2006 Pine Ridge Cabernet Sauvignon Fortis
+2011 Pine Ridge Cabernet Sauvignon Fortis
+2012 La Jota Merlot W.S. Keyes Vineyard
+2013 La Jota Merlot W.S. Keyes Vineyard
+2012 Rhys Pinot Noir Alpine Vineyard
+2012 Rhys Pinot Noir Home Vineyard
+2003 Marcassin Chardonnay Marcassin Vineyard
+2014 Rhys Chardonnay Horseshoe Vineyard
+2017 00 Wines Chardonnay Hyland
+2017 00 Wines Chardonnay Open Claim
+2017 00 Wines Chardonnay Seven Springs Vineyard
+2006 Achaval Ferrer Malbec Finca Altamira, La Consulta
+2006 Achaval Ferrer Malbec Finca Mirador, Medrano
+2005 Achaval Ferrer Red Quimera
+2006 Bodega Chacra Pinot Noir Treinta Y Dos
+2007 Bodega Chacra Pinot Noir Treinta Y Dos
+2008 Bodega Chacra Pinot Noir Treinta Y Dos
+2009 Bodega Chacra Pinot Noir Treinta Y Dos
+2010 Bodega Chacra Pinot Noir Treinta Y Dos
+2008 Riojanas Rioja Monte Real, Gran Reserva
+1975 Chateau Ducru Beaucaillou
+1988 Chateau La Mission Haut Brion
+1989 Chateau Montrose
+1985 Chateau Mouton Rothschild
+2000 Chateau Pavie
+1995 Dujac Charmes Chambertin
+1995 Dujac Morey St. Denis
+2003 Chateau de Beaucastel Chateauneuf du Pape Hommage a Jacques Perrin
+2013 E. Guigal Cote Rotie La Mouline
+2005 A. Rousseau Ruchottes Chambertin Clos des Ruchottes
+2009 Arnoux-Lachaux Romanee St. Vivant
+2009 B. Dugat-Py Gevrey Chambertin Coeur de Roy, Tres Vieilles Vignes
+2010 B. Dugat-Py Gevrey Chambertin Les Champeaux, Vieilles Vignes
+2010 B. Dugat-Py Gevrey Chambertin Premier Cru, Vieilles Vignes
+2014 Bouchard, Pere et Fils Bonnes Mares
+1999 C. Dugat Chapelle Chambertin
+2001 C. Roumier Charmes Chambertin
+2009 Chandon de Briailles Corton Clos du Roi
+2009 Chandon de Briailles Corton Les Bressandes
+2009 Chandon de Briailles Corton Les Marechaudes
+2014 Chandon de Briailles Savigny les Beaune Les Lavieres
+1999 Comte de Vogue Bonnes Mares
+2009 Comte de Vogue Chambolle Musigny
+2009 Comte de Vogue Chambolle Musigny Premier Cru
+1995 Comte Lafon Volnay Clos des Chenes
+2008 D. Bachelet Charmes Chambertin Vieilles Vignes
+2009 D. Bachelet Cotes de Nuits Villages
+2002 D. Bachelet Gevrey Chambertin Les Corbeaux, Vieilles Vignes
+2009 Domaine D'Eugenie Clos Vougeot
+1999 Domaine de l'Arlot Nuits St. Georges Clos de L'Arlot
+2002 Domaine de l'Arlot Nuits St. Georges Clos de L'Arlot
+2005 Domaine de l'Arlot Nuits St. Georges Clos de L'Arlot
+2002 Domaine de l'Arlot Nuits St. Georges Clos des Forets, St. Georges
+2002 Domaine de Montille Pommard Les Pezerolles
+2009 Domaine de Montille Pommard Les Pezerolles
+2010 Domaine de Montille Pommard Les Pezerolles
+2009 Domaine de Montille Volnay Les Mitans
+2002 Domaine de Montille Volnay Les Taillepieds
+2009 Domaine de Montille Volnay Les Taillepieds
+2010 Domaine de Montille Vosne Romanee Les Malconsorts
+2012 Domaine de Montille Vosne Romanee Les Malconsorts, Christiane
+2012 Domaine des Lambrays Clos des Lambrays
+2014 Domaine des Lambrays Clos des Lambrays
+2008 Domaine du Clos de Tart Clos de Tart
+2009 F. Gay Aloxe Corton
+2009 F. Gay Chorey Les Beaune
+2010 F. Gay Corton Renardes
+2009 Faiveley Chambertin Clos de Beze
+1999 Follin-Arbelet Aloxe Corton Les Vercots
+2009 G. Barthod Chambolle Musigny
+1996 G. Barthod Chambolle Musigny Les Chatelots
+1990 G. Noellat Vosne Romanee Les Beaux Monts
+2005 G. Roumier Chambolle Musigny
+2009 G. Roumier Morey St. Denis Clos de la Bussiere
+2014 Geantet-Pansiot Gevrey Chambertin Vieilles Vignes
+2005 H. Gouges Nuits St. Georges Clos des Porrets St. Georges
+2010 H. Gouges Nuits St. Georges Clos des Porrets St. Georges
+2005 H. Gouges Nuits St. Georges Les Chenes Carteaux
+2005 H. Gouges Nuits St. Georges Les Pruliers
+2005 H. Gouges Nuits St. Georges Les Vaucrains
+2010 H. Gouges Nuits St. Georges Les Vaucrains
+1999 Humbert Charmes Chambertin
+1999 Humbert Gevrey Chambertin Craipillot
+2009 J. Drouhin Beaune Greves
+2005 J. Drouhin Beaune Rouge Clos des Mouches
+2009 J. Drouhin Beaune Rouge Clos des Mouches
+2009 J. Drouhin Chambolle Musigny
+2002 J. Drouhin Clos Vougeot
+2009 J. Drouhin Clos Vougeot
+2002 J. Drouhin Echezeaux
+1993 J. Drouhin Griottes Chambertin
+2009 J. Drouhin Griottes Chambertin
+2009 J. Drouhin Morey St. Denis Clos Sorbes
+2005 J. Drouhin Volnay
+2009 J. Drouhin Volnay
+2009 J. Drouhin Vosne Romanee
+2009 J. Drouhin Vosne Romanee Les Petits Monts
+2009 J. Voillot Volnay Vieilles Vignes
+2005 J.F. Mugnier Nuits St. Georges Clos de la Marechale
+2009 J.M. Pavelot Savigny les Beaune La Dominode
+2010 L. Jadot Beaune Rouge Clos des Ursules
+2002 L. Jadot Bonnes Mares
+2005 L. Jadot Bonnes Mares
+2009 L. Jadot Bonnes Mares
+2009 L. Jadot Chambertin
+1997 L. Jadot Chambolle Musigny Les Amoureuses
+2009 L. Jadot Chambolle Musigny Les Amoureuses
+2009 L. Jadot Corton Pougets
+2005 L. Jadot Echezeaux
+1997 L. Jadot Gevrey Chambertin Clos St. Jacques
+2009 L. Jadot Gevrey Chambertin Clos St. Jacques
+2005 L. Jadot Latricieres Chambertin
+2009 L. Jadot Latricieres Chambertin
+2005 L. Jadot Pernand Vergelesses Clos de la Croix de Pierre
+2005 L. Jadot Vosne Romanee Les Suchots
+2010 L. Jadot Vosne Romanee Les Suchots
+2012 La Famille Claude Dugat Charmes Chambertin La Gibryotte
+2002 M. Lafarge Beaune Greves
+2009 M. Lafarge Beaune Greves
+2002 M. Lafarge Pommard Les Pezerolles
+2009 M. Lafarge Pommard Les Pezerolles
+2009 M. Lafarge Volnay Clos du Chateau des Ducs
+2009 M. Lafarge Volnay Les Caillerets
+2009 M. Lafarge Volnay Vendages Selectionnees
+1990 Maison Leroy Bourgogne Rouge
+2009 Marquis d'Angerville Volnay Premier Cru
+2013 Marquis d'Angerville Volnay Premier Cru
+2002 Marquis d'Angerville Volnay Taillepieds
+2005 Marquis d'Angerville Volnay Taillepieds
+2009 Meo Camuzet Clos Vougeot Le Grand Maupertui
+2009 Meo Camuzet Vosne Romanee Les Chaumes
+2002 R. Arnoux Nuits St. Georges Clos des Corvees Pagets
+2002 R. Arnoux Vosne Romanee Les Chaumes
+2009 S. Bize Savigny les Beaune Aux Fourneaux
+2009 S. Bize Savigny les Beaune Aux Guettes
+2010 S. Bize Savigny les Beaune Aux Guettes
+2009 S. Bize Savigny les Beaune Aux Vergelesses
+2010 S. Bize Savigny les Beaune Les Talmettes
+1999 S. Cathiard Chambolle Musigny Clos De L'Orme
+2005 S. Cathiard Vosne Romanee
+2005 Taupenot-Merme Charmes Chambertin
+2005 Chandon de Briailles Corton Blanc
+1996 Chateau de la Maltroye Chassagne Montrachet Dent de Chien
+2002 Chateau de la Maltroye Chassagne Montrachet Clos du Chateau de la Maltroye
+2005 Domaine de l'Arlot Nuits St. Georges Blanc Clos de L'Arlot
+2009 L. Jadot Bienvenue Batard Montrachet
+2018 Tua Rita Redigaffi
+2019 Palmaz Vineyards Cabernet Sauvignon Napa Valley
+2015 Bart Marsannay Les Champs Salomon
+2016 Berthaut-Gerbet Bourgogne Hautes-Cotes de Nuits
+2016 Berthaut-Gerbet Fixin
+2011 Bouchard, Pere et Fils Volnay Clos des Chenes
+2011 Bouchard, Pere et Fils Volnay Les Caillerets, Ancienne Cuvee Carnot
+2010 C. Audoin Marsannay Les Favieres
+2007 C. Giroud Gevrey Chambertin Combe Aux Moines
+2010 C. Giroud Maranges Les Croix Moines
+2007 C. Giroud Nuits St. Georges Les Vaucrains
+2010 C. Marechal Pommard La Chaniere
+2011 Chandon de Briailles Pernand Vergelesses Ile des Vergelesses
+2012 Chandon de Briailles Pernand Vergelesses Les Vergelesses
+2011 Chandon de Briailles Savigny les Beaune Les Lavieres
+2014 Clos de la Chapelle Corton Bressandes
+2006 Clos de la Chapelle Pommard Les Chanlins, Reserve
+2010 Clos de la Chapelle Volnay Carelle Sous la Chapelle
+2009 Clos de la Roilette Fleurie
+2010 Clos de la Roilette Fleurie
+2011 Clos de la Roilette Fleurie Cuvee Tardive
+2013 Clos de la Roilette Fleurie Cuvee Tardive
+2010 Clos de la Roilette Fleurie Griffe du Marquis
+2009 Comte Lafon Volnay Santenots du Milieu
+2011 Comte Lafon Volnay Santenots du Milieu
+2015 Confuron-Gindre Bourgogne Rouge
+2011 D. Bachelet Gevrey Chambertin Les Corbeaux, Vieilles Vignes
+2016 D. Bouland Cote de Brouilly Cuvee Melanie
+2016 D. Bouland Morgon Delys
+2016 D. Bouland Morgon Schiste Bellevue
+2014 Domaine de Bellene Vosne Romanee Les Quartiers
+2005 Domaine de la Voute des Crozes Cote de Brouilly
+2017 Domaine de la Voute des Crozes Cote de Brouilly
+2009 Domaine des Terres Dorees (Jean-Paul Brun) Fleurie
+2010 Domaine Diochon Moulin a Vent Cuvee Vieilles Vignes
+2009 Domaine du Chateau de Chorey Beaune Rouge Les Cras, Vieilles Vignes
+2009 Domaine du Chateau de Chorey Beaune Rouge Vignes Franches, Vieilles Vignes
+2009 Domaine du Vissoux Fleurie Les Garants
+2010 Domaine du Vissoux Fleurie Les Garants
+2011 Domaine du Vissoux Fleurie Les Garants
+2010 Domaine du Vissoux Fleurie Poncie
+2011 Domaine du Vissoux Fleurie Poncie
+2010 Domaine du Vissoux Moulin a Vent Les Trois Roches
+2011 Domaine du Vissoux Moulin a Vent Les Trois Roches
+2002 Faiveley Volnay Santenots
+2008 Fourrier Gevrey Chambertin Cherbaudes, Vieilles Vignes
+2008 Fourrier Gevrey Chambertin Clos St. Jacques, Vieilles Vignes
+2008 Fourrier Gevrey Chambertin Combe Aux Moines, Vieilles Vignes
+2008 Fourrier Gevrey Chambertin Les Goulots, Vieilles Vignes
+2013 Fourrier Gevrey Chambertin Vieilles Vignes
+2010 Fourrier Morey St. Denis Clos Solon, Vieilles Vignes
+2004 Gros Frere et Soeur Clos Vougeot Musigni
+2009 H. Gouges Nuits St. Georges Clos des Porrets St. Georges
+2008 H. Lignier Hospices de Nuits, Nuits St. Georges Les Didiers
+2010 H. Lignier Pommard Les Chanlins
+2010 H. Sigaut Chambolle Musigny Les Sentiers, Vieilles Vignes
+2010 Harmand-Geoffroy Gevrey Chambertin Champeaux
+2010 Harmand-Geoffroy Gevrey Chambertin Clos Prieur
+2010 Harmand-Geoffroy Gevrey Chambertin La Bossiere
+2010 Harmand-Geoffroy Gevrey Chambertin La Perriere
+2013 Hudelot-Noellat Chambolle Musigny
+2005 Hudelot-Noellat Chambolle Musigny Les Charmes
+2012 Hudelot-Noellat Vosne Romanee
+2011 Hudelot-Noellat Vosne Romanee Les Beaumonts
+2013 Hudelot-Noellat Vosne Romanee Les Suchots
+2011 Hudelot-Noellat Vougeot Les Petits Vougeots
+2009 G. Descombes Morgon
+2013 J. Chamonard Morgon Le Clos de Lys
+2010 J. Chezeaux Nuits St. Georges Aux Boudots
+2010 J. Chezeaux Vosne Romanee Les Suchots
+2015 J. Cruchandeau Bourgogne Hautes-Cotes de Nuits Les Valancos
+2014 J. Galeyrand Cote de Nuits Villages Vieilles Vignes
+2004 J. Grivot Vosne Romanee Les Beaux Monts
+2015 J. L. & E. Burguet Bourgogne Rouge Les Pince Vin
+2010 J. Marechal Mercurey Vieilles Vignes
+2011 J. Sunier Morgon
+2002 J.C. Boisset Corton Les Renardes
+2002 J.C. Boisset Echezeaux
+2002 J.C. Boisset Volnay Les Brouillards
+2009 J.F. Mugnier Nuits St. Georges Clos de la Marechale
+2009 J.G. Lafouge Auxey Duresses Rouge La Chapelle
+2010 J.G. Lafouge Pommard Les Chanlins
+2012 J.J. Girard Savigny les Beaune Les Lavieres
+2014 J.J. Girard Savigny les Beaune Les Lavieres
+2014 J.J. Girard Savigny les Beaune Les Narbantons
+2011 J.M. Fourrier Chambolle Musigny Aux Echanges, Vieilles Vignes
+2004 L. & A. Lignier Clos de la Roche
+2011 L. Jadot Beaune Rouge Clos des Couchereaux
+2012 L. Jadot Beaune Rouge 153rd Anniversary
+2012 L. Jadot Beaune Rouge Clos des Couchereaux
+2011 L. Jadot Beaune Rouge Clos des Ursules
+2006 L. Jadot Gevrey Chambertin Clos St. Jacques
+2015 L. Jadot Savigny les Beaune La Dominode
+2011 L. Jadot Vosne Romanee
+2007 Louis Boillot Pommard Les Fremiers
+2009 Lucien Boillot Volnay Les Angles
+2005 M. Gaunoux Corton Renardes
+2005 M. Gaunoux Pommard Grands Epenots
+2010 M. Juillot Mercurey Clos Tonnerre
+2009 Maison Leroy Bourgogne Rouge
+1999 Marquis d'Angerville Volnay Champans
+2005 Marquis d'Angerville Volnay Champans
+2006 Marquis d'Angerville Volnay Champans
+2009 Marquis d'Angerville Volnay Champans
+2007 Marquis d'Angerville Volnay Fremiets
+2010 Marquis d'Angerville Volnay Fremiets
+2006 Marquis d'Angerville Volnay Les Caillerets
+2013 N. Faure Nuits St. Georges Les Herbues
+2016 P. Bouley Bourgogne Rouge
+2001 P. Bouree Santenay Les Gravieres
+2016 P. Bouley Volnay
+2016 P. Bouley Volnay Clos des Chenes
+2017 P. Bouley Volnay Les Grands Champs
+2016 P. Bouley Volnay Les Robardelles
+2015 P. Bouley Volnay Ronceret
+2010 P. Bouree Pommard
+2017 P. Brisset Volnay Santenots
+2009 Perrot-Minot Gevrey Chambertin
+2011 Perrot-Minot Gevrey Chambertin
+2015 R. & P. Bouley Pommard
+2017 R. & P. Bouley Volnay Ronceret
+2014 R. & P. Bouley Volnay Champans
+2010 R. Belland Maranges La Fussiere
+2008 R. Chevillon Nuits St. Georges Les Pruliers
+2009 R. Chevillon Nuits St. Georges Les Pruliers
+2014 R. Chevillon Nuits St. Georges Vieilles Vignes
+2012 R. Jeanniard Morey St. Denis Les Ruchots
+2006 S. Bize Latricieres Chambertin
+2002 S. Bize Savigny les Beaune Les Fournaux
+2010 S. Bize Savigny les Beaune Les Fournaux
+2011 S. Bize Savigny les Beaune Les Fournaux
+2010 S. Bize Savigny les Beaune Les Vergelesses
+2010 S. Magnien Chambolle Musigny Les Sentiers
+2009 S. Magnien Charmes Chambertin
+2009 S. Magnien Morey St. Denis Cuvee Aux Petites Noix
+2010 S. Magnien Morey St. Denis Cuvee Aux Petites Noix
+2010 S. Magnien Morey St. Denis Les Faconnieres
+2012 V. Dauvissat Irancy
+2012 Comte Lafon Meursault Clos de la Baronne
+2012 G. Duplessis Chablis Fourchaume
+2012 G. Duplessis Chablis Montee de Tonnerre
+2012 G. Duplessis Chablis Vaillons
+2014 J. Dauvissat Chablis Cote de Lechet
+2014 J. Dauvissat Chablis Heritage
+2018 J. Dauvissat Chablis Vaillons
+2011 M. Niellon Chevalier Montrachet
+2013 P. Pacalet Chablis Beauroy
+2012 Dauvissat-Camus Petit Chablis
+2013 Pierre-Yves Colin Morey St. Aubin En Remilly
+2013 Pierre-Yves Colin Morey St. Aubin La Chateniere
+2013 Roulot Bourgogne Blanc
+2009 Domaine des Billards Saint Amour Le Clos, Reserve Caveau
+2011 Domaine des Billards Saint Amour
+1970 Bilbainas Rioja Vendimia Especial, Gran Reserva
+1978 Faustino Rioja Reserva V
+1978 La Rioja Alta Rioja Vina Ardanza, Reserva
+1995 La Rioja Alta Rioja Gran Reserva '904'
+2000 Bodegas Ostatu Rioja Gloria de Ostato
+2001 Bodegas Ostatu Rioja Gloria de Ostato
+1973 La Rioja Alta Rioja Vina Ardanza, Crianza
+1976 La Rioja Alta Rioja Vina Ardanza, Reserva
+1978 Lopez de Heredia Rioja Vina Bosconia, Gran Reserva
+2004 Sierra Cantabria Rioja Colleccion Privada
+1978 Jean Luc Aegerter Musigny
+1985 A. Conterno Barolo Bussia Soprana
+1964 G. Conterno Barolo
+1961 G. Conterno Barolo Vini Pregiati Riserva
+1985 Marcarini Barolo La Serra Riserva
+1943 Marchesi di Barolo Barolo Gia Opera Pia
+1947 Marchesi di Barolo Barolo Gia Opera Pia
+1951 Marchesi di Barolo Barolo Gia Opera Pia
+1952 Marchesi di Barolo Barolo Gia Opera Pia
+1957 Marchesi di Barolo Barolo Gia Opera Pia
+1996 Bouchard, Pere et Fils Corton

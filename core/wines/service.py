@@ -39,10 +39,19 @@ async def get_wine_by_name(name: str):
 
 async def save_wines_batch(wines: List[Wine]):
     client = await get_client()
-    wine_data = [wine.model_dump(exclude={"offers"}) for wine in wines]
+
+    unique_wines = {}  # type: ignore
+    for wine in wines:
+        if (
+            wine.id not in unique_wines
+            or wine.updated_at > unique_wines[wine.id].updated_at
+        ):
+            unique_wines[wine.id] = wine
+
+    wine_data = [wine.model_dump(exclude={"offers"}) for wine in unique_wines.values()]
     offers_data = []
 
-    for wine in wines:
+    for wine in unique_wines.values():
         if wine.offers:
             for offer in wine.offers:
                 offer_dict = offer.model_dump()

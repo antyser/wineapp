@@ -32,3 +32,4 @@ class Wine(BaseModel):
     wine_type: Optional[str]
     wine_style: Optional[str]
     offers: Optional[List[Offer]]
+    offers_count: Optional[int] = None

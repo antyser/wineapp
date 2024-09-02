@@ -3,7 +3,7 @@ import csv
 import io
 import os
 import re
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional, Set, Tuple
 from urllib.parse import unquote
 
 from loguru import logger
@@ -114,11 +114,33 @@ def _extract_average_price(root) -> Optional[float]:
     return float(average_price_str)
 
 
-def extract_offers(root) -> List[Offer]:
+def extract_offers(root) -> Tuple[List[Offer], int, bool]:
     offers = []
+    offers_count = 0
+    search_expanded = False
+
+    # Check if search was expanded
+    expanded_info = root.xpath(
+        '//div[@id="pjax-offers"]//div[contains(@class, "auto-expand-card")]'
+    )
+    if expanded_info:
+        search_expanded = True
+        return (
+            [],
+            0,
+            search_expanded,
+        )  # Return empty offers, 0 count, and True for search_expanded
+
+    # If search was not expanded, extract offers count and offers
+    offers_count_element = root.xpath(
+        '//div[@id="pjax-offers"]/div[1]//span[@class="font-weight-bold"]/text()'
+    )
+    if offers_count_element:
+        offers_count = int(offers_count_element[0].split()[0])
+
     offer_cards = root.xpath('//div[contains(@class, "offer-card__container")]')
 
-    for offer_card in offer_cards[:5]:  # Limit to 5 offers
+    for offer_card in offer_cards:
         price_section = offer_card.xpath(
             './/div[contains(@class, "offer-card__price-section")]'
         )[0]
@@ -183,7 +205,7 @@ def extract_offers(root) -> List[Offer]:
             )
         )
 
-    return offers
+    return offers, offers_count, search_expanded
 
 
 def parse_wine(html: str) -> Optional[Wine]:
@@ -226,7 +248,9 @@ def parse_wine(html: str) -> Optional[Wine]:
         if producer:
             producer = producer.replace("More information about ", "")
 
-        offers = extract_offers(root)
+        offers, offers_count, search_expanded = extract_offers(root)
+        logger.info(f"Offers count: {offers_count}")
+        logger.info(f"Search expended: {search_expanded}")
 
         return Wine(
             id=str(f"{wine_searcher_id}_{vintage}"),
@@ -248,6 +272,8 @@ def parse_wine(html: str) -> Optional[Wine]:
             wine_type=wine_type,
             wine_style=wine_style,
             offers=offers,
+            offers_count=offers_count,
+            search_expanded=search_expanded,
         )
     except Exception as e:
         logger.warning(f"Error in parse_wine: {e}")

@@ -16,17 +16,20 @@ def load_catalog_data(file_path: str) -> pd.DataFrame:
 
 
 def extract_wine_names(catalog_df: pd.DataFrame) -> pd.DataFrame:
-    """Extract and combine WineName, Vintage, and Producer fields."""
+    """Extract and combine Vintage, Producer, WineName, and Designation fields."""
     logger.info("Extracting wine names")
-    catalog_df["FullWineNameWithProducer"] = (
-        catalog_df["WineName"].str.strip() + " " + catalog_df["Vintage"].astype(str)
-    )
-    catalog_df["FullWineNameWithProducer"] = catalog_df.apply(
-        lambda row: row["Producer"] + " " + row["FullWineNameWithProducer"]
-        if pd.notnull(row["Producer"])
-        else row["FullWineNameWithProducer"],
-        axis=1,
-    )
+
+    def combine_wine_name(row):
+        parts = [
+            str(row["Vintage"]),
+            row["Producer"] if pd.notnull(row["Producer"]) else "",
+            row["WineName"].strip(),
+            row["Designation"] if pd.notnull(row["Designation"]) else "",
+        ]
+        return " ".join(part for part in parts if part)
+
+    catalog_df["FullWineNameWithProducer"] = catalog_df.apply(combine_wine_name, axis=1)
+
     return catalog_df
 
 
@@ -69,8 +72,12 @@ def process_catalog_data(
         lambda row: calculate_unit_price(row, format_multipliers), axis=1
     )
 
+    # Calculate the new auction_on_hand_unit_price
+    joined_df["auction_on_hand_unit_price"] = joined_df["auction_unit_price"] * 1.27 + 7
+
+    # Calculate discount percentage using auction_on_hand_unit_price
     joined_df["discount_percentage"] = (
-        (joined_df["min_price"] - joined_df["auction_unit_price"])
+        (joined_df["min_price"] - joined_df["auction_on_hand_unit_price"])
         / joined_df["min_price"]
     ) * 100
     return joined_df.sort_values(by="discount_percentage", ascending=False)
@@ -81,6 +88,7 @@ def reorder_columns(df: pd.DataFrame) -> pd.DataFrame:
     logger.info("Reordering columns")
     columns_order = [
         "Vintage",
+        "LotNo",
         "WineName",
         "FullWineNameWithProducer",
         "auction_unit_price",
@@ -102,16 +110,13 @@ def reorder_columns(df: pd.DataFrame) -> pd.DataFrame:
         "grape_variety",
         "image",
         "region_image",
-        "offers",
-        "offer_1",
-        "offer_2",
-        "offer_3",
+        "offers_count",
     ]
     return df[columns_order]
 
 
 async def analyze_auction_catalog(
-    catalog_file_path: str, batch_size: int = 10
+    catalog_file_path: str, batch_size: int = 100
 ) -> pd.DataFrame:
     """Perform the full auction catalog analysis."""
     logger.info("Starting auction catalog analysis")
