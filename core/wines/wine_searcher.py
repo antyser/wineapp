@@ -62,7 +62,7 @@ async def batch_fetch_wines(
             wine = parse_wine(response.text)
             result[wine_name] = wine
             if wine is None:
-                logger.error(f"Failed to parse wine: {wine_name}")
+                logger.warning(f"Failed to parse wine: {wine_name}")
             else:
                 wines_to_save.append(wine)
         else:
@@ -108,10 +108,14 @@ def parse_float(value: str) -> Optional[float]:
 
 
 def _extract_average_price(root) -> Optional[float]:
-    description_content = root.xpath('//meta[@name="description"]/@content')[0]
-    average_price_str = description_content.split("$")[1].split("/")[0].strip()
-    average_price_str = average_price_str.replace(",", "")
-    return float(average_price_str)
+    try:
+        description_content = root.xpath('//meta[@name="description"]/@content')[0]
+        average_price_str = description_content.split("$")[1].split("/")[0].strip()
+        average_price_str = average_price_str.replace(",", "")
+        return float(average_price_str)
+    except (IndexError, ValueError, AttributeError) as e:
+        logger.warning(f"Failed to extract average price: {e}")
+        return None
 
 
 def extract_offers(root) -> Tuple[List[Offer], int, bool]:
