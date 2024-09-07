@@ -44,6 +44,11 @@ async def stream_chat(request: ChatRequest):
                 wines = {}
                 if result.has_wine:
                     wine_names = list(dict.fromkeys(result.dict().get("wines", [])))
+                    wine_names_str = "\n".join([f"• {wine}" for wine in wine_names])
+                    event = orjson.dumps(
+                        {"msg": f"Searching wine information for:\n{wine_names_str}"}
+                    ).decode("utf-8")
+                    yield f"{event}\n\n"
                     for i in range(0, len(wine_names), 10):
                         batch = wine_names[i : i + 10]
                         logger.info(f"batch: {batch}")
