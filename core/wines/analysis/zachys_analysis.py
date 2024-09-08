@@ -1,6 +1,6 @@
 import asyncio
 import os
-import shutil
+import re
 from datetime import datetime
 
 import pandas as pd
@@ -14,22 +14,12 @@ DATA_DIR = "data"
 
 
 def step_1_normalize_auction_lot(input_file_path: str, output_file_path: str):
-    """Load the catalog data and extract wine names."""
+    """Load the catalog data and extract wine names from Lot Title."""
     logger.info(f"Loading catalog data from {input_file_path}")
-    catalog_df = pd.read_excel(input_file_path, sheet_name="qryCatalogExcel")
+    catalog_df = pd.read_excel(input_file_path, skiprows=2)
 
-    logger.info("Extracting wine names")
-
-    def combine_wine_name(row):
-        parts = [
-            str(row["Vintage"]),
-            row["Producer"] if pd.notnull(row["Producer"]) else "",
-            row["WineName"].strip(),
-            row["Designation"] if pd.notnull(row["Designation"]) else "",
-        ]
-        return " ".join(part for part in parts if part)
-
-    catalog_df["FullWineNameWithProducer"] = catalog_df.apply(combine_wine_name, axis=1)
+    logger.info("Extracting wine names from Lot Title")
+    catalog_df["FullWineNameWithProducer"] = catalog_df["Lot Title"].str.strip()
 
     # Save the normalized data
     catalog_df.to_csv(output_file_path, index=False)
@@ -53,22 +43,29 @@ def step_2_merge_and_analyze_wine_data(
         how="inner",
     )
 
-    format_multipliers = {
-        "bottle": 1,
-        "magnum": 2,
-        "half-bottle": 0.5,
-        "jeroboam": 4,
-        "double magnum": 4,
-        "methuselah": 8,
-        "nebuchadnezzar": 20,
-        "imperial": 8,
-        "6 liter": 8,
-    }
+    def normalize_size(size: str) -> float:
+        """Convert size to ml."""
+        size = size.lower().strip()
+        if "ml" in size:
+            return float(size.replace("ml", ""))
+        elif "l" in size:
+            return float(size.replace("l", "")) * 1000
+        else:
+            # Default to 750ml if size is not recognized
+            logger.warning(f"Unrecognized size: {size}. Defaulting to 750ml.")
+            return 750.0
 
     def calculate_unit_price(row: pd.Series) -> float:
-        format_multiplier = format_multipliers.get(row["BottleName"].lower(), 1)
-        total_units = row["Quantity"] * format_multiplier
-        return row["Low"] / total_units if total_units > 0 else row["Low"]
+        if row["Qty"] <= 0:
+            return row["Low Estimate"]
+
+        size_ml = normalize_size(row["Size"])
+        size_ratio = size_ml / 750.0  # Normalize to 750ml bottle
+
+        # Remove currency symbol and commas from Low Estimate
+        low_estimate = float(re.sub(r"[^\d.]", "", str(row["Low Estimate"])))
+
+        return (low_estimate / row["Qty"]) / size_ratio
 
     joined_df["auction_unit_price"] = joined_df.apply(calculate_unit_price, axis=1)
     joined_df["auction_on_hand_unit_price"] = joined_df["auction_unit_price"] * 1.25 + 7
@@ -85,24 +82,29 @@ def step_2_merge_and_analyze_wine_data(
         "discount_percentage",
         "min_price",
         "average_price",
-        "Low",
-        "High",
-        "Quantity",
+        "Low Estimate",
+        "High Estimate",
+        "Qty",
         "offers_count",
         "url",
-        "LotNo",
-        "BottleName",
+        "Lot",
+        "Size",
+        "Vintage",
+        "Lot Title",
+        "Lot Details",
         "Producer",
-        "RegionDescription",
-        "WineType",
+        "Country",
+        "Region",
+        "Class",
+        "OWC_OC",
+        "Your Bid",
+        "URL",
         "description",
-        "WineName",
         "region",
         "origin",
         "grape_variety",
         "image",
         "region_image",
-        "Vintage",
         "query",
     ]
 
@@ -118,26 +120,20 @@ def step_2_merge_and_analyze_wine_data(
 async def analyze_auction_catalog(
     catalog_file_path: str, batch_size: int = 100
 ) -> pd.DataFrame:
-    """Perform the full auction catalog analysis."""
-    logger.info("Starting auction catalog analysis")
+    """Perform the full auction catalog analysis for Zachys."""
+    logger.info("Starting Zachys auction catalog analysis")
 
     # Create a new directory for this analysis run
     today = datetime.now().strftime("%Y%m%d")
-    analysis_dir = os.path.join(DATA_DIR, f"acker_{today}")
+    analysis_dir = os.path.join(DATA_DIR, f"zachys_{today}")
     os.makedirs(analysis_dir, exist_ok=True)
-
-    # Copy the source file to the new directory
-    source_file_name = os.path.basename(catalog_file_path)
-    new_catalog_file_path = os.path.join(analysis_dir, source_file_name)
-    shutil.copy2(catalog_file_path, new_catalog_file_path)
 
     # Step 1: Normalize auction lot
     normalized_auction_file = os.path.join(analysis_dir, "normalized_auction_lot.csv")
-    step_1_normalize_auction_lot(new_catalog_file_path, normalized_auction_file)
+    step_1_normalize_auction_lot(catalog_file_path, normalized_auction_file)
 
     # Step 2: Process wine list
-    catalog_name = os.path.splitext(source_file_name)[0]
-    wine_list_output_file = os.path.join(analysis_dir, f"{catalog_name}_wine_list.csv")
+    wine_list_output_file = os.path.join(analysis_dir, "wine_list.csv")
 
     logger.info(f"Processing wine list with batch size {batch_size}")
     await process_wine_list(
@@ -148,9 +144,7 @@ async def analyze_auction_catalog(
     )
 
     # Step 3: Merge and analyze wine data
-    final_output_file = os.path.join(
-        analysis_dir, f"{catalog_name}_final_processed_wine_data.csv"
-    )
+    final_output_file = os.path.join(analysis_dir, "final_processed_wine_data.csv")
     step_2_merge_and_analyze_wine_data(
         normalized_auction_file, wine_list_output_file, final_output_file
     )
@@ -165,13 +159,13 @@ if __name__ == "__main__":
 
     # Create a log file in the analysis directory
     today = datetime.now().strftime("%Y%m%d")
-    analysis_dir = os.path.join(DATA_DIR, f"acker_{today}")
+    analysis_dir = os.path.join(DATA_DIR, f"zachys_{today}")
     os.makedirs(analysis_dir, exist_ok=True)
     logger.add(
-        os.path.join(analysis_dir, "acker_auction_analysis.log"), rotation="10 MB"
+        os.path.join(analysis_dir, "zachys_auction_analysis.log"), rotation="10 MB"
     )
 
-    catalog_file_path = os.path.join(DATA_DIR, "Catalog_241W_36.xlsx")
+    catalog_file_path = os.path.join(DATA_DIR, "zachys_0912.xls")
 
     result_df = asyncio.run(analyze_auction_catalog(catalog_file_path))
 
