@@ -69,7 +69,6 @@ async def stream_chat(request: ChatRequest):
                 if not result.need_further_action and wines:
                     return
                 else:
-                    wines = [wine for wine in wines.values() if wine is not None]
                     agent = somm_agent(request.user_id, wines)
                     input_messages = build_input_messages(
                         text=request.text,
