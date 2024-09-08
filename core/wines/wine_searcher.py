@@ -251,7 +251,7 @@ def parse_wine(html: str) -> Optional[Wine]:
         if producer:
             producer = producer.replace("More information about ", "")
 
-        offers, offers_count, search_expanded = extract_offers(root)
+        offers, offers_count, _ = extract_offers(root)
 
         return Wine(
             id=str(f"{wine_searcher_id}_{vintage}"),
@@ -274,7 +274,6 @@ def parse_wine(html: str) -> Optional[Wine]:
             wine_style=wine_style,
             offers=offers,
             offers_count=offers_count,
-            search_expanded=search_expanded,
         )
     except Exception as e:
         logger.warning(f"Error in parse_wine: {e}")

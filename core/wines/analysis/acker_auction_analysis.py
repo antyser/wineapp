@@ -176,7 +176,7 @@ if __name__ == "__main__":
         os.path.join(analysis_dir, "acker_auction_analysis.log"), rotation="10 MB"
     )
 
-    catalog_file_path = os.path.join(DATA_DIR, "Catalog_241W_35_sample.xlsx")
+    catalog_file_path = os.path.join(DATA_DIR, "Catalog_241W_36.xlsx")
 
     result_df = asyncio.run(analyze_auction_catalog(catalog_file_path))
 
