@@ -1,3 +1,4 @@
+import argparse
 import asyncio
 import os
 import re
@@ -157,6 +158,11 @@ async def analyze_auction_catalog(
 if __name__ == "__main__":
     load_dotenv()
 
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description="Analyze Zachys auction catalog")
+    parser.add_argument("input_file", help="Path to the input Zachys catalog file")
+    args = parser.parse_args()
+
     # Create a log file in the analysis directory
     today = datetime.now().strftime("%Y%m%d")
     analysis_dir = os.path.join(DATA_DIR, f"zachys_{today}")
@@ -165,7 +171,13 @@ if __name__ == "__main__":
         os.path.join(analysis_dir, "zachys_auction_analysis.log"), rotation="10 MB"
     )
 
-    catalog_file_path = os.path.join(DATA_DIR, "zachys_0912.xls")
+    catalog_file_path = args.input_file
+
+    if not os.path.exists(catalog_file_path):
+        logger.error(f"Input file not found: {catalog_file_path}")
+        exit(1)
+
+    logger.info(f"Starting analysis of catalog file: {catalog_file_path}")
 
     result_df = asyncio.run(analyze_auction_catalog(catalog_file_path))
 
