@@ -1,3 +1,4 @@
+import argparse
 import asyncio
 import os
 import shutil
@@ -136,8 +137,7 @@ async def analyze_auction_catalog(
     step_1_normalize_auction_lot(new_catalog_file_path, normalized_auction_file)
 
     # Step 2: Process wine list
-    catalog_name = os.path.splitext(source_file_name)[0]
-    wine_list_output_file = os.path.join(analysis_dir, f"{catalog_name}_wine_list.csv")
+    wine_list_output_file = os.path.join(analysis_dir, "wine_list.csv")
 
     logger.info(f"Processing wine list with batch size {batch_size}")
     await process_wine_list(
@@ -148,9 +148,7 @@ async def analyze_auction_catalog(
     )
 
     # Step 3: Merge and analyze wine data
-    final_output_file = os.path.join(
-        analysis_dir, f"{catalog_name}_final_processed_wine_data.csv"
-    )
+    final_output_file = os.path.join(analysis_dir, "final_processed_wine_data.csv")
     step_2_merge_and_analyze_wine_data(
         normalized_auction_file, wine_list_output_file, final_output_file
     )
@@ -163,6 +161,10 @@ async def analyze_auction_catalog(
 if __name__ == "__main__":
     load_dotenv()
 
+    parser = argparse.ArgumentParser(description="Analyze Acker auction catalog")
+    parser.add_argument("input_file", help="Path to the input Acker catalog file")
+    args = parser.parse_args()
+
     # Create a log file in the analysis directory
     today = datetime.now().strftime("%Y%m%d")
     analysis_dir = os.path.join(DATA_DIR, f"acker_{today}")
@@ -171,7 +173,13 @@ if __name__ == "__main__":
         os.path.join(analysis_dir, "acker_auction_analysis.log"), rotation="10 MB"
     )
 
-    catalog_file_path = os.path.join(DATA_DIR, "Catalog_241W_36.xlsx")
+    catalog_file_path = args.input_file
+
+    if not os.path.exists(catalog_file_path):
+        logger.error(f"Input file not found: {catalog_file_path}")
+        exit(1)
+
+    logger.info(f"Starting analysis of catalog file: {catalog_file_path}")
 
     result_df = asyncio.run(analyze_auction_catalog(catalog_file_path))
 

@@ -280,23 +280,23 @@ def parse_wine(html: str) -> Optional[Wine]:
         return None
 
 
-def wines_to_csv(wines: Dict[str, Wine]) -> str:
-    """Convert a dictionary of Wine objects to a CSV string."""
+def wines_to_csv(wines: List[Tuple[str, Optional[Wine]]]) -> str:
     output = io.StringIO()
     writer = csv.writer(output)
 
+    # Write header
     header = ["query"] + list(Wine.model_fields.keys())
-    header.extend(["first_offer", "second_offer", "third_offer"])
     writer.writerow(header)
 
-    # Write the wine data
-    for query, wine in wines.items():
-        row = [query] + [getattr(wine, field) for field in Wine.model_fields.keys()]
-        offers = wine.offers[:3] if wine.offers else []
-        for i in range(3):
-            if i < len(offers):
-                row.append(offers[i].model_dump())
-            else:
-                row.append(None)
+    # Write data
+    for query, wine in wines:
+        if wine is None:
+            # Handle the case where wine is None
+            row = [query] + ["N/A"] * len(Wine.model_fields)
+        else:
+            row = [query] + [
+                getattr(wine, field, "N/A") for field in Wine.model_fields.keys()
+            ]
         writer.writerow(row)
+
     return output.getvalue()
