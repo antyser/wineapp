@@ -259,7 +259,13 @@ async def analyze_auction_catalog(
 
 
 if __name__ == "__main__":
+    import argparse
+
     load_dotenv(override=True)
+
+    parser = argparse.ArgumentParser(description="Analyze K&L Wines auction catalog")
+    parser.add_argument("file_path", help="Path to the auction catalog file")
+    args = parser.parse_args()
 
     # Create a log file in the analysis directory
     today = datetime.now().strftime("%Y%m%d")
@@ -269,7 +275,7 @@ if __name__ == "__main__":
         os.path.join(analysis_dir, "klwines_auction_analysis.log"), rotation="10 MB"
     )
 
-    catalog_file_path = os.path.join(DATA_DIR, "Auction Lots 9-2-2024-sample.xlsx")
+    catalog_file_path = args.file_path
 
     result_df = asyncio.run(analyze_auction_catalog(catalog_file_path))
 
