@@ -111,7 +111,7 @@ def normalize_auction_data_zachys(catalog_file_path: str) -> pd.DataFrame:
 
 
 def normalize_auction_data_klwines(catalog_file_path: str) -> pd.DataFrame:
-    """Normalize K&L Wines auction data."""
+    """Normalize K&L Wines auction data assuming quantity is always 1."""
     # Load the auction catalog file
     logger.info(f"Loading K&L Wines catalog data from {catalog_file_path}")
     try:
@@ -121,44 +121,44 @@ def normalize_auction_data_klwines(catalog_file_path: str) -> pd.DataFrame:
         logger.info("Attempting to read as CSV...")
         df = pd.read_csv(catalog_file_path)
 
-    # Process the catalog to extract lot data
-    lot_data = []
-    current_lot = {}
+    # Map the unit sizes to a standardized format (ml)
+    def unit_size_to_standard_format(unit_size):
+        unit_size = str(unit_size).lower().strip()
+        if "ml" in unit_size:
+            return unit_size
+        elif "liter" in unit_size:
+            return f"{float(unit_size.replace('liter', '').strip()) * 1000}ml"
+        else:
+            return "750ml"  # default if unknown
 
-    for _, row in df.iterrows():
-        # Logic to extract lot data from the specific format
-        if isinstance(row[0], str) and (
-            "Current Bid" in row[0] or "Starting Bid" in row[0]
-        ):
-            bid_str = row[0]
-            bid = float(re.sub(r"[^\d.]", "", bid_str)) if bid_str else None
-            current_lot["auction_price"] = bid
-            lot_data.append(current_lot)
-            current_lot = {}
-        elif isinstance(row[0], str) and "Bid on this" in row[0]:
-            current_lot["Description"] = row[0]
-        elif isinstance(row[0], str) and "This lot contains" in row[0]:
-            current_lot["Lot Details"] = row[0]
-        elif pd.notna(row[0]):
-            title = row[0]
-            # Extract wine name and format from title
-            wine_name = title.split("(")[0].strip()
-            format_match = re.search(r"\(([\d.]+L)\)", title)
-            format = format_match.group(1) if format_match else "750ml"
-            # Extract quantity
-            qty_match = re.search(r"\(qty\s*:\s*(\d+)\)", title, flags=re.IGNORECASE)
-            quantity = int(qty_match.group(1)) if qty_match else 1
-            current_lot["wine_name"] = wine_name
-            current_lot["format"] = format.lower()
-            current_lot["quantity"] = quantity
+    def clean_and_combine_wine_name(row):
+        # Clean the wine name by removing format information
+        clean_name = re.sub(r"\s*\([^)]*[Ll]\)\s*$", "", row["name"].strip())
+        # Combine vintage and clean wine name
+        return f"{row['vintage']} {clean_name}"
 
-    catalog_df = pd.DataFrame(lot_data)
+    # Clean wine name by removing content in parentheses at the end
+    def clean_wine_name(name):
+        return re.sub(r"\s*\([^)]*\)\s*$", "", str(name).strip())
 
-    # Return DataFrame with standard columns
-    return catalog_df[
-        STANDARD_COLUMNS
-        + [col for col in catalog_df.columns if col not in STANDARD_COLUMNS]
+    # Standardize the data, assuming all quantities are 1
+    df["format"] = df["unit-size"].apply(unit_size_to_standard_format)
+    df["quantity"] = 1  # Assuming all quantities are 1
+    df["auction_price"] = pd.to_numeric(
+        df["price"].replace("[\$,]", "", regex=True), errors="coerce"
+    )
+    df["wine_name"] = df.apply(clean_and_combine_wine_name, axis=1)
+    df["auction_url"] = df["url"]
+
+    # Select only the required columns
+    required_columns = [
+        "wine_name",
+        "quantity",
+        "format",
+        "auction_price",
+        "auction_url",
     ]
+    return df[required_columns]
 
 
 def normalize_auction_data_hdh(catalog_file_path: str) -> pd.DataFrame:
@@ -216,7 +216,7 @@ def normalize_auction_data(catalog_file_path: str, auction_house: str) -> pd.Dat
 
 
 def merge_and_analyze_wine_data(
-    auction_data_path: str, search_wine_path: str
+    auction_data_path: str, search_wine_path: str, auction_house: str
 ) -> pd.DataFrame:
     """Process catalog data and merge with search results."""
     logger.info("Starting merge and analysis of wine data")
@@ -233,16 +233,29 @@ def merge_and_analyze_wine_data(
         how="inner",
     )
 
-    # Normalize format to get size in ml
-    def format_to_ml(format_str):
-        format_str = format_str.lower().strip()
-        if format_str.endswith("ml"):
-            return float(format_str.replace("ml", "").strip())
-        elif format_str.endswith("l"):
-            return float(format_str.replace("l", "").strip()) * 1000
-        else:
-            logger.warning(f"Unknown format: {format_str}")
-            return 750.0  # Default to 750ml
+    def format_to_ml(format_str: str) -> int:
+        """
+        Convert a wine format string to milliliters.
+
+        Args:
+        format_str (str): The format string to convert.
+
+        Returns:
+        int: The equivalent volume in milliliters.
+        """
+        format_mapping = {
+            "liter": 1000,
+            # Add other known formats here if needed
+        }
+
+        match = re.match(r"(\d+)\s*(liter)", format_str.lower())
+        if match:
+            quantity = int(match.group(1))
+            unit = match.group(2)
+            return quantity * format_mapping[unit]
+
+        logger.warning(f"Unknown format: {format_str}")
+        return 750
 
     joined_df["format_ml"] = joined_df["format"].apply(format_to_ml)
 
@@ -256,9 +269,15 @@ def merge_and_analyze_wine_data(
         axis=1,
     )
 
-    # Calculate 'auction_on_hand_unit_price', assuming certain costs
-    # For example, add 10% buyer's premium and $7 shipping per bottle
-    joined_df["auction_on_hand_unit_price"] = joined_df["unit_price"] * 1.1 + 7
+    # Calculate 'auction_on_hand_unit_price' based on auction house
+    if auction_house.lower() == "klwines":
+        joined_df["auction_on_hand_unit_price"] = joined_df["unit_price"] * 1.1
+    elif auction_house.lower() == "hdh":
+        joined_df["auction_on_hand_unit_price"] = joined_df["unit_price"] * 1.195 + 7
+    elif auction_house.lower() in ["acker", "zachys"]:
+        joined_df["auction_on_hand_unit_price"] = joined_df["unit_price"] * 1.25 + 7
+    else:
+        raise ValueError(f"Unsupported auction house: {auction_house}")
 
     # Compute 'discount_percentage'
     joined_df["discount_percentage"] = (
@@ -327,7 +346,7 @@ async def analyze_auction_catalog(
     # Step 3: Merge and analyze wine data
     final_output_file = os.path.join(analysis_dir, "final_processed_wine_data.csv")
     final_df = merge_and_analyze_wine_data(
-        normalized_auction_file, wine_list_output_file
+        normalized_auction_file, wine_list_output_file, auction_house
     )
     final_df.to_csv(final_output_file, index=False)
 
