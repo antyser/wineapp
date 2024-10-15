@@ -243,19 +243,44 @@ def merge_and_analyze_wine_data(
         Returns:
         int: The equivalent volume in milliliters.
         """
+        format_str = str(format_str).lower().strip()
+
+        # Handle 'ml' suffix
+        if format_str.endswith("ml"):
+            return int(float(format_str[:-2]))
+
+        # Handle 'l' or 'liter' suffix
+        if format_str.endswith("l") or format_str.endswith("liter"):
+            try:
+                liters = float(format_str.rstrip("literl"))
+                return int(liters * 1000)
+            except ValueError:
+                logger.warning(f"Unknown format: {format_str}")
+                return 750  # Default to standard bottle size
+        # Handle specific formats
         format_mapping = {
-            "liter": 1000,
-            # Add other known formats here if needed
+            "half bottle": 375,
+            "bottle": 750,
+            "magnum": 1500,
+            "double magnum": 3000,
+            "jeroboam": 3000,
+            "rehoboam": 4500,
+            "methuselah": 6000,
+            "salmanazar": 9000,
+            "balthazar": 12000,
+            "nebuchadnezzar": 15000,
         }
 
-        match = re.match(r"(\d+)\s*(liter)", format_str.lower())
-        if match:
-            quantity = int(match.group(1))
-            unit = match.group(2)
-            return quantity * format_mapping[unit]
+        for key, value in format_mapping.items():
+            if key in format_str:
+                return value
 
-        logger.warning(f"Unknown format: {format_str}")
-        return 750
+        # If it's a number without a unit, assume it's in ml
+        try:
+            return int(float(format_str))
+        except ValueError:
+            logger.warning(f"Unknown format: {format_str}")
+            return 750  # Default to standard bottle size
 
     joined_df["format_ml"] = joined_df["format"].apply(format_to_ml)
 
