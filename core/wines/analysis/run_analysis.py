@@ -250,8 +250,11 @@ def merge_and_analyze_wine_data(
             return int(float(format_str[:-2]))
 
         # Handle 'l' or 'liter' suffix
+
         if format_str.endswith("l") or format_str.endswith("liter"):
             try:
+                if format_str == "liter":
+                    return 1000
                 liters = float(format_str.rstrip("literl"))
                 return int(liters * 1000)
             except ValueError:
