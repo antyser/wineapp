@@ -44,8 +44,8 @@ async def fetch_proxies(cnt: int = 1) -> List[str]:
 
 
 @retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=2, max=10),
+    stop=stop_after_attempt(1),
+    wait=wait_exponential(multiplier=1, min=2, max=30),
     retry=retry_if_exception_type((httpx.HTTPStatusError, httpx.RequestError)),
     reraise=True,
 )
@@ -67,6 +67,16 @@ async def fetch_url(
         if use_scraper_api:
             payload = {"api_key": os.getenv("SCRAPER_API_KEY"), "url": url}
             response = await client.get("https://api.scraperapi.com/", params=payload)
+
+            if response.status_code == 500:
+                logger.warning(
+                    f"Received 500 error from scraper API for URL: {url}. Retrying..."
+                )
+                raise httpx.HTTPStatusError(
+                    "Server error from scraper API",
+                    request=response.request,
+                    response=response,
+                )
         else:
             response = await client.get(
                 url, headers=Headers(headers=True).generate(), follow_redirects=True

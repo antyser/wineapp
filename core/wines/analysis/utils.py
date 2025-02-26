@@ -1,5 +1,6 @@
 import csv
 import os
+import time
 from typing import Dict, List, Set
 
 import pandas as pd
@@ -10,7 +11,7 @@ from core.wines.wine_searcher import batch_fetch_wines
 
 
 async def process_wine_list(
-    input_file: str, wine_name_field: str, output_file: str, batch_size: int = 100
+    input_file: str, wine_name_field: str, output_file: str, batch_size: int = 5
 ) -> pd.DataFrame:
     """
     Process a list of wine names from an input file, fetch their details, store them in CSV format,
@@ -34,6 +35,9 @@ async def process_wine_list(
             reader = csv.DictReader(csvfile)
             processed_wines = set(row["query"] for row in reader)
             all_results = list(reader)
+        logger.info(
+            f"Found existing output file with {len(processed_wines)} processed wines"
+        )
 
     # Read input file
     input_df = pd.read_csv(input_file)
@@ -43,10 +47,34 @@ async def process_wine_list(
 
     logger.info(f"Total wines: {total_wines}")
     logger.info(f"Wines to process: {len(wines_to_process)}")
+    logger.info(f"Using batch size: {batch_size}")
 
+    # Create fieldnames for CSV
+    fieldnames = (
+        list(Wine.model_fields.keys()) + ["query"] + [f"offer_{j+1}" for j in range(3)]
+    )
+
+    # Create file if it doesn't exist
+    file_exists = os.path.exists(output_file)
+    if not file_exists:
+        with open(output_file, "w", newline="", encoding="utf-8") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            logger.info(f"Created new output file: {output_file}")
+
+    # Process wines in batches
     for i in range(0, len(wines_to_process), batch_size):
         batch = wines_to_process[i : i + batch_size]
-        logger.info(f"Processing batch {i//batch_size + 1}")
+        batch_num = i // batch_size + 1
+        total_batches = (len(wines_to_process) + batch_size - 1) // batch_size
+        logger.info(
+            f"Processing batch {batch_num}/{total_batches} ({len(batch)} wines)"
+        )
+
+        # Add a small delay between batches to avoid overwhelming the API
+        if i > 0:
+            logger.info("Waiting 2 seconds before next batch...")
+            time.sleep(2)
 
         try:
             results = await batch_fetch_wines(batch, True)
@@ -55,40 +83,37 @@ async def process_wine_list(
             csv_data = []
             for wine_name, wine in results.items():
                 if wine:
-                    wine_dict = wine.model_dump()
-                    wine_dict["query"] = wine_name  # Add query field
-                    offers = wine.offers[:3] if wine.offers else []
-                    for j in range(3):
-                        if j < len(offers):
-                            wine_dict[f"offer_{j+1}"] = offers[j].model_dump()
-                        else:
-                            wine_dict[f"offer_{j+1}"] = None
-                    csv_data.append(wine_dict)
+                    try:
+                        wine_dict = wine.model_dump()
+                        wine_dict["query"] = wine_name  # Add query field
+                        offers = wine.offers[:3] if wine.offers else []
+                        for j in range(3):
+                            if j < len(offers):
+                                wine_dict[f"offer_{j+1}"] = offers[j].model_dump()
+                            else:
+                                wine_dict[f"offer_{j+1}"] = None
+                        csv_data.append(wine_dict)
+                    except Exception as e:
+                        logger.error(f"Error processing wine {wine_name}: {e}")
 
             # Append to CSV file
-            file_exists = os.path.exists(output_file)
             with open(output_file, "a", newline="", encoding="utf-8") as csvfile:
-                fieldnames = (
-                    list(Wine.model_fields.keys())
-                    + ["query"]
-                    + [f"offer_{j+1}" for j in range(3)]
-                )
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-                if not file_exists:
-                    writer.writeheader()
-
                 for row in csv_data:
                     writer.writerow(row)
 
             processed_wines.update(batch)
             all_results.extend(csv_data)
+            logger.info(
+                f"Batch {batch_num} completed. Processed {len(csv_data)}/{len(batch)} wines successfully."
+            )
 
         except Exception as e:
-            logger.error(f"Error processing batch: {e}")
+            logger.error(f"Error processing batch {batch_num}: {e}")
             # Continue with the next batch
 
     logger.info("Wine processing completed")
+    logger.info(f"Total wines processed successfully: {len(all_results)}/{total_wines}")
 
     # Convert all results to DataFrame
     result_df = pd.DataFrame(all_results)

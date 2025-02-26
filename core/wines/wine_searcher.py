@@ -36,10 +36,18 @@ def compose_search_url(
         match = re.search(r"(\d{4})", keyword)
         if match:
             vintage = match.group(1)
-            # Remove the vintage from the keyword
+            # Remove the vintage from the keyword for URL construction
             keyword = re.sub(r"(\d{4})", "", keyword).strip()
 
-    url = f"https://www.wine-searcher.com/find/{keyword}/"
+    # Clean the keyword for URL construction
+    # Replace special characters with spaces
+    keyword_for_url = re.sub(r"[,\.\(\)&]", " ", keyword)
+    # Replace spaces with hyphens
+    keyword_for_url = re.sub(r"\s+", "-", keyword_for_url.strip())
+    # Remove consecutive hyphens
+    keyword_for_url = re.sub(r"-+", "-", keyword_for_url)
+
+    url = f"https://www.wine-searcher.com/find/{keyword_for_url}/"
     if vintage:
         url += f"{vintage}/"
     if not include_auction:
@@ -52,24 +60,40 @@ async def batch_fetch_wines(
     wine_names: List[str], is_pro: bool = False
 ) -> Dict[str, Optional[Wine]]:
     urls = [compose_search_url(wine_name, country="usa") for wine_name in wine_names]
+
+    # Log the URLs being fetched
+    for i, (wine_name, url) in enumerate(zip(wine_names, urls)):
+        logger.info(f"Fetching wine {i+1}/{len(wine_names)}: {wine_name}")
+        logger.debug(f"URL: {url}")
+
     responses = await fetch(urls, is_pro)
 
     result = {}
     wines_to_save = []
     for wine_name, response in zip(wine_names, responses):
         if response and response.status_code == 200:
-            wine = parse_wine(response.text)
-            result[wine_name] = wine
-            if wine is None:
-                logger.warning(f"Failed to parse wine: {wine_name}")
-            else:
-                wines_to_save.append(wine)
+            try:
+                wine = parse_wine(response.text)
+                result[wine_name] = wine
+                if wine is None:
+                    logger.warning(f"Failed to parse wine: {wine_name}")
+                else:
+                    wines_to_save.append(wine)
+                    logger.info(f"Successfully parsed wine: {wine_name}")
+            except Exception as e:
+                logger.error(f"Error parsing wine {wine_name}: {str(e)}")
+                result[wine_name] = None
         else:
+            status_code = response.status_code if response else "No response"
+            logger.warning(
+                f"Failed to fetch wine {wine_name}: Status code {status_code}"
+            )
             result[wine_name] = None
 
     # Schedule save_wines_batch to run in the background
     if wines_to_save:
         asyncio.create_task(save_wines_batch(wines_to_save))
+        logger.info(f"Scheduled saving of {len(wines_to_save)} wines")
 
     return result
 
@@ -267,9 +291,9 @@ def parse_wine(html: str) -> Optional[Wine]:
             image=image,
             producer=producer,
             average_price=average_price,
-            min_price=min(offers, key=lambda x: x.unit_price).unit_price
-            if offers
-            else None,
+            min_price=(
+                min(offers, key=lambda x: x.unit_price).unit_price if offers else None
+            ),
             wine_type=wine_type,
             wine_style=wine_style,
             offers=offers,

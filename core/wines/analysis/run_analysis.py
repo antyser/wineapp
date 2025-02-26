@@ -132,8 +132,14 @@ def normalize_auction_data_klwines(catalog_file_path: str) -> pd.DataFrame:
             return "750ml"  # default if unknown
 
     def clean_and_combine_wine_name(row):
-        # Clean the wine name by removing format information
-        clean_name = re.sub(r"\s*\([^)]*[Ll]\)\s*$", "", row["name"].strip())
+        # Handle NaN/float values in the name column
+        if pd.isna(row["name"]):
+            return ""
+
+        # Convert to string and then clean
+        name = str(row["name"]).strip()
+        clean_name = re.sub(r"\s*\([^)]*[Ll]\)\s*$", "", name)
+
         # Combine vintage and clean wine name
         return f"{row['vintage']} {clean_name}"
 
@@ -170,13 +176,48 @@ def normalize_auction_data_hdh(catalog_file_path: str) -> pd.DataFrame:
 
     logger.info("Extracting wine names and normalizing data")
 
-    def clean_wine_name(row):
-        # Combine Vintage and Wine Name
-        full_name = row["Wine Name"].strip()
-        # Remove format information (e.g., "(1.5L)")
-        return re.sub(r"\s*\([^)]*[Ll]\)\s*$", "", full_name)
+    def reformat_hdh_wine_name(wine_name):
+        """
+        Reformat HDH wine name to match Wine-Searcher's expected format.
 
-    catalog_df["wine_name"] = catalog_df.apply(clean_wine_name, axis=1)
+        From: [Vintage] [Appellation], [Vineyard], [Producer]
+        To:   [Vintage] [Producer] [Vineyard] [Appellation]
+        """
+        # First, remove any bottle size information
+        wine_name = re.sub(r"\s*\([^)]*[Ll]\)\s*$", "", str(wine_name).strip())
+
+        # Extract vintage if present
+        vintage_match = re.search(r"^(\d{4})\s+", wine_name)
+        vintage = ""
+        if vintage_match:
+            vintage = vintage_match.group(1)
+            wine_name = wine_name[len(vintage) :].strip()
+
+        # Split the remaining parts by commas
+        parts = [part.strip() for part in wine_name.split(",")]
+
+        if len(parts) >= 3:
+            # If we have at least 3 parts, assume format: [Appellation], [Vineyard], [Producer]
+            appellation = parts[0]
+            vineyard = parts[1]
+            producer = parts[2]
+
+            # Reconstruct in Wine-Searcher format: [Vintage] [Producer] [Vineyard] [Appellation]
+            reformatted = f"{vintage} {producer} {vineyard} {appellation}".strip()
+            return reformatted
+        elif len(parts) == 2:
+            # If we have 2 parts, assume format: [Appellation], [Producer]
+            appellation = parts[0]
+            producer = parts[1]
+
+            # Reconstruct in Wine-Searcher format: [Vintage] [Producer] [Appellation]
+            reformatted = f"{vintage} {producer} {appellation}".strip()
+            return reformatted
+        else:
+            # If we only have 1 part or can't parse properly, return the original with vintage
+            return f"{vintage} {parts[0]}".strip()
+
+    catalog_df["wine_name"] = catalog_df["Wine Name"].apply(reformat_hdh_wine_name)
     catalog_df["quantity"] = catalog_df["Qty"].fillna(1).astype(int)
 
     def literage_to_format(literage):
@@ -201,6 +242,36 @@ def normalize_auction_data_hdh(catalog_file_path: str) -> pd.DataFrame:
     return catalog_df[available_columns + additional_columns]
 
 
+def normalize_auction_data_spectrum(catalog_file_path: str) -> pd.DataFrame:
+    """Normalize Spectrum auction data."""
+    logger.info(f"Loading Spectrum catalog data from {catalog_file_path}")
+    catalog_df = pd.read_excel(catalog_file_path)
+
+    logger.info("Extracting wine names and normalizing data")
+
+    # Wine name is in "LotHeading"
+    catalog_df["wine_name"] = catalog_df["LotHeading"].str.strip()
+
+    # Quantity is in "BottleQuantity"
+    catalog_df["quantity"] = catalog_df["BottleQuantity"].fillna(1).astype(int)
+
+    # Format is in "BottleFormat" - convert to milliliters
+    catalog_df["format"] = (
+        catalog_df["BottleFormat"]
+        .fillna(0.75)
+        .apply(lambda x: f"{int(float(x) * 1000)}ml")
+    )
+
+    # Auction price is in "OpeningBid"
+    catalog_df["auction_price"] = catalog_df["OpeningBid"].astype(float)
+
+    # Return DataFrame with standard columns
+    return catalog_df[
+        STANDARD_COLUMNS
+        + [col for col in catalog_df.columns if col not in STANDARD_COLUMNS]
+    ]
+
+
 def normalize_auction_data(catalog_file_path: str, auction_house: str) -> pd.DataFrame:
     """Normalize auction data from the specified auction house."""
     if auction_house.lower() == "acker":
@@ -211,6 +282,8 @@ def normalize_auction_data(catalog_file_path: str, auction_house: str) -> pd.Dat
         return normalize_auction_data_klwines(catalog_file_path)
     elif auction_house.lower() == "hdh":
         return normalize_auction_data_hdh(catalog_file_path)
+    elif auction_house.lower() == "spectrum":
+        return normalize_auction_data_spectrum(catalog_file_path)
     else:
         raise ValueError(f"Unsupported auction house: {auction_house}")
 
@@ -290,10 +363,11 @@ def merge_and_analyze_wine_data(
     # Calculate unit price
     # Unit price = auction_price / (quantity * (format_ml / 750))
     joined_df["unit_price"] = joined_df.apply(
-        lambda row: row["auction_price"]
-        / (row["quantity"] * (row["format_ml"] / 750.0))
-        if row["quantity"] > 0
-        else row["auction_price"],
+        lambda row: (
+            row["auction_price"] / (row["quantity"] * (row["format_ml"] / 750.0))
+            if row["quantity"] > 0
+            else row["auction_price"]
+        ),
         axis=1,
     )
 
@@ -304,6 +378,8 @@ def merge_and_analyze_wine_data(
         joined_df["auction_on_hand_unit_price"] = joined_df["unit_price"] * 1.195 + 7
     elif auction_house.lower() in ["acker", "zachys"]:
         joined_df["auction_on_hand_unit_price"] = joined_df["unit_price"] * 1.25 + 7
+    elif auction_house.lower() == "spectrum":
+        joined_df["auction_on_hand_unit_price"] = joined_df["unit_price"] * 1.22 + 7
     else:
         raise ValueError(f"Unsupported auction house: {auction_house}")
 
